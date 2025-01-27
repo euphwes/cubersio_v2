@@ -1,13 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
-
-  let message = '';
-
-  onMount(async () => {
-    const response = await fetch('/api/');
-    const responseData = await response.json();  // this is cleaner with Axios
-    message = responseData.message;
-  });
+  export let data;
 </script>
 
-<h1>{message}</h1>
+<h1>{data.message}</h1>

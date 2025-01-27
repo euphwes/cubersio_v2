@@ -1,3 +1,43 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+:root {
+  --white: rgb(255, 255, 255);
+  --dusty-blue: rgba(120, 170, 210, 0.8);
+  --dusty-green: rgba(143, 210, 138, 0.8);
+  --dusty-orange: rgba(255, 178, 114, 0.8);
+  --dusty-yellow: rgba(255, 221, 122, 0.8);
+  --dusty-red: rgba(204, 94, 94, 0.8);
+
+  --dark-grey: rgb(51, 51, 51);
+
+  --spooky-grey: rgb(219, 219, 219);
+  --dusty-purple: rgba(139, 112, 183, 0.8);
+  --olive-green: rgba(128, 128, 0, 0.8);
+  --stark-orange: rgba(255, 101, 0, 0.8);
+
+  /* Default theme */
+  --primary-color: var(--dusty-blue);
+  --secondary-color: var(--white);
+  --accent-color: var(--dusty-green);
+}
+
+.halloween-theme {
+  --primary-color: var(--dusty-purple);
+  --secondary-color: var(--spooky-grey);
+  --accent-color: var(--stark-orange);
+}
+
+.bg-cubersio-primary {
+  background-color: var(--primary-color);
+}
+.bg-cubersio-secondary {
+  background-color: var(--secondary-color);
+}
+.bg-cubersio-accent {
+  background-color: var(--accent-color);
+}
+.bg-dark-grey {
+  background-color: var(--dark-grey);
+}

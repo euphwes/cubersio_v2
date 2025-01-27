@@ -7,8 +7,8 @@ export default {
       '/api': {
         target: 'http://localhost:8000', // FastAPI backend
         changeOrigin: true,
-        rewrite: (path: string) => path.replace(/^\/api/, ''), // Optional: adjust path
-      },
-    },
-  },
+        rewrite: (path: string) => path.replace(/^\/api/, '') // Optional: adjust path
+      }
+    }
+  }
 };
