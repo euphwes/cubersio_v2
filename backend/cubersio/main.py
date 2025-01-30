@@ -1,17 +1,20 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from cubersio.types import EventSlug
+
 app = FastAPI()
 
-# Enable CORS for development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Port used by Vite
+    allow_origins=["http://localhost:5173"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+    
+
 @app.get("/")
 def read_root():
-    return {"message": "Hello from the FastAPI backend!"}
+    return {"events": list(EventSlug)}
