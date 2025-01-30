@@ -3,6 +3,6 @@ export const load = async ({ fetch }) => {
   const responseData = await response.json();
 
   return {
-    message: responseData.message
+    events: responseData.events
   };
 };
