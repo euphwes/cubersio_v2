@@ -78,7 +78,11 @@ the cube face.
     grid-template-rows: repeat(3, 12px);
     grid-template-columns: repeat(3, 12px);
     gap: 2px;
-    line-height: normal;
+    line-height: 0;
+  }
+  .cube div {
+    width: 12px;
+    height: 12px;
   }
   .cube > :nth-child(1) {
     border-top-left-radius: 4px;
