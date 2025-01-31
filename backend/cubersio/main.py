@@ -17,4 +17,5 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"events": list(EventSlug)}
+    # return {"events": list(EventSlug)}
+    return {"events": [EventSlug.EVENT_3x3, EventSlug.TWO_BLD, EventSlug.EVENT_10x10]}
