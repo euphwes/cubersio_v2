@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+  <style>
+    :root {
+      --color-white: white;
+      --color-red: #f45e5e;
+      --color-blue: #4591f5;
+      --color-green: #54fd64;
+      --color-yellow: #f0ff70;
+      --color-orange: #f8b468;
+    }
+  </style>
+
+  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" fill="var(--color-white)">
+    <rect x="0" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="0" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="34" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="68" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="102" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="136" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="170" width="30" height="30" rx="6" ry="6" />
+  </g>
+
+  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)" fill="var(--color-green)">
+    <rect x="0" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="0" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="34" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="68" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="102" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="136" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="170" width="30" height="30" rx="6" ry="6" />
+  </g>
+
+  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" fill="var(--color-red)">
+    <rect x="0" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="0" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="0" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="34" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="34" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="68" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="68" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="102" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="102" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="136" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="136" width="30" height="30" rx="6" ry="6" />
+
+    <rect x="0" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="34" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="68" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="102" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="136" y="170" width="30" height="30" rx="6" ry="6" />
+    <rect x="170" y="170" width="30" height="30" rx="6" ry="6" />
+  </g>
+</svg>

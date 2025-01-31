@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+  <style>
+    :root {
+      --color-white: white;
+      --color-red: #f45e5e;
+      --color-blue: #4591f5;
+      --color-green: #54fd64;
+      --color-yellow: #f0ff70;
+      --color-orange: #f8b468;
+    }
+  </style>
+
+  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" fill="var(--color-white)">
+    <rect x="0" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="0" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="29" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="58" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="87" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="116" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="145" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="174" width="26" height="26" rx="4" ry="4" />
+  </g>
+
+  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)" fill="var(--color-green)">
+    <rect x="0" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="0" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="29" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="58" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="87" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="116" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="145" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="174" width="26" height="26" rx="4" ry="4" />
+  </g>
+
+  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" fill="var(--color-red)">
+    <rect x="0" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="0" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="0" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="29" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="29" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="58" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="58" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="87" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="87" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="116" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="116" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="145" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="145" width="26" height="26" rx="4" ry="4" />
+
+    <rect x="0" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="29" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="58" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="87" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="116" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="145" y="174" width="26" height="26" rx="4" ry="4" />
+    <rect x="174" y="174" width="26" height="26" rx="4" ry="4" />
+  </g>
+</svg>

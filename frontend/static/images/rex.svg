@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+  <style>
+    :root {
+      --color-white: white;
+      --color-red: #f45e5e;
+      --color-blue: #4591f5;
+      --color-green: #54fd64;
+      --color-yellow: #f0ff70;
+      --color-orange: #f8b468;
+    }
+  </style>
+
+  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)">
+    <path d="M 5 0 L 195 -0 Q 150 5 100 45 Q 50 5 5 0" fill="var(--color-orange)" />
+    <path d="M 200 5 L 200 195 Q 195 150 155 100 Q 195 50 200 5" fill="var(--color-orange)" />
+    <path d="M 195 200 L 5 200 Q 50 195 100 155 Q 150 195 195 200" fill="var(--color-orange)" />
+    <path d="M 0 195 L 0 5 Q 5 50 45 100 Q 5 150 0 195" fill="var(--color-green)" />
+
+    <path d="M 3 3 Q 47 8 97 47 Q 68 68 47 97 Q 8 47 3 3" fill="var(--color-white)" />
+    <path d="M 197 3 Q 192 47 153 97 Q 132 68 103 47 Q 153 8 197 3" fill="var(--color-blue)" />
+    <path d="M 197 197 Q 153 192 103 153 Q 132 132 153 103 Q 192 153 197 197" fill="var(--color-green)" />
+    <path d="M 3 197 Q 8 153 47 103 Q 68 132 97 153 Q 47 192 3 197" fill="var(--color-green)" />
+
+    <path d="M 100 50 C 115 57 143 85 150 100 C 143 115 115 143 100 150 C 83 143 57 115 50 100 C 57 85 85 57 100 50"
+      fill="var(--color-white)" />
+  </g>
+
+  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)">
+    <path d="M 5 0 L 195 -0 Q 150 5 100 45 Q 50 5 5 0" fill="var(--color-blue)" />
+    <path d="M 200 5 L 200 195 Q 195 150 155 100 Q 195 50 200 5" fill="var(--color-blue)" />
+    <path d="M 195 200 L 5 200 Q 50 195 100 155 Q 150 195 195 200" fill="var(--color-yellow)" />
+    <path d="M 0 195 L 0 5 Q 5 50 45 100 Q 5 150 0 195" fill="var(--color-green)" />
+
+    <path d="M 3 3 Q 47 8 97 47 Q 68 68 47 97 Q 8 47 3 3" fill="var(--color-red)" />
+    <path d="M 197 3 Q 192 47 153 97 Q 132 68 103 47 Q 153 8 197 3" fill="var(--color-white)" />
+    <path d="M 197 197 Q 153 192 103 153 Q 132 132 153 103 Q 192 153 197 197" fill="var(--color-red)" />
+    <path d="M 3 197 Q 8 153 47 103 Q 68 132 97 153 Q 47 192 3 197" fill="var(--color-blue)" />
+
+    <path d="M 100 50 C 115 57 143 85 150 100 C 143 115 115 143 100 150 C 83 143 57 115 50 100 C 57 85 85 57 100 50"
+      fill="var(--color-green)" />
+  </g>
+
+  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)">
+    <path d="M 5 0 L 195 -0 Q 150 5 100 45 Q 50 5 5 0" fill="var(--color-yellow)" />
+    <path d="M 200 5 L 200 195 Q 195 150 155 100 Q 195 50 200 5" fill="var(--color-orange)" />
+    <path d="M 195 200 L 5 200 Q 50 195 100 155 Q 150 195 195 200" fill="var(--color-yellow)" />
+    <path d="M 0 195 L 0 5 Q 5 50 45 100 Q 5 150 0 195" fill="var(--color-white)" />
+
+    <path d="M 3 3 Q 47 8 97 47 Q 68 68 47 97 Q 8 47 3 3" fill="var(--color-red)" />
+    <path d="M 197 3 Q 192 47 153 97 Q 132 68 103 47 Q 153 8 197 3" fill="var(--color-white)" />
+    <path d="M 197 197 Q 153 192 103 153 Q 132 132 153 103 Q 192 153 197 197" fill="var(--color-orange)" />
+    <path d="M 3 197 Q 8 153 47 103 Q 68 132 97 153 Q 47 192 3 197" fill="var(--color-yellow)" />
+
+    <path d="M 100 50 C 115 57 143 85 150 100 C 143 115 115 143 100 150 C 83 143 57 115 50 100 C 57 85 85 57 100 50"
+      fill="var(--color-blue)" />
+  </g>
+
+</svg>

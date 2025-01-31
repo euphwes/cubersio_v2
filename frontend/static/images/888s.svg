@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+  <style>
+    :root {
+      --color-white: white;
+      --color-red: #f45e5e;
+      --color-blue: #4591f5;
+      --color-green: #54fd64;
+      --color-yellow: #f0ff70;
+      --color-orange: #f8b468;
+    }
+  </style>
+
+  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" fill="var(--color-white)">
+    <rect x="0.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+  </g>
+
+  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)" fill="var(--color-green)">
+    <rect x="0.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+  </g>
+
+  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" fill="var(--color-red)">
+    <rect x="0.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="0.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="25.5" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="51.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="76.5" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="102.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="127.5" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="153.0" width="21.5" height="21.5" rx="2" ry="2" />
+
+    <rect x="0.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="25.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="51.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="76.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="102.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="127.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="153.0" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+    <rect x="178.5" y="178.5" width="21.5" height="21.5" rx="2" ry="2" />
+  </g>
+</svg>

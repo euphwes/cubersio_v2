@@ -56,3 +56,14 @@ To publish your library to [npm](https://www.npmjs.com):
 ```bash
 npm publish
 ```
+
+## Notes
+
+https://yqnn.github.io/svg-path-editor/
+
+for editing SVG paths
+
+https://www.npmjs.com/package/svg-round-corners
+
+for rounding paths
+

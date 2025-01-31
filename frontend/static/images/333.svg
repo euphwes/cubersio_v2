@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+  <style>
+    :root {
+      --color-white: white;
+      --color-red: #f45e5e;
+      --color-blue: #4591f5;
+      --color-green: #54fd64;
+      --color-yellow: #f0ff70;
+      --color-orange: #f8b468;
+    }
+  </style>
+
+  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)">
+    <rect x="0" y="0" width="63" height="63" rx="6" ry="6" fill="var(--color-blue)" />
+    <rect x="69" y="0" width="63" height="63" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="138" y="0" width="63" height="63" rx="6" ry="6" fill="var(--color-orange)" />
+
+    <rect x="0" y="69" width="63" height="63" rx="6" ry="6" fill="var(--color-orange)" />
+    <rect x="69" y="69" width="63" height="63" rx="6" ry="6" fill="var(--color-white)" />
+    <rect x="138" y="69" width="63" height="63" rx="6" ry="6" fill="var(--color-yellow)" />
+
+    <rect x="0" y="138" width="63" height="63" rx="6" ry="6" fill="var(--color-yellow)" />
+    <rect x="69" y="138" width="63" height="63" rx="6" ry="6" fill="var(--color-white)" />
+    <rect x="138" y="138" width="63" height="63" rx="6" ry="6" fill="var(--color-white)" />
+  </g>
+
+  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)">
+    <rect x="0" y="0" width="63" height="63" rx="6" ry="6" fill="var(--color-blue)" />
+    <rect x="69" y="0" width="63" height="63" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="138" y="0" width="63" height="63" rx="6" ry="6" fill="var(--color-green)" />
+
+    <rect x="0" y="69" width="63" height="63" rx="6" ry="6" fill="var(--color-green)" />
+    <rect x="69" y="69" width="63" height="63" rx="6" ry="6" fill="var(--color-green)" />
+    <rect x="138" y="69" width="63" height="63" rx="6" ry="6" fill="var(--color-blue)" />
+
+    <rect x="0" y="138" width="63" height="63" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="69" y="138" width="63" height="63" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="138" y="138" width="63" height="63" rx="6" ry="6" fill="var(--color-yellow)" />
+  </g>
+
+  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)">
+    <rect x="0" y="0" width="63" height="63" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="69" y="0" width="63" height="63" rx="6" ry="6" fill="var(--color-green)" />
+    <rect x="138" y="0" width="63" height="63" rx="6" ry="6" fill="var(--color-white)" />
+
+    <rect x="0" y="69" width="63" height="63" rx="6" ry="6" fill="var(--color-yellow)" />
+    <rect x="69" y="69" width="63" height="63" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="138" y="69" width="63" height="63" rx="6" ry="6" fill="var(--color-orange)" />
+
+    <rect x="0" y="138" width="63" height="63" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="69" y="138" width="63" height="63" rx="6" ry="6" fill="var(--color-blue)" />
+    <rect x="138" y="138" width="63" height="63" rx="6" ry="6" fill="var(--color-green)" />
+  </g>
+</svg>

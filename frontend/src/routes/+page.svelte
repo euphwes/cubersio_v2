@@ -1,8 +1,14 @@
 <script>
+  import '../app.css';
+  import EventCard from '$lib/EventCard.svelte';
+
   export let data;
 </script>
 
-<h1>Events</h1>
-{#each data.events as event}
-  <div>{event}</div>
-{/each}
+<div class="app-container">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    {#each data.events as event}
+      <EventCard eventSlug={event} />
+    {/each}
+  </div>
+</div>

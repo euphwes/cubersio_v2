@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+  <style>
+    :root {
+      --color-white: white;
+      --color-red: #f45e5e;
+      --color-blue: #4591f5;
+      --color-green: #54fd64;
+      --color-yellow: #f0ff70;
+      --color-orange: #f8b468;
+      --clock-body: #dddddd;
+      --clock-face: #444444;
+      --body-tan: #c4a284;
+      --body-inset: #615345;
+      --body-print: #3e3935;
+    }
+  </style>
+
+  <!-- static "board" -->
+  <rect x="0" y="0" width="500" height="500" rx="40" ry="40" fill="var(--body-tan)" />
+  <rect x="50" y="50" width="400" height="400" rx="4" ry="4" stroke="var(--body-inset)" stroke-width="2"
+    fill="var(--body-tan)" />
+    <line x1="50" y1="100" x2="450" y2="100" stroke="var(--body-inset)" stroke-width="1" />
+  <line x1="50" y1="200" x2="450" y2="200" stroke="var(--body-inset)" stroke-width="1" />
+  <line x1="50" y1="300" x2="450" y2="300" stroke="var(--body-inset)" stroke-width="1" />
+  <line x1="50" y1="400" x2="450" y2="400" stroke="var(--body-inset)" stroke-width="1" />
+  <line x1="100" y1="50" x2="100" y2="450" stroke="var(--body-inset)" stroke-width="1" />
+  <line x1="200" y1="50" x2="200" y2="450" stroke="var(--body-inset)" stroke-width="1" />
+  <line x1="300" y1="50" x2="300" y2="450" stroke="var(--body-inset)" stroke-width="1" />
+  <line x1="400" y1="50" x2="400" y2="450" stroke="var(--body-inset)" stroke-width="1" />
+  <circle cx="100" cy="100" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="100" cy="200" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="100" cy="300" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="100" cy="400" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="200" cy="100" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="200" cy="200" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="200" cy="300" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="200" cy="400" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="300" cy="100" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="300" cy="200" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="300" cy="300" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="300" cy="400" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="400" cy="100" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="400" cy="200" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="400" cy="300" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+  <circle cx="400" cy="400" r="8" stroke="var(--body-inset)" stroke-width="1" fill="var(--body-tan)" />
+
+  <!-- moving numbered pieces -->
+  <g transform="">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">1</text>
+  </g>
+  <g transform="translate(100 0)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">2</text>
+  </g>
+  <g transform="translate(200 0)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">3</text>
+  </g>
+  <g transform="translate(300 0)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">4</text>
+  </g>
+  <g transform="translate(0 100)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">5</text>
+  </g>
+  <g transform="translate(100 100)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">6</text>
+  </g>
+  <g transform="translate(200 100)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">7</text>
+  </g>
+  <g transform="translate(300 100)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">8</text>
+  </g>
+  <g transform="translate(0 200)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">9</text>
+  </g>
+  <g transform="translate(100 200)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">10</text>
+  </g>
+  <g transform="translate(200 200)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">11</text>
+  </g>
+  <g transform="translate(300 200)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">12</text>
+  </g>
+  <g transform="translate(0 300)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">13</text>
+  </g>
+  <g transform="translate(100 300)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">14</text>
+  </g>
+  <g transform="translate(200 300)">
+    <rect x="51" y="51" width="98" height="98" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="1.5" />
+    <rect x="57.5" y="57.5" width="85" height="85" rx="4" ry="4" fill="var(--body-tan)" stroke="var(--body-print)"
+      stroke-width="3" />
+    <text x="100" y="105" font-size="50" fill="var(--body-print)" text-anchor="middle"
+      alignment-baseline="middle">15</text>
+  </g>
+</svg>

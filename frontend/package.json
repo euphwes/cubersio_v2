@@ -56,6 +56,7 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "daisyui": "^4.12.23"
+    "daisyui": "^4.12.23",
+    "svg-round-corners": "^0.4.3"
   }
 }
