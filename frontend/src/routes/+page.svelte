@@ -6,7 +6,7 @@
 </script>
 
 <div class="app-container">
-  <div style="display: flex; flex-wrap: wrap;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
     {#each data.events as event}
       <EventCard eventSlug={event} />
     {/each}
