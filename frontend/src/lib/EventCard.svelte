@@ -28,6 +28,7 @@ TODO
     border-radius: 0.5rem;
     transition: all 250ms ease;
     position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.1); /* Tighter, darker shadow */
   }
 
   .event-card:hover {

@@ -44,11 +44,11 @@
 
 .app-container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 2rem;
+  padding-left: 2rem;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 32px;
+  margin-top: 1rem;
   box-sizing: border-box;
 }
 
@@ -80,4 +80,8 @@
   .app-container {
     max-width: 1320px;
   }
+}
+
+.bg-gradient {
+  background: linear-gradient(to bottom, var(--primary-color), var(--white));
 }
