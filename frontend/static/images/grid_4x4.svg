@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+  <rect x="5.0" y="5.0" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="53.75" y="5.0" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="102.5" y="5.0" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="151.25" y="5.0" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="5.0" y="53.75" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="53.75" y="53.75" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="102.5" y="53.75" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="151.25" y="53.75" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="5.0" y="102.5" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="53.75" y="102.5" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="102.5" y="102.5" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="151.25" y="102.5" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="5.0" y="151.25" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="53.75" y="151.25" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="102.5" y="151.25" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+  <rect x="151.25" y="151.25" width="43.75" height="43.75" rx="4.375" ry="4.375" fill="#333"/>
+</svg>

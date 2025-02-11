@@ -21,6 +21,7 @@ build/
 *.egg
 *.manifest
 *.spec
+.python-version
 
 # Vite / Frontend-related files
 node_modules/

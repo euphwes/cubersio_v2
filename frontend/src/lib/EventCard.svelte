@@ -12,7 +12,7 @@ TODO
 
 <div class="event-card drop-shadow">
   <div class="event-image-container">
-    <img class="event-image" src="/images/{eventSlug}.png" alt="{eventSlug} image" />
+    <img class="event-image" src="/images/{eventSlug}.svg" alt="{eventSlug} image" />
   </div>
   <hr />
   <div class="event-title">{eventSlug}</div>
@@ -22,7 +22,7 @@ TODO
 <style>
   .event-card {
     text-align: center;
-    background-color: white;
+    background-color: #444444;
     margin: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
