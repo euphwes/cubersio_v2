@@ -13,6 +13,8 @@
     }
   </style>
 
+<path d="M 250 0 L 468 125 L 470 375 L 250 500 L 30 375 L 32 125" fill="#444444"/>
+
 <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)">
 <rect x="0" y="0" width="26" height="26" rx="4" ry="4" fill="var(--color-orange)" />
 <rect x="29" y="0" width="26" height="26" rx="4" ry="4" fill="var(--color-white)" />
