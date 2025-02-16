@@ -17,9 +17,9 @@
       <rect x="123" y="82" width="36" height="36" rx="6" ry="6" fill="var(--color-orange)" />
       <rect x="164" y="82" width="36" height="36" rx="6" ry="6" fill="var(--color-red)" />
 
-      <rect x="82" y="123" width="36" height="36" rx="6" ry="6" fill="var(--color-orange)" />
+      <rect x="82" y="123" width="36" height="36" rx="6" ry="6" fill="var(--color-red)" />
       <rect x="123" y="123" width="36" height="36" rx="6" ry="6" fill="var(--color-red)" />
-      <rect x="164" y="123" width="36" height="36" rx="6" ry="6" fill="var(--color-red)" />
+      <rect x="164" y="123" width="36" height="36" rx="6" ry="6" fill="var(--color-orange)" />
 
       <rect x="82" y="164" width="36" height="36" rx="6" ry="6" fill="var(--color-orange)" />
       <rect x="123" y="164" width="36" height="36" rx="6" ry="6" fill="var(--color-orange)" />
@@ -55,7 +55,7 @@
 
       <rect x="0" y="41" width="36" height="36" rx="6" ry="6" fill="var(--color-green)" />
       <rect x="41" y="41" width="36" height="36" rx="6" ry="6" fill="var(--color-green)" />
-      <rect x="82" y="41" width="36" height="36" rx="6" ry="6" fill="var(--color-blue)" />
+      <rect x="82" y="41" width="36" height="36" rx="6" ry="6" fill="var(--color-yellow)" />
 
       <rect x="0" y="82" width="36" height="36" rx="6" ry="6" fill="var(--color-blue)" />
       <rect x="41" y="82" width="36" height="36" rx="6" ry="6" fill="var(--color-blue)" />
@@ -63,7 +63,7 @@
 
       <rect x="0" y="123" width="36" height="36" rx="6" ry="6" fill="var(--color-white)" />
       <rect x="41" y="123" width="36" height="36" rx="6" ry="6" fill="var(--color-white)" />
-      <rect x="82" y="123" width="36" height="36" rx="6" ry="6" fill="var(--color-green)" />
+      <rect x="82" y="123" width="36" height="36" rx="6" ry="6" fill="var(--color-yellow)" />
 
       <rect x="0" y="164" width="36" height="36" rx="6" ry="6" fill="var(--color-green)" />
       <rect x="41" y="164" width="36" height="36" rx="6" ry="6" fill="var(--color-white)" />
