@@ -1,9 +1,9 @@
 from random import choice
 
-for y in [0, 20, 40, 60, 80, 100, 120, 140, 160, 180]:
-    for x in [0, 20, 40, 60, 80, 100, 120, 140, 160, 180]:
+for y in [0, 20.22, 40.44, 60.66, 80.88, 101.1, 121.32, 141.54, 161.76, 181.98]:
+    for x in [0, 20.22, 40.44, 60.66, 80.88, 101.1, 121.32, 141.54, 161.76, 181.98]:
         c = choice(["white", "red", "blue", "green", "yellow", "orange"])
         print(
-            f'<rect x="{x}" y="{y}" width="17" height="17" rx="4" ry="4" fill="var(--color-{c})" />'
+            f'<rect x="{x}" y="{y}" width="18" height="18" rx="4" ry="4" fill="var(--color-{c})" />'
         )
     print()
