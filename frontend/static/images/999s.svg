@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+  <style>
+    :root {
+      --color-white: white;
+      --color-red: #f45e5e;
+      --color-blue: #4591f5;
+      --color-green: #54fd64;
+      --color-yellow: #f0ff70;
+      --color-orange: #f8b468;
+    }
+  </style>
+
+  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" fill="var(--color-white)">
+    <rect x="0.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+  </g>
+
+  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)" fill="var(--color-green)">
+    <rect x="0.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+  </g>
+
+  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" fill="var(--color-red)">
+    <rect x="0.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="0.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="0.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="22.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="22.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="45.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="45.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="67.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="67.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="90.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="90.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="112.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="112.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="135.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="135.0" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="157.5" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="157.5" width="20" height="20" rx="2" ry="2" />
+
+    <rect x="0.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="22.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="45.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="67.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="90.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="112.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="135.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="157.5" y="180.0" width="20" height="20" rx="2" ry="2" />
+    <rect x="180.0" y="180.0" width="20" height="20" rx="2" ry="2" />
+  </g>
+</svg>
