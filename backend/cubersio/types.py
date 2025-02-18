@@ -24,7 +24,6 @@ class EventSlug(StrEnum):
     PYRAMINX = "pyra"
     MEGAMINX = "mega"
     KILOMINX = "kilo"
-    CLOCK = "clock"
     MIRROR_BLOCKS = "bump"
     THREE_BY_THREE_TWO = "332"
     THREE_BY_THREE_FOUR = "334"
@@ -35,4 +34,5 @@ class EventSlug(StrEnum):
     REDI_CUBE = "redi"
     DINO_CUBE = "dino"
     REX_CUBE = "rex"
+    CLOCK = "clock"
     FIFTEEN_PUZZLE = "15puzzle"

@@ -3,12 +3,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
   <style>
     :root {
-      --color-white: white;
       --color-red: #f45e5e;
-      --color-blue: #4591f5;
-      --color-green: #54fd64;
-      --color-yellow: #f0ff70;
-      --color-orange: #f8b468;
       --clock-body: #dddddd;
       --clock-face: #444444;
     }
