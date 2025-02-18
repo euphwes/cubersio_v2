@@ -6,6 +6,8 @@
       --color-red: #f45e5e;
       --clock-body: #dddddd;
       --clock-face: #444444;
+      --pin-down: #375fa5;
+      --pin-up: #87a1ce;
     }
   </style>
 
@@ -15,6 +17,12 @@
   <circle cx="100" cy="400" r="75" fill="var(--clock-body)" />
   <circle cx="400" cy="100" r="75" fill="var(--clock-body)" />
   <circle cx="400" cy="400" r="75" fill="var(--clock-body)" />
+
+  <!-- push button things -->
+  <circle cx="175" cy="175" r="15" fill="var(--pin-down)" />
+  <circle cx="325" cy="175" r="15" fill="var(--pin-down)" />
+  <circle cx="175" cy="325" r="15" fill="var(--pin-down)" />
+  <circle cx="325" cy="325" r="15" fill="var(--pin-down)" />
 
   <!-- STATIC clock faces from left to right, top to bottom -->
   <g transform="translate(100 100)">
@@ -55,7 +63,7 @@
     <g transform="rotate(-150)">
       <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
     </g>
-    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)"/>
+    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
   </g>
 
   <g transform="translate(250 100)">
@@ -96,7 +104,7 @@
     <g transform="rotate(-150)">
       <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
     </g>
-    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)"/>
+    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
   </g>
 
   <g transform="translate(400 100)">
@@ -137,7 +145,7 @@
     <g transform="rotate(-150)">
       <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
     </g>
-    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)"/>
+    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
   </g>
 
   <g transform="translate(100 250)">
@@ -178,7 +186,7 @@
     <g transform="rotate(-150)">
       <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
     </g>
-    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)"/>
+    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
   </g>
 
   <g transform="translate(250 250)">
@@ -219,7 +227,7 @@
     <g transform="rotate(-150)">
       <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
     </g>
-    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)"/>
+    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
   </g>
 
   <g transform="translate(400 250)">
@@ -260,7 +268,7 @@
     <g transform="rotate(-150)">
       <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
     </g>
-    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)"/>
+    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
   </g>
 
   <g transform="translate(100 400)">
@@ -301,7 +309,7 @@
     <g transform="rotate(-150)">
       <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
     </g>
-    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)"/>
+    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
   </g>
 
   <g transform="translate(250 400)">
@@ -342,7 +350,7 @@
     <g transform="rotate(-150)">
       <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
     </g>
-    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)"/>
+    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
   </g>
 
   <g transform="translate(400 400)">
@@ -383,7 +391,7 @@
     <g transform="rotate(-150)">
       <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
     </g>
-    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)"/>
+    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
   </g>
 
 </svg>

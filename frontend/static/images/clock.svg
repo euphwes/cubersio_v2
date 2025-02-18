@@ -6,6 +6,8 @@
       --color-red: #f45e5e;
       --clock-body: #dddddd;
       --clock-face: #444444;
+      --pin-down: #375fa5;
+      --pin-up: #87a1ce;
     }
   </style>
 
@@ -16,7 +18,14 @@
   <circle cx="400" cy="100" r="75" fill="var(--clock-body)" />
   <circle cx="400" cy="400" r="75" fill="var(--clock-body)" />
 
-  <!-- STATIC clock faces from left to right, top to bottom -->
+  <!-- push button things -->
+  <circle cx="175" cy="175" r="15" fill="var(--pin-down)" />
+  <circle cx="325" cy="175" r="15" fill="var(--pin-up)" />
+  <circle cx="175" cy="325" r="15" fill="var(--pin-up)" />
+  <circle cx="325" cy="325" r="15" fill="var(--pin-down)" />
+
+  <!-- clock faces from left to right, top to bottom -->
+  <!-- STATIC except for hands on clock in different directions-->
   <g transform="translate(100 100)">
     <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
     <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
