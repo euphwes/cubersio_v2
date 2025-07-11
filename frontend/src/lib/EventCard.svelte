@@ -2,12 +2,49 @@
 @component
 
 EventCard
-7CB278
 TODO
 -->
 
 <script lang="ts">
   const { eventSlug } = $props();
+
+  const nameByEventSlug = {
+    '222': '2x2',
+    '333': '3x3',
+    '444': '4x4',
+    '555': '5x5',
+    '666': '6x6',
+    '777': '7x7',
+    '888': '8x8',
+    '999': '9x9',
+    '10x': '10x10',
+    'pyra': 'Pyraminx',
+    'skewb': 'Skewb',
+    'sq1': 'Square-1',
+    'clock': 'Clock',
+    'mega': 'Megaminx',
+    'kilo': 'Kilominx',
+    '3bld': '3BLD',
+    '4bld': '4BLD',
+    '5bld': '5BLD',
+    'mbld': '3x3 MBLD',
+    'fto': 'FTO',
+    'bump': 'Mirror Blocks',
+    '3oh': '3x3 One-handed',
+    'fmc': '3x3 Fewest Moves',
+    'bicube': 'BiCube',
+    'redi' : 'Redi Cube',
+    '333relay': '3x3 Relay of 3',
+    'dino' : 'Dino Cube',
+    'rex' : 'Rex Cube',
+    '15puzzle' : '15 Puzzle',
+    '234relay' : '2-3-4 Relay',
+    '332' : '3x3x2',
+    '223' : '2x2x3',
+    '334' : '3x3x4',
+    '335' : '3x3x5',
+  };
+  const eventName = nameByEventSlug[eventSlug] || eventSlug;
 </script>
 
 <div class="event-card drop-shadow">
@@ -15,7 +52,7 @@ TODO
     <img class="event-image" src="/images/{eventSlug}.svg" alt="{eventSlug} image" />
   </div>
   <hr />
-  <div class="event-title">{eventSlug}</div>
+  <div class="event-title">{eventName}</div>
   <span class="event-summary">10.25</span>
 </div>
 
