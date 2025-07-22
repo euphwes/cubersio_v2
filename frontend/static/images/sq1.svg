@@ -69,8 +69,8 @@
     <rect x="77.5" y="0" width="45" height="65" rx="5" ry="5" fill="var(--color-blue)" />
     <rect x="125" y="0" width="75" height="65" rx="5" ry="5" fill="var(--color-blue)" />
 
-    <rect x="0" y="67.5" width="122.5" height="65" rx="5" ry="5" fill="var(--color-red)" />
-    <rect x="125" y="67.5" width="75" height="65" rx="5" ry="5" fill="var(--color-red)" />
+    <rect x="0" y="67.5" width="75" height="65" rx="5" ry="5" fill="var(--color-red)" />
+    <rect x="77.5" y="67.5" width="122.5" height="65" rx="5" ry="5" fill="var(--color-red)" />
 
     <rect x="0" y="135" width="75" height="65" rx="5" ry="5" fill="var(--color-orange)" />
     <rect x="77.5" y="135" width="45" height="65" rx="5" ry="5" fill="var(--color-green)" />
@@ -82,7 +82,7 @@
     <rect x="77.5" y="0" width="45" height="65" rx="5" ry="5" fill="var(--color-red)" />
     <rect x="125" y="0" width="75" height="65" rx="5" ry="5" fill="var(--color-orange)" />
 
-    <rect x="0" y="67.5" width="200" height="65" rx="5" ry="5" fill="var(--color-blue)" />
+    <rect x="0" y="67.5" width="200" height="65" rx="5" ry="5" fill="var(--color-green)" />
 
     <rect x="0" y="135" width="75" height="65" rx="5" ry="5" fill="var(--color-green)" />
     <rect x="77.5" y="135" width="45" height="65" rx="5" ry="5" fill="var(--color-orange)" />

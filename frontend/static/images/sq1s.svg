@@ -12,7 +12,7 @@
     }
   </style>
 
-  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" fill="var(--color-white)">
+  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" fill="var(--color-yellow)">
     <!-- commands in comments are before rounding, on a 200x200 canvas -->
 
     <!-- up left corner -->
@@ -61,15 +61,15 @@
     <rect x="77.5" y="0" width="45" height="65" rx="5" ry="5" />
     <rect x="125" y="0" width="75" height="65" rx="5" ry="5" />
 
-    <rect x="0" y="67.5" width="122.5" height="65" rx="5" ry="5" />
-    <rect x="125" y="67.5" width="75" height="65" rx="5" ry="5" />
+    <rect x="0" y="67.5" width="75" height="65" rx="5" ry="5" />
+    <rect x="77.5" y="67.5" width="122.5" height="65" rx="5" ry="5" />
 
     <rect x="0" y="135" width="75" height="65" rx="5" ry="5" />
     <rect x="77.5" y="135" width="45" height="65" rx="5" ry="5" />
     <rect x="125" y="135" width="75" height="65" rx="5" ry="5" />
   </g>
 
-  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" fill="var(--color-blue)">
+  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" fill="var(--color-green)">
     <rect x="0" y="0" width="75" height="65" rx="5" ry="5" />
     <rect x="77.5" y="0" width="45" height="65" rx="5" ry="5" />
     <rect x="125" y="0" width="75" height="65" rx="5" ry="5" />

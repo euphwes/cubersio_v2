@@ -49,7 +49,7 @@ TODO
 
 <div class="event-card drop-shadow">
   <div class="event-image-container">
-    <img class="event-image" src="/images/{eventSlug}.svg" alt="{eventSlug} image" />
+    <img class="event-image" src="/images/{eventSlug}s.svg" alt="{eventSlug} image" />
   </div>
   <hr />
   <div class="event-title">{eventName}</div>
@@ -74,8 +74,8 @@ TODO
   }
 
   .event-card:hover .event-image {
-    /* filter: saturate(75%);
-    -webkit-filter: saturate(75%); */
+    filter: saturate(75%);
+    -webkit-filter: saturate(75%);
   }
 
   .event-image-container {
