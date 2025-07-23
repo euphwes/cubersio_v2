@@ -25,14 +25,14 @@
   <g transform="translate(0,470)">
     <!-- just to have as a frame for the cubelets, this is the whole face -->
     <!-- comment this out after we figure out each cubelet -->
-    <path d="M 0 0 L 500 0 L 250 -433 Z" fill="var(--color-white)"/>
+    <!-- <path d="M 0 0 L 500 0 L 250 -433 Z" fill="var(color-white)"/> -->
 
     <!-- bottom row left-to-right #1/5 -->
     <g transform="translate(0,0)">
       <path d="M8.652,-14.997A10,10,-60.01836063115068,0,0,17.314,0L132.686,0A10,10,-60.01836063115068,0,0,141.348,-14.997L83.662,-114.986A10,10,-59.963278737698666,0,0,66.338,-114.986Z" fill="var(--color-blue)"/>
     </g>
     <!-- bottom row left-to-right #2/5 -->
-    <g transform="translate(87.5,-125)">
+    <g transform="translate(87.5,-135)">
       <path d="M8.652,14.997A10,10,60.01836063115067,0,1,17.314,0L132.686,0A10,10,60.01836063115067,0,1,141.348,14.997L83.662,114.986A10,10,-300.03672126230134,0,1,66.338,114.986Z" fill="var(--color-orange)"/>
     </g>
     <!-- bottom row left-to-right #3/5 -->
@@ -40,7 +40,7 @@
       <path d="M8.652,-14.997A10,10,-60.01836063115068,0,0,17.314,0L132.686,0A10,10,-60.01836063115068,0,0,141.348,-14.997L83.662,-114.986A10,10,-59.963278737698666,0,0,66.338,-114.986Z" fill="var(--color-red)"/>
     </g>
     <!-- bottom row left-to-right #4/5 -->
-    <g transform="translate(262.5,-125)">
+    <g transform="translate(262.5,-135)">
       <path d="M8.652,14.997A10,10,60.01836063115067,0,1,17.314,0L132.686,0A10,10,60.01836063115067,0,1,141.348,14.997L83.662,114.986A10,10,-300.03672126230134,0,1,66.338,114.986Z" fill="var(--color-orange)"/>
     </g>
     <!-- bottom row left-to-right #5/5 -->
@@ -49,8 +49,16 @@
     </g>
 
     <!-- middle row left-to-right #1/3 -->
-    <g transform="translate(87.5,-150)">
+    <g transform="translate(90,-150)">
       <path d="M8.652,-14.997A10,10,-60.01836063115068,0,0,17.314,0L132.686,0A10,10,-60.01836063115068,0,0,141.348,-14.997L83.662,-114.986A10,10,-59.963278737698666,0,0,66.338,-114.986Z" fill="var(--color-green)"/>
+    </g>
+    <!-- middle row left-to-right #2/3 -->
+    <g transform="translate(175,-292.5)">
+      <path d="M8.652,14.997A10,10,60.01836063115067,0,1,17.314,0L132.686,0A10,10,60.01836063115067,0,1,141.348,14.997L83.662,114.986A10,10,-300.03672126230134,0,1,66.338,114.986Z" fill="var(--color-yellow)"/>
+    </g>
+    <!-- middle row left-to-right #3/3 -->
+    <g transform="translate(260,-150)">
+      <path d="M8.652,-14.997A10,10,-60.01836063115068,0,0,17.314,0L132.686,0A10,10,-60.01836063115068,0,0,141.348,-14.997L83.662,-114.986A10,10,-59.963278737698666,0,0,66.338,-114.986Z" fill="var(--color-blue)"/>
     </g>
 
     <!-- top #1/1 -->
