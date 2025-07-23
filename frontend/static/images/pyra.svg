@@ -3,80 +3,143 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
   <style>
     :root {
-      --color-white: white;
       --color-red: #f45e5e;
       --color-blue: #4591f5;
       --color-green: #54fd64;
       --color-yellow: #f0ff70;
-      --color-orange: #f8b468;
     }
   </style>
 
-  <!-- base unrounded path for a single triangle cubelet -->
   <!-- side length 166.66 (=500/3)-->
-  <!-- M 0 -72.1687 L -83.333 72.1687 L 83.333 72.1687 Z --> <!-- pointing up -->
-  <!-- M 0 72.1687 L -83.333 -72.1687 L 83.333 -72.1687 Z --> <!-- pointing down -->
 
+  <!-- base unrounded paths, followed by rounded, for a single triangle cubelet -->
+
+  <!-- pointing up -->
+  <!-- M 0 -72.1687 L -83.333 72.1687 L 83.333 72.1687 Z -->
+  <!-- M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z -->
+  
+  <!-- pointing down -->
+  <!-- M 0 72.1687 L -83.333 -72.1687 L 83.333 -72.1687 Z -->
+  <!-- M8.66,57.169A10,10,-300,0,1,-8.66,57.17L-74.67,-57.17A10,10,60,0,1,-66.01,-72.17L66.01,-72.17A10,10,60,0,1,74.67,-57.17Z -->
+
+  <!-- right face -->
+  <g transform="matrix(0.78, -0.2, 0.2199, 0.9954, -3.3565, 22.1759)">
   <g transform="translate(0,470)">
-    <!-- just to have as a frame for the cubelets, this is the whole face -->
-    <!-- comment this out after we figure out each cubelet -->
-    <path d="M 0 0 L 500 0 L 250 -433 Z" fill="var(--color-white)"/>
-
     <!-- bottom row left-to-right #1/5 -->
     <g transform="translate(83.33, -72.1687)">
-      <path d="M 0 -72.1687 L -83.333 72.1687 L 83.333 72.1687 Z" fill="var(--color-blue)"/>
+      <g transform="scale(0.95, 0.95)">
+        <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-yellow)"/>
+      </g>
     </g>
     <!-- bottom row left-to-right #2/5 -->
     <g transform="translate(166.66, -72.1687)">
-      <path d="M 0 72.1687 L -83.333 -72.1687 L 83.333 -72.1687 Z" fill="var(--color-orange)"/>
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,57.169A10,10,-300,0,1,-8.66,57.17L-74.67,-57.17A10,10,60,0,1,-66.01,-72.17L66.01,-72.17A10,10,60,0,1,74.67,-57.17Z" fill="var(--color-green)"/>
+      </g>
     </g>
     <!-- bottom row left-to-right #3/5 -->
     <g transform="translate(250, -72.1687)">
-      <path d="M 0 -72.1687 L -83.333 72.1687 L 83.333 72.1687 Z" fill="var(--color-red)"/>
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-blue)"/>
+      </g>
     </g>
     <!-- bottom row left-to-right #4/5 -->
     <g transform="translate(333.33, -72.1687)">
-      <path d="M 0 72.1687 L -83.333 -72.1687 L 83.333 -72.1687 Z" fill="var(--color-orange)"/>
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,57.169A10,10,-300,0,1,-8.66,57.17L-74.67,-57.17A10,10,60,0,1,-66.01,-72.17L66.01,-72.17A10,10,60,0,1,74.67,-57.17Z" fill="var(--color-red)"/>
+      </g>
     </g>
     <!-- bottom row left-to-right #5/5 -->
     <g transform="translate(416.66, -72.1687)">
-      <path d="M 0 -72.1687 L -83.333 72.1687 L 83.333 72.1687 Z" fill="var(--color-green)"/>
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-blue)"/>
+      </g>
     </g>
     <!-- middle row left-to-right #1/3 -->
     <g transform="translate(166.66, -216.5057)">
-      <path d="M 0 -72.1687 L -83.333 72.1687 L 83.333 72.1687 Z" fill="var(--color-green)"/>
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-red)"/>
+      </g>
     </g>
     <!-- middle row left-to-right #2/3 -->
     <g transform="translate(250, -216.5057)">
-      <path d="M 0 72.1687 L -83.333 -72.1687 L 83.333 -72.1687 Z" fill="var(--color-orange)"/>
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,57.169A10,10,-300,0,1,-8.66,57.17L-74.67,-57.17A10,10,60,0,1,-66.01,-72.17L66.01,-72.17A10,10,60,0,1,74.67,-57.17Z" fill="var(--color-red)"/>
+      </g>
     </g>
     <!-- middle row left-to-right #3/3 -->
     <g transform="translate(333.33, -216.5057)">
-      <path d="M 0 -72.1687 L -83.333 72.1687 L 83.333 72.1687 Z" fill="var(--color-blue)"/>
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-green)"/>
+      </g>
     </g>
     <!-- top #1/1 -->
     <g transform="translate(250, -360.8427)">
-      <path d="M 0 -72.1687 L -83.333 72.1687 L 83.333 72.1687 Z" fill="var(--color-red)"/>
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-yellow)"/>
+      </g>
     </g>
   </g>
+  </g>
 
-
-
-
-
-  <!-- reference -->
-  <!-- <g transform="scale(0.666, 0.666)">
-    <g transform="translate(0,-150)" id="layer5" style="display:inline">
-      <path d="m 167.24138,851.28282 c 0,-3.24074 132.76909,-632.13529 134.15164,-635.44335 1.0893,-2.6064 38.76055,45.67804 193.70338,248.27587 152.19557,199.0056 191.77165,251.77183 189.57562,252.75841 -2.211,0.99329 -495.04783,130.8209 -512.68926,135.05731 -2.85484,0.68557 -4.74138,0.42764 -4.74138,-0.64824 z" id="path8311" style="fill:#ee3333;fill-opacity:1;stroke:#0000ff;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"/>
-      <path d="M 107.55632,747.19063 50.457464,642.16204 173.80551,430.20111 c 67.84142,-116.5785 123.55363,-211.75533 123.8049,-211.50405 0.32061,0.3206 -125.47354,599.87807 -132.33727,630.74323 -0.33988,1.52841 -26.31245,-44.48393 -57.71682,-102.24966 z" id="path8313" style="fill:#33ee33;fill-opacity:1;stroke:#0000ff;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"/>
+<g transform="matrix(0.18, 0.314, -0.3356, 0.9294, 167.7546, -103.8171)">
+  <g transform="translate(0,470)">
+    <!-- bottom row left-to-right #1/5 -->
+    <g transform="translate(83.33, -72.1687)">
+      <g transform="scale(0.95, 0.95)">
+        <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-blue)"/>
+      </g>
     </g>
-    <g transform="translate(0,-302.36218)" id="layer1" style="display:inline">
-      <path d="m 301.31528,361.21044 -252.148074,433.29337 0.09442,0" id="path6" style="fill:none;stroke:#1177aa;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
-      <path d="m 301.31528,361.21044 -136.25803,646.21536 0.0944,0" id="path9" style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
-      <path d="m 301.31528,361.21044 388.40612,508.07067 0.0944,0" id="path13" style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
-      <path d="m 49.167206,794.50381 115.890044,212.92199 0.0944,0" id="path16" style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
-      <path d="m 165.05725,1007.4258 524.66415,-138.14469 0.0944,0" id="path17" style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <!-- bottom row left-to-right #2/5 -->
+    <g transform="translate(166.66, -72.1687)">
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,57.169A10,10,-300,0,1,-8.66,57.17L-74.67,-57.17A10,10,60,0,1,-66.01,-72.17L66.01,-72.17A10,10,60,0,1,74.67,-57.17Z" fill="var(--color-yellow)"/>
+      </g>
     </g>
-  </g> -->
+    <!-- bottom row left-to-right #3/5 -->
+    <g transform="translate(250, -72.1687)">
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-red)"/>
+      </g>
+    </g>
+    <!-- bottom row left-to-right #4/5 -->
+    <g transform="translate(333.33, -72.1687)">
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,57.169A10,10,-300,0,1,-8.66,57.17L-74.67,-57.17A10,10,60,0,1,-66.01,-72.17L66.01,-72.17A10,10,60,0,1,74.67,-57.17Z" fill="var(--color-yellow)"/>
+      </g>
+    </g>
+    <!-- bottom row left-to-right #5/5 -->
+    <g transform="translate(416.66, -72.1687)">
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-blue)"/>
+      </g>
+    </g>
+    <!-- middle row left-to-right #1/3 -->
+    <g transform="translate(166.66, -216.5057)">
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-yellow)"/>
+      </g>
+    </g>
+    <!-- middle row left-to-right #2/3 -->
+    <g transform="translate(250, -216.5057)">
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,57.169A10,10,-300,0,1,-8.66,57.17L-74.67,-57.17A10,10,60,0,1,-66.01,-72.17L66.01,-72.17A10,10,60,0,1,74.67,-57.17Z" fill="var(--color-green)"/>
+      </g>
+    </g>
+    <!-- middle row left-to-right #3/3 -->
+    <g transform="translate(333.33, -216.5057)">
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-blue)"/>
+      </g>
+    </g>
+    <!-- top #1/1 -->
+    <g transform="translate(250, -360.8427)">
+      <g transform="scale(0.95, 0.95)">
+      <path d="M8.66,-57.17A10,10,-60,0,0,-8.66,-57.17L-74.67,57.17A10,10,-60,0,0,-66.01,72.17L66.01,72.17A10,10,-60,0,0,74.67,57.17Z" fill="var(--color-red)"/>
+      </g>
+    </g>
+  </g>
+  </g>
+
 
 </svg>
