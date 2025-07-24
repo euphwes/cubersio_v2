@@ -10,6 +10,15 @@
   </style>
 
   <g transform="translate(310, 310)">
-    <path d="M 0 -309.02 L 293.89 -95.11 L 181.64 250.37 L -181.64 250.37 L -293.89 -95.11 Z" style="fill:#999999;"/>
+    <!-- "frame" to figure out cubelets against. Delete or comment out below when done. -->
+    <path d="M 0 -309.02 L 293.89 -95.11 L 181.64 250.37 L -181.64 250.37 L -293.89 -95.11 Z"
+    style="fill:#999999;"/>
+    
+    <!-- Extended offset lines -->
+    <path d="M -750.24 -668.69 L 867.80 506.88" stroke="lightblue" fill="none"/>
+    <path d="M 404.12 -920.15 L -213.91 981.96" stroke="lightblue" fill="none"/>
+    <path d="M 1000.00 100.00 L -1000.00 100.00" stroke="lightblue" fill="none"/>
+    <path d="M 213.91 981.96 L -404.12 -920.15" stroke="lightblue" fill="none"/>
+    <path d="M -867.80 506.88 L 750.24 -668.69" stroke="lightblue" fill="none"/>
   </g>
 </svg>
