@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="620">
+  <style>
+    :root {
+      --color-red: #f45e5e;
+      --color-blue: #4591f5;
+      --color-green: #54fd64;
+      --color-yellow: #f0ff70;
+    }
+  </style>
+
+  <g transform="translate(310, 310)">
+    <path d="M 0 -309.02 L 293.89 -95.11 L 181.64 250.37 L -181.64 250.37 L -293.89 -95.11 Z" style="fill:#999999;"/>
+  </g>
+</svg>
