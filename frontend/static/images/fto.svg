@@ -8,7 +8,7 @@
       --color-yellow: #f0ff70;
       --color-orange: #f8b468;
       --color-white: #ffffff;
-      --color-purple: #811ba0ff;
+      --color-purple: #a25ccaff;
       --color-grey: #787579ff;
     }
   </style>

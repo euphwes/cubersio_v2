@@ -53,13 +53,12 @@ TODO
   </div>
   <hr />
   <div class="event-title">{eventName}</div>
-  <span class="event-summary">10.25</span>
 </div>
 
 <style>
   .event-card {
     text-align: center;
-    background-color: #444444;
+    background-color: #555555;
     margin: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -84,6 +83,7 @@ TODO
 
   .event-title {
     margin-top: 0.5rem;
+    color: #dfdfdf;
   }
 
   .event-image {
@@ -101,11 +101,4 @@ TODO
     height: 120px;
   }
 
-  .event-summary {
-    font-size: 0.75rem;
-    opacity: 0.66;
-    position: fixed;
-    right: 0.25rem;
-    bottom: 0.25rem;
-  }
 </style>
