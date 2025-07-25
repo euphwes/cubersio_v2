@@ -6,105 +6,70 @@
       --color-blue: #4591f5;
       --color-green: #54fd64;
       --color-yellow: #f0ff70;
+      --color-orange: #f8b468;
     }
   </style>
-
-
-
   <!-- corner unrounded path -->
   <!-- M 310 0 L 437 94 L 310 186 L 183 94 Z -->
-
   <!-- edge unrounded path -->
   <!-- M 438 95 L 475 122 L 427 271 L 311 187 Z -->
-
   <!-- center unrounded path -->
   <!-- M 310 187 L 427 272 L 382 409 L 238 409 L 193 272 Z -->
-   <g transform="translate(310, 310)">
-     <!-- "frame" to figure out cubelets against. Delete or comment out below when done. -->
-     <path d="M 0 -309.02 L 293.89 -95.11 L 181.64 250.37 L -181.64 250.37 L -293.89 -95.11 Z"
-    style="fill:#ffffff;"/>
- </g>
-  
+  <!-- 
+    This a "frame" (white outlined plain pentagon) to figure out cubelets against.
+    Delete or comment out below when done. 
+  -->
+  <g transform="translate(310, 310)">
+    <path d="M 0 -309.02 L 293.89 -95.11 L 181.64 250.37 L -181.64 250.37 L -293.89 -95.11 Z" style="fill:#ffffff;" />
+  </g>
+  <!--
+    These are the individual paths for each piece on the pentagonal face.
+    They have been "pre-transformed" so they are just a flat list of paths,
+    no groups with translations, rotations, or scale applied.
 
-<g>
-	 <!-- U corner -->
-	 <g transform="translate(31, 12) scale(0.9, 0.9)">
-		 <path d="M304.051,4.403A10,10,106.98545805623698,0,1,315.949,4.403L426.023,85.875A10,10,72.4271981078548,0,1,425.94,102.012L315.867,181.75A10,10,-251.83985427194656,0,1,304.133,181.75L194.06,102.012A10,10,72.4271981078548,0,1,193.977,85.875Z" fill="var(--color-blue)" />
-	 </g>
-	 <!-- UR edge -->
-	 <g transform="translate(40, 20) scale(0.9, 0.9)">
-		 <path d="M432.112,99.265A10,10,107.96073201454696,0,1,443.873,99.286L469.159,117.738A10,10,108.2631175921655,0,1,472.783,128.882L431.225,257.886A10,10,-288.05349982186345,0,1,415.841,262.919L322.183,195.098A10,10,71.82965021515096,0,1,322.181,178.9Z" fill="var(--color-red)" />
-	 </g>
-	 <!-- R corner -->
-	 <g transform="rotate(72, 310, 310) translate(31, 12) scale(0.9, 0.9)">
-		 <path d="M304.051,4.403A10,10,106.98545805623698,0,1,315.949,4.403L426.023,85.875A10,10,72.4271981078548,0,1,425.94,102.012L315.867,181.75A10,10,-251.83985427194656,0,1,304.133,181.75L194.06,102.012A10,10,72.4271981078548,0,1,193.977,85.875Z" fill="var(--color-blue)" />
-	 </g>
-	 <!-- DR edge -->
-	 <g transform="rotate(72, 310, 310) translate(40, 20) scale(0.9, 0.9)">
-		 <path d="M432.112,99.265A10,10,107.96073201454696,0,1,443.873,99.286L469.159,117.738A10,10,108.2631175921655,0,1,472.783,128.882L431.225,257.886A10,10,-288.05349982186345,0,1,415.841,262.919L322.183,195.098A10,10,71.82965021515096,0,1,322.181,178.9Z" fill="var(--color-red)" />
-	 </g>
-	 <!-- DR corner -->
-	 <g transform="rotate(144, 310, 310) translate(31, 12) scale(0.9, 0.9)">
-		 <path d="M304.051,4.403A10,10,106.98545805623698,0,1,315.949,4.403L426.023,85.875A10,10,72.4271981078548,0,1,425.94,102.012L315.867,181.75A10,10,-251.83985427194656,0,1,304.133,181.75L194.06,102.012A10,10,72.4271981078548,0,1,193.977,85.875Z" fill="var(--color-blue)" />
-	 </g>
-	 <!-- D edge -->
-	 <g transform="rotate(144, 310, 310) translate(40, 20) scale(0.9, 0.9)">
-		 <path d="M432.112,99.265A10,10,107.96073201454696,0,1,443.873,99.286L469.159,117.738A10,10,108.2631175921655,0,1,472.783,128.882L431.225,257.886A10,10,-288.05349982186345,0,1,415.841,262.919L322.183,195.098A10,10,71.82965021515096,0,1,322.181,178.9Z" fill="var(--color-red)" />
-	 </g>
-	 <!-- DL corner -->
-	 <g transform="rotate(216, 310, 310) translate(31, 12) scale(0.9, 0.9)">
-		 <path d="M304.051,4.403A10,10,106.98545805623698,0,1,315.949,4.403L426.023,85.875A10,10,72.4271981078548,0,1,425.94,102.012L315.867,181.75A10,10,-251.83985427194656,0,1,304.133,181.75L194.06,102.012A10,10,72.4271981078548,0,1,193.977,85.875Z" fill="var(--color-blue)" />
-	 </g>
-	 <!-- DL edge -->
-	 <g transform="rotate(216, 310, 310) translate(40, 20) scale(0.9, 0.9)">
-		 <path d="M432.112,99.265A10,10,107.96073201454696,0,1,443.873,99.286L469.159,117.738A10,10,108.2631175921655,0,1,472.783,128.882L431.225,257.886A10,10,-288.05349982186345,0,1,415.841,262.919L322.183,195.098A10,10,71.82965021515096,0,1,322.181,178.9Z" fill="var(--color-red)" />
-	 </g>
-	 <!-- L corner -->
-	 <g transform="rotate(288, 310, 310) translate(31, 12) scale(0.9, 0.9)">
-		 <path d="M304.051,4.403A10,10,106.98545805623698,0,1,315.949,4.403L426.023,85.875A10,10,72.4271981078548,0,1,425.94,102.012L315.867,181.75A10,10,-251.83985427194656,0,1,304.133,181.75L194.06,102.012A10,10,72.4271981078548,0,1,193.977,85.875Z" fill="var(--color-blue)" />
-	 </g>
-	 <!-- UL edge -->
-	 <g transform="rotate(288, 310, 310) translate(40, 20) scale(0.9, 0.9)">
-		 <path d="M432.112,99.265A10,10,107.96073201454696,0,1,443.873,99.286L469.159,117.738A10,10,108.2631175921655,0,1,472.783,128.882L431.225,257.886A10,10,-288.05349982186345,0,1,415.841,262.919L322.183,195.098A10,10,71.82965021515096,0,1,322.181,178.9Z" fill="var(--color-red)" />
-	 </g>
-	 <!-- center -->
-	 <g transform="translate(32, 32) scale(0.9, 0.9)">
-		 <path d="M301.184,193.405A15,15,108.00351024512261,0,1,318.816,193.405L418.153,265.573A15,15,107.81459172172563,0,1,423.587,282.389L385.389,398.681A15,15,-251.81634684428695,0,1,371.139,409L248.861,409A15,15,-251.81634684428695,0,1,234.611,398.681L196.413,282.389A15,15,107.81459172172563,0,1,201.847,265.573Z" fill="var(--color-green)" />
-	 </g>
- </g>
+    This allows us to pass the paths into some other util to perform a perspective
+    translation (which SVG doesn't natively support) and then get out another set
+    of paths which we can hardcode for each face of the isometric dodecahedron.
 
-    <!-- <g
-     id="layer1" transform="translate(-50, -70) scale(2,2)">
-    <g
-       style="opacity:0.89999998">
-      <g
-         transform="translate(2.142857,2.142857)"
-         id="g24289">
-        <path
-           d="M 156.74036,40.287001 L 87.692834,86.458152 L 29.251920,165.25005 L 54.505733,183.78994 L 145.74597,96.023963 L 156.74036,40.287001 z "
-           style="opacity:0.60000002;fill:#c6c8d2;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000"
-           id="path8253" />
-        <path
-           d="M 156.74035,40.526849 L 254.72515,64.622577 L 318.66063,131.26201 L 258.91369,161.24008 L 145.89391,95.728096 L 156.74035,40.526849 z "
-           style="opacity:0.60000002;fill:#c1c8f2;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000"
-           id="path8255" />
-        <path
-           d="M 29.134625,165.07149 L 54.505733,183.78994 L 107.18161,298.26369 L 102.81448,325.38987 L 58.041267,247.42955 L 29.134625,165.07149 z "
-           style="opacity:0.60000002;fill:#c8c8c8;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000"
-           id="path8257" />
-        <path
-           d="M 107.18161,298.26369 L 232.47115,287.83565 L 279.68310,311.75281 L 199.61056,331.59872 L 102.84513,325.35924 L 107.18161,298.26369 z "
-           style="opacity:0.60000002;fill:#c3c8e6;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000"
-           id="path8259" />
-        <path
-           d="M 258.58718,161.41865 L 318.80856,131.23138 L 325.55313,222.32368 L 279.76975,311.54361 L 232.68037,287.83565 L 258.58718,161.41865 z "
-           style="opacity:0.60000002;fill:#bec8ff;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000"
-           id="path8261" />
-        <path
-           d="M 146.10311,95.697458 L 258.79640,161.06151 L 232.61909,287.65708 L 107.36018,298.29432 L 54.505733,183.85122 L 146.10311,95.697458 z "
-           style="opacity:0.60000002;fill:#c4c8e1;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000"
-           id="path8263" />
+    These paths below have not yet been rounded (via svg-round-corners). I'll have to
+    do that after the perspective transformation since it's difficult to handle arcs.
+  -->
+  <g>
+    <!-- U corner -->
+    <path d="M 310.0,12.0 L 424.3,96.6 L 310.0,179.4 L 195.7,96.6 M 195.7,96.6 L 310.0,12.0" fill="var(--color-orange)" />
+    <!-- UR edge -->
+    <path d="M 434.2,105.5 L 467.5,129.8 L 424.3,263.9 L 319.9,188.3 M 319.9,188.3 L 434.2,105.5" fill="var(--color-orange)" />
+    <!-- R corner -->
+    <path d="M 593.4148418559557,217.91293567626565 L 548.2761030344423,352.76153321292225 L 434.20798102814706,269.64238053463185 L 477.6348181203292,135.35001358785016 M 477.6348181203292,135.35001358785019 L 593.4148418559557,217.91293567626565" fill="var(--color-orange)" />
+    <!-- DR edge -->
+    <path d="M 542.8709682837274,364.9272439741813 L 530.0505608504409,404.10653893012113 L 389.1643478582631,404.46007637185096 L 428.80284627743214,281.8080912958909 M 428.8028462774322,281.80809129589096 L 542.8709682837274,364.92724397418135" fill="var(--color-orange)" />
+    <!-- DR corner -->
+    <path d="M 485.16000518315707,551.0870643237342 L 342.9627303821573,549.8280809366435 L 386.764753949397,415.6576194653681 L 527.9040152962702,415.46037226258403 M 527.9040152962702,415.4603722625841 L 485.16000518315707,551.0870643237342" fill="var(--color-orange)" />
+    <!-- D edge -->
+    <path d="M 329.7221733924423,548.4469036844018 L 288.4987258490495,548.3610396224301 L 244.62625767362653,414.47953777771477 L 373.524196959682,414.27644221312653 M 373.524196959682,414.2764422131266 L 329.7221733924423,548.446903684402" fill="var(--color-orange)" />
+    <!-- DL corner -->
+    <path d="M 134.83999481684305,551.0870643237344 L 92.09598470372975,415.4603722625841 L 233.23524605060302,415.65761946536816 L 277.03726961784275,549.8280809366435 L 134.83999481684305,551.0870643237344" fill="var(--color-orange)" />
+    <!-- DL edge -->
+    <path d="M 89.31800520482079,402.4410470149516 L 76.66092092284214,363.208685150301 L 190.43245741226048,280.1118291036554 L 230.4572665516941,402.6382942177356 M 230.45726655169403,402.6382942177356 L 89.31800520482074,402.44104701495155" fill="var(--color-orange)" />
+    <!-- L corner -->
+    <path d="M 26.585158144044215,217.91293567626573 L 142.3651818796707,135.35001358785019 L 185.79201897185294,269.6423805346319 L 71.72389696555777,352.76153321292236 M 71.72389696555777,352.7615332129223 L 26.585158144044215,217.91293567626573" fill="var(--color-orange)" />
+    <!-- UL edge -->
+    <path d="M 153.88885311900953,128.6848053264652 L 187.2897923776675,104.52373629714779 L 301.4769370558499,187.04855674677884 L 197.3156902111918,262.97717227324694 M 197.3156902111918,262.9771722732469 L 153.88885311900955,128.68480532646515" fill="var(--color-orange)" />
+    <!-- center -->
+    <path d="M 311.0,200.3 L 416.3,276.8 L 375.8,400.1 L 246.2,400.1 L 205.7,276.8 L 311.0,200.3" fill="var(--color-orange)" />
+  </g>
+  <!--
+  <g id="layer1" transform="translate(-50, -70) scale(2,2)">
+    <g style="opacity:0.89999998">
+      <g transform="translate(2.142857,2.142857)" id="g24289">
+        <path d="M 156.74036,40.287001 L 87.692834,86.458152 L 29.251920,165.25005 L 54.505733,183.78994 L 145.74597,96.023963 L 156.74036,40.287001 z " style="opacity:0.60000002;fill:#c6c8d2;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000" id="path8253" />
+        <path d="M 156.74035,40.526849 L 254.72515,64.622577 L 318.66063,131.26201 L 258.91369,161.24008 L 145.89391,95.728096 L 156.74035,40.526849 z " style="opacity:0.60000002;fill:#c1c8f2;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000" id="path8255" />
+        <path d="M 29.134625,165.07149 L 54.505733,183.78994 L 107.18161,298.26369 L 102.81448,325.38987 L 58.041267,247.42955 L 29.134625,165.07149 z " style="opacity:0.60000002;fill:#c8c8c8;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000" id="path8257" />
+        <path d="M 107.18161,298.26369 L 232.47115,287.83565 L 279.68310,311.75281 L 199.61056,331.59872 L 102.84513,325.35924 L 107.18161,298.26369 z " style="opacity:0.60000002;fill:#c3c8e6;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000" id="path8259" />
+        <path d="M 258.58718,161.41865 L 318.80856,131.23138 L 325.55313,222.32368 L 279.76975,311.54361 L 232.68037,287.83565 L 258.58718,161.41865 z " style="opacity:0.60000002;fill:#bec8ff;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000" id="path8261" />
+        <path d="M 146.10311,95.697458 L 258.79640,161.06151 L 232.61909,287.65708 L 107.36018,298.29432 L 54.505733,183.85122 L 146.10311,95.697458 z " style="opacity:0.60000002;fill:#c4c8e1;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1.0000000" id="path8263" />
       </g>
     </g>
-  </g> -->
+  </g>
+  -->
 </svg>
