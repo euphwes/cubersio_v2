@@ -3,17 +3,17 @@
   <style>
     :root {
       --color-red: #f45e5e;
-      --color-pink: #eca1dcff;
+      --color-pink: #fa3e86ff;
       --color-blue: #4591f5;
-      --color-green: #176e1fff;
+      --color-lightblue: #68f5ffff;
+      --color-green: #35d345ff;
+      --color-lightgreen: #a1ffabff;
       --color-yellow: #f0ff70;
-      --color-orange: #e4953bff;
+      --color-orange: #f8b468;
       --color-white: #ffffff;
+      --color-tan: #ffe1a9ff;
       --color-purple: #a25ccaff;
-      --color-grey: #999999ff;
-      --color-lightblue: #66c6ecff;
-      --color-lightgreen: #92fa56ff;
-      --color-tan: #fae19bff;
+      --color-grey: #787579ff;
     }
   </style>
   <!-- corner unrounded path -->
