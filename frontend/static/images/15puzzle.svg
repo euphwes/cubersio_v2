@@ -14,6 +14,7 @@
       --body-tan: #c4a284;
       --body-inset: #615345;
       --body-print: #3e3935;
+      --innard: #555555;
     }
   </style>
 

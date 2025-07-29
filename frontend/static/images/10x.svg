@@ -9,10 +9,13 @@
       --color-green: #54fd64;
       --color-yellow: #f0ff70;
       --color-orange: #f8b468;
+      --innard: #555555;
     }
   </style>
 
-  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)">
+  <path d="M 250 20 L 450 135 L 450 370 L 250 475 L 50 370 L 50 135 Z" fill="var(--innard)"/>
+
+  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" stroke="var(--innard)">
     <rect x="0" y="0" width="18" height="18" rx="2" ry="2" fill="var(--color-blue)" />
     <rect x="20.22" y="0" width="18" height="18" rx="2" ry="2" fill="var(--color-red)" />
     <rect x="40.44" y="0" width="18" height="18" rx="2" ry="2" fill="var(--color-blue)" />
@@ -124,7 +127,7 @@
     <rect x="181.98" y="181.98" width="18" height="18" rx="2" ry="2" fill="var(--color-yellow)" />
   </g>
 
-  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)">
+  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)" stroke="var(--innard)">
     <rect x="0" y="0" width="18" height="18" rx="2" ry="2" fill="var(--color-green)" />
     <rect x="20.22" y="0" width="18" height="18" rx="2" ry="2" fill="var(--color-green)" />
     <rect x="40.44" y="0" width="18" height="18" rx="2" ry="2" fill="var(--color-white)" />
@@ -236,7 +239,7 @@
     <rect x="181.98" y="181.98" width="18" height="18" rx="2" ry="2" fill="var(--color-red)" />
   </g>
 
-  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)">
+  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" stroke="var(--innard)">
     <rect x="0" y="0" width="18" height="18" rx="2" ry="2" fill="var(--color-red)" />
     <rect x="20.22" y="0" width="18" height="18" rx="2" ry="2" fill="var(--color-white)" />
     <rect x="40.44" y="0" width="18" height="18" rx="2" ry="2" fill="var(--color-orange)" />

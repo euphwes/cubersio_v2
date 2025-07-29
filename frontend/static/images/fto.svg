@@ -10,8 +10,12 @@
       --color-white: #ffffff;
       --color-purple: #a25ccaff;
       --color-grey: #787579ff;
+      --innard: #555555;
     }
   </style>
+
+  <path d="M 250 25 L 480 270 L 250 475 L 23 233 Z" fill="var(--innard)"/>
+
   <!-- side length 166.66 (=500/3)-->
   <!-- base unrounded paths, followed by rounded, for a single triangle cubelet -->
   <!-- pointing up -->
@@ -21,7 +25,7 @@
   <!-- M 0 72.1687 L -83.333 -72.1687 L 83.333 -72.1687 Z -->
   <!-- M8.66,57.169A10,10,-300,0,1,-8.66,57.17L-74.67,-57.17A10,10,60,0,1,-66.01,-72.17L66.01,-72.17A10,10,60,0,1,74.67,-57.17Z -->
   <!-- UR face -->
-  <g transform="matrix(0.6, -0.11, 0.2037, 0.6516, 94.2593, 18.7384)">
+  <g transform="matrix(0.6, -0.11, 0.2037, 0.6516, 94.2593, 18.7384)" stroke="var(--innard)">
     <g transform="translate(0,470)">
       <!-- bottom row left-to-right #1/5 -->
       <g transform="translate(83.33, -72.1687)">
@@ -80,7 +84,7 @@
     </g>
   </g>
   <!-- DR face -->
-  <g transform="matrix(0.124, 0.318, -0.6227, 0.3113, 482.662, 178.6689)">
+  <g transform="matrix(0.124, 0.318, -0.6227, 0.3113, 482.662, 178.6689)" stroke="var(--innard)">
     <g transform="translate(0,470)">
       <!-- bottom row left-to-right #1/5 -->
       <g transform="translate(83.33, -72.1687)">
@@ -139,7 +143,7 @@
     </g>
   </g>
   <!-- DL face -->
-  <g transform="matrix(-0.124, -0.318, 0.4769, 0.4039, 27.8796, 294.1505)">
+  <g transform="matrix(-0.124, -0.318, 0.4769, 0.4039, 27.8796, 294.1505)" stroke="var(--innard)">
     <g transform="translate(0,470)">
       <!-- bottom row left-to-right #1/5 -->
       <g transform="translate(83.33, -72.1687)">
@@ -198,7 +202,7 @@
     </g>
   </g>
   <!-- UL face -->
-  <g transform="matrix(0.35, 0.19, -0.3461, 0.6053, 177.6505, -54.5023)">
+  <g transform="matrix(0.35, 0.19, -0.3461, 0.6053, 177.6505, -54.5023)" stroke="var(--innard)">
     <g transform="translate(0,470)">
       <!-- bottom row left-to-right #1/5 -->
       <g transform="translate(83.33, -72.1687)">

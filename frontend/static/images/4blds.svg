@@ -9,76 +9,79 @@
       --color-green: #54fd64;
       --color-yellow: #f0ff70;
       --color-orange: #f8b468;
+      --innard: #555555;
     }
   </style>
 
-  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" fill="var(--color-white)">
-    <rect x="0" y="0" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="0" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="0" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="0" width="46.25" height="46.25" rx="6" ry="6" />
+  <path d="M 250 20 L 450 135 L 450 370 L 250 475 L 50 370 L 50 135 Z" fill="var(--innard)"/>
 
-    <rect x="0" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
+  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" fill="var(--color-white)" stroke="var(--innard)">
+    <rect x="0" y="0" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="0" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="0" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="0" width="48.5" height="48.5" rx="6" ry="6" />
 
-    <rect x="0" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
+    <rect x="0" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
 
-    <rect x="0" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
+    <rect x="0" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
+
+    <rect x="0" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
   </g>
 
-  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)" fill="var(--color-green)">
-    <rect x="0" y="0" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="0" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="0" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="0" width="46.25" height="46.25" rx="6" ry="6" />
+  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)" fill="var(--color-green)" stroke="var(--innard)">
+    <rect x="0" y="0" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="0" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="0" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="0" width="48.5" height="48.5" rx="6" ry="6" />
 
-    <rect x="0" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
+    <rect x="0" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
 
-    <rect x="0" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
+    <rect x="0" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
 
-    <rect x="0" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
+    <rect x="0" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
   </g>
 
-  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" fill="var(--color-red)">
-    <rect x="0" y="0" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="0" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="0" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="0" width="46.25" height="46.25" rx="6" ry="6" />
+  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" fill="var(--color-red)" stroke="var(--innard)">
+    <rect x="0" y="0" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="0" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="0" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="0" width="48.5" height="48.5" rx="6" ry="6" />
 
-    <rect x="0" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="51.25" width="46.25" height="46.25" rx="6" ry="6" />
+    <rect x="0" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="51.25" width="48.5" height="48.5" rx="6" ry="6" />
 
-    <rect x="0" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="102.5" width="46.25" height="46.25" rx="6" ry="6" />
+    <rect x="0" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="102.5" width="48.5" height="48.5" rx="6" ry="6" />
 
-    <rect x="0" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="51.25" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="102.5" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
-    <rect x="153.75" y="153.75" width="46.25" height="46.25" rx="6" ry="6" />
+    <rect x="0" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="51.25" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="102.5" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
+    <rect x="153.75" y="153.75" width="48.5" height="48.5" rx="6" ry="6" />
   </g>
 
-  <g transform="scale(0.75) translate(75 35)" fill="#444444">
+  <g transform="scale(0.75) translate(75 35)" fill="#555555">
     <path d="M47.557,266.837c-8.92-16.947-16.25-37.444-10.906-51.562c3.936-10.399,15.91-17.467,35.587-21.007
 				c38.154-6.862,80.698-3.379,118.233-0.308c49.438,4.049,88.49,7.245,107.681-14.106c9.084-10.106,12.063-23.776,8.856-40.639
 				c-1.699-8.931,0.54-14.173,7.726-18.094c11.745-6.408,33.016-6.97,55.51-1.469c26.255,6.421,51.089,19.814,69.928,37.716

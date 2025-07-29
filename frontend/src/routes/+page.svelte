@@ -1,14 +1,34 @@
-<script>
+<script lang="ts">
   import '../app.css';
-  import EventCard from '$lib/EventCard.svelte';
+  import EventCardList from '$lib/EventCardList.svelte';
+  import TwoColumnLayout from '$lib/TwoColumnLayout.svelte';
+  import HubLandingInfo from '$lib/HubLandingInfo.svelte';
+  import type { EventSlug } from '$lib/types.js';
 
-  export let data;
+  const {
+    data
+  }: {
+    data: {
+      events: EventSlug[];
+    };
+  } = $props();
+
+  let selectedEventSlug = $state<EventSlug | undefined>(undefined);
+  function handleEventSelect(slug: EventSlug) {
+    selectedEventSlug = slug;
+  }
 </script>
 
-<div class="app-container">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-    {#each data.events as event}
-      <EventCard eventSlug={event} />
-    {/each}
-  </div>
-</div>
+<TwoColumnLayout>
+  <svelte:fragment slot="left">
+    <EventCardList
+      events={data.events}
+      eventSelectionSetter={handleEventSelect}
+      {selectedEventSlug}
+    />
+  </svelte:fragment>
+
+  <svelte:fragment slot="right">
+    <HubLandingInfo {selectedEventSlug} competitionTitle={'July 2025 Week 4'} />
+  </svelte:fragment>
+</TwoColumnLayout>

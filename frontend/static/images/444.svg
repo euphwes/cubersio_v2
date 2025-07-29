@@ -9,72 +9,75 @@
       --color-green: #54fd64;
       --color-yellow: #f0ff70;
       --color-orange: #f8b468;
+      --innard: #555555;
     }
   </style>
 
-  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)">
-    <rect x="0" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-orange)" />
-    <rect x="51.25" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-orange)" />
-    <rect x="102.5" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-green)" />
-    <rect x="153.75" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-yellow)" />
+  <path d="M 250 20 L 450 135 L 450 370 L 250 475 L 50 370 L 50 135 Z" fill="var(--innard)"/>
 
-    <rect x="0" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-white)" />
-    <rect x="51.25" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-blue)" />
-    <rect x="102.5" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-red)" />
-    <rect x="153.75" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-green)" />
+  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" stroke="var(--innard)">
+    <rect x="0" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-orange)" />
+    <rect x="51.25" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-orange)" />
+    <rect x="102.5" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-green)" />
+    <rect x="153.75" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-yellow)" />
 
-    <rect x="0" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-red)" />
-    <rect x="51.25" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-red)" />
-    <rect x="102.5" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-white)" />
-    <rect x="153.75" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-orange)" />
+    <rect x="0" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-white)" />
+    <rect x="51.25" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-blue)" />
+    <rect x="102.5" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="153.75" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-green)" />
 
-    <rect x="0" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-green)" />
-    <rect x="51.25" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-yellow)" />
-    <rect x="102.5" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-yellow)" />
-    <rect x="153.75" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-blue)" />
+    <rect x="0" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="51.25" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="102.5" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-white)" />
+    <rect x="153.75" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-orange)" />
+
+    <rect x="0" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-green)" />
+    <rect x="51.25" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-yellow)" />
+    <rect x="102.5" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-yellow)" />
+    <rect x="153.75" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-blue)" />
   </g>
 
-  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)">
-    <rect x="0" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-orange)" />
-    <rect x="51.25" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-orange)" />
-    <rect x="102.5" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-orange)" />
-    <rect x="153.75" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-red)" />
+  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)" stroke="var(--innard)">
+    <rect x="0" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-orange)" />
+    <rect x="51.25" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-orange)" />
+    <rect x="102.5" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-orange)" />
+    <rect x="153.75" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-red)" />
 
-    <rect x="0" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-red)" />
-    <rect x="51.25" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-red)" />
-    <rect x="102.5" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-orange)" />
-    <rect x="153.75" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-blue)" />
+    <rect x="0" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="51.25" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="102.5" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-orange)" />
+    <rect x="153.75" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-blue)" />
 
-    <rect x="0" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-white)" />
-    <rect x="51.25" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-blue)" />
-    <rect x="102.5" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-white)" />
-    <rect x="153.75" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-blue)" />
+    <rect x="0" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-white)" />
+    <rect x="51.25" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-blue)" />
+    <rect x="102.5" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-white)" />
+    <rect x="153.75" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-blue)" />
 
-    <rect x="0" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-green)" />
-    <rect x="51.25" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-white)" />
-    <rect x="102.5" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-white)" />
-    <rect x="153.75" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-orange)" />
+    <rect x="0" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-green)" />
+    <rect x="51.25" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-white)" />
+    <rect x="102.5" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-white)" />
+    <rect x="153.75" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-orange)" />
   </g>
 
-  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)">
-    <rect x="0" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-yellow)" />
-    <rect x="51.25" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-blue)" />
-    <rect x="102.5" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-red)" />
-    <rect x="153.75" y="0" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-red)" />
+  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" stroke="var(--innard)">
+    <rect x="0" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-yellow)" />
+    <rect x="51.25" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-blue)" />
+    <rect x="102.5" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="153.75" y="0" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-red)" />
 
-    <rect x="0" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-yellow)" />
-    <rect x="51.25" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-white)" />
-    <rect x="102.5" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-white)" />
-    <rect x="153.75" y="51.25" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-yellow)" />
+    <rect x="0" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-yellow)" />
+    <rect x="51.25" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-white)" />
+    <rect x="102.5" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-white)" />
+    <rect x="153.75" y="51.25" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-yellow)" />
 
-    <rect x="0" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-red)" />
-    <rect x="51.25" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-green)" />
-    <rect x="102.5" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-blue)" />
-    <rect x="153.75" y="102.5" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-orange)" />
+    <rect x="0" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-red)" />
+    <rect x="51.25" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-green)" />
+    <rect x="102.5" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-blue)" />
+    <rect x="153.75" y="102.5" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-orange)" />
 
-    <rect x="0" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-yellow)" />
-    <rect x="51.25" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-yellow)" />
-    <rect x="102.5" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-green)" />
-    <rect x="153.75" y="153.75" width="46.25" height="46.25" rx="6" ry="6" fill="var(--color-white)" />
+    <rect x="0" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-yellow)" />
+    <rect x="51.25" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-yellow)" />
+    <rect x="102.5" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-green)" />
+    <rect x="153.75" y="153.75" width="48.5" height="48.5" rx="6" ry="6" fill="var(--color-white)" />
   </g>
 </svg>

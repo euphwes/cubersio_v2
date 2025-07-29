@@ -1,398 +1,407 @@
 <?xml version="1.0"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520">
   <style>
     :root {
-      --color-red: #f45e5e;
-      --clock-body: #dddddd;
-      --clock-face: #444444;
-      --pin-down: #375fa5;
-      --pin-up: #87a1ce;
+    --color-red: #f45e5e;
+    --clock-body: #dddddd;
+    --clock-face: #444444;
+    --pin-down: #375fa5;
+    --pin-up: #87a1ce;
+    --innard: #375fa5;
     }
   </style>
 
-  <!-- STATIC "frame" of the clock -->
-  <circle cx="250" cy="250" r="250" fill="var(--clock-body)" />
-  <circle cx="100" cy="100" r="75" fill="var(--clock-body)" />
-  <circle cx="100" cy="400" r="75" fill="var(--clock-body)" />
-  <circle cx="400" cy="100" r="75" fill="var(--clock-body)" />
-  <circle cx="400" cy="400" r="75" fill="var(--clock-body)" />
+  <g transform="translate(10 10)">
+    <!-- Backdrop outline behind frame -->
+    <circle cx="250" cy="250" r="253" fill="var(--innard)" />
+    <circle cx="100" cy="100" r="78" fill="var(--innard)" />
+    <circle cx="100" cy="400" r="78" fill="var(--innard)" />
+    <circle cx="400" cy="100" r="78" fill="var(--innard)" />
+    <circle cx="400" cy="400" r="78" fill="var(--innard)" />
 
-  <!-- push button things -->
-  <circle cx="175" cy="175" r="15" fill="var(--pin-down)" />
-  <circle cx="325" cy="175" r="15" fill="var(--pin-up)" />
-  <circle cx="175" cy="325" r="15" fill="var(--pin-up)" />
-  <circle cx="325" cy="325" r="15" fill="var(--pin-down)" />
+    <!-- STATIC "frame" of the clock -->
+    <circle cx="250" cy="250" r="250" fill="var(--clock-body)" />
+    <circle cx="100" cy="100" r="75" fill="var(--clock-body)" />
+    <circle cx="100" cy="400" r="75" fill="var(--clock-body)" />
+    <circle cx="400" cy="100" r="75" fill="var(--clock-body)" />
+    <circle cx="400" cy="400" r="75" fill="var(--clock-body)" />
 
-  <!-- clock faces from left to right, top to bottom -->
-  <!-- STATIC except for hands on clock in different directions-->
-  <g transform="translate(100 100)">
-    <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
-    <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
-    <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <g transform="rotate(90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+    <!-- push button things -->
+    <circle cx="175" cy="175" r="15" fill="var(--pin-down)" />
+    <circle cx="325" cy="175" r="15" fill="var(--pin-up)" />
+    <circle cx="175" cy="325" r="15" fill="var(--pin-up)" />
+    <circle cx="325" cy="325" r="15" fill="var(--pin-down)" />
+
+    <!-- clock faces from left to right, top to bottom -->
+    <!-- STATIC except for hands on clock in different directions-->
+    <g transform="translate(100 100)">
+      <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
+      <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
+      <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <g transform="rotate(90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(180)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+        <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
+      </g>
     </g>
-    <g transform="rotate(180)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+
+    <g transform="translate(250 100)">
+      <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
+      <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
+      <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <g transform="rotate(90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(180)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+        <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
+      </g>
+      <g transform="rotate(120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
     </g>
-    <g transform="rotate(-90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+
+    <g transform="translate(400 100)">
+      <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
+      <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
+      <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <g transform="rotate(90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(180)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+        <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
+      </g>
+      <g transform="rotate(-120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
     </g>
-    <g transform="rotate(30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+
+    <g transform="translate(100 250)">
+      <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
+      <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
+      <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <g transform="rotate(90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(180)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+        <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
+      </g>
+      <g transform="rotate(-90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
     </g>
-    <g transform="rotate(60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+
+    <g transform="translate(250 250)">
+      <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
+      <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
+      <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <g transform="rotate(90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(180)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+        <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
+      </g>
+      <g transform="rotate(60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
     </g>
-    <g transform="rotate(120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+
+    <g transform="translate(400 250)">
+      <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
+      <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
+      <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <g transform="rotate(90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(180)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
       <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
     </g>
-  </g>
 
-  <g transform="translate(250 100)">
-    <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
-    <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
-    <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <g transform="rotate(90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+    <g transform="translate(100 400)">
+      <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
+      <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
+      <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <g transform="rotate(90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(180)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+        <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
+      </g>
+      <g transform="rotate(-30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
     </g>
-    <g transform="rotate(180)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-      <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
-    </g>
-    <g transform="rotate(120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-  </g>
 
-  <g transform="translate(400 100)">
-    <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
-    <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
-    <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <g transform="rotate(90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+    <g transform="translate(250 400)">
+      <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
+      <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
+      <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <g transform="rotate(90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+        <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
+      </g>
+      <g transform="rotate(180)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
     </g>
-    <g transform="rotate(180)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-      <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
-    </g>
-    <g transform="rotate(-120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-  </g>
 
-  <g transform="translate(100 250)">
-    <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
-    <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
-    <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <g transform="rotate(90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(180)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-      <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
-    </g>
-    <g transform="rotate(-90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-  </g>
-
-  <g transform="translate(250 250)">
-    <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
-    <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
-    <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <g transform="rotate(90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(180)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-      <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
-    </g>
-    <g transform="rotate(60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+    <g transform="translate(400 400)">
+      <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
+      <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
+      <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
+      <g transform="rotate(90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(180)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-90)">
+        <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+        <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
+      </g>
+      <g transform="rotate(60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-30)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-60)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-120)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
+      <g transform="rotate(-150)">
+        <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
+      </g>
     </g>
   </g>
-
-  <g transform="translate(400 250)">
-    <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
-    <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
-    <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <g transform="rotate(90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(180)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
-  </g>
-
-  <g transform="translate(100 400)">
-    <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
-    <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
-    <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <g transform="rotate(90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(180)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-      <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
-    </g>
-    <g transform="rotate(-30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-  </g>
-
-  <g transform="translate(250 400)">
-    <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
-    <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
-    <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <g transform="rotate(90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-      <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
-    </g>
-    <g transform="rotate(180)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-  </g>
-
-  <g transform="translate(400 400)">
-    <circle cx="0" cy="0" r="55" fill="var(--clock-face)" />
-    <circle cx="0" cy="0" r="5" fill="var(--clock-body)" />
-    <rect x="-4.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <rect x="1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--color-red)" />
-    <g transform="rotate(90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(180)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-90)">
-      <rect x="-1.5" y="-70" width="3" height="12" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-      <path d="M 0 0 L 6 -20 L 0 -50 L -6 -20 L 0 0" fill="var(--clock-body)" />
-    </g>
-    <g transform="rotate(60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-30)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-60)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-120)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-    <g transform="rotate(-150)">
-      <rect x="-1.5" y="-65" width="3" height="6" rx="2" ry="2" fill="var(--clock-face)" />
-    </g>
-  </g>
-
 </svg>

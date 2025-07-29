@@ -2,54 +2,71 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/*
+Color schemes to look into:
+
+https://www.canva.com/colors/color-palettes/northern-lights-3/
+https://www.canva.com/colors/color-palettes/halloween-lite/
+*/
+
+/* Default theme */
 :root {
-  --white: rgb(255, 255, 255);
-  --dusty-blue: rgb(106, 146, 178);
-  --dusty-green: rgb(124, 178, 120);
-  --dusty-orange: rgba(255, 178, 114, 0.8);
-  --dusty-yellow: rgba(255, 221, 122, 0.8);
-  --dusty-red: rgba(204, 94, 94, 0.8);
+  --dark-grey: #333333;
+  --med-grey: #555555;
 
-  --dark-grey: rgb(51, 51, 51);
-
-  --spooky-grey: rgb(219, 219, 219);
-  --dusty-purple: rgba(139, 112, 183, 0.8);
-  --olive-green: rgba(128, 128, 0, 0.8);
-  --stark-orange: rgba(255, 101, 0, 0.8);
-
-  /* Default theme */
-  --primary-color: var(--dusty-blue);
-  --secondary-color: var(--white);
-  --accent-color: var(--dusty-green);
+  --primary-color: #1A3C5E;
+  --secondary-color: #278AB0;
+  --accent-color: #9bd3c2;
+  --surface-color: #e8e8e2;
+  --surface-color-dark: #d5d5cd;
+  --text-color-dark: #1A3C5E;
+  --text-color-light: #e8e8e2;
 }
 
 .halloween-theme {
-  --primary-color: var(--dusty-purple);
-  --secondary-color: var(--spooky-grey);
-  --accent-color: var(--stark-orange);
+  --primary-color: #39243b;
+  --secondary-color: #b84901;
+  --accent-color: #a3ac88;
+  --surface-color: #d3ab8a;
+  --surface-color-dark: #af8b6e;
+  --text-color-dark: #39243b;
+  --text-color-light: #EAEAE0;
 }
 
-.bg-cubersio-primary {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent body scroll */
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-color);
+}
+
+.app-navbar {
+  color: var(--text-color-light);
   background-color: var(--primary-color);
-}
-.bg-cubersio-secondary {
-  background-color: var(--secondary-color);
-}
-.bg-cubersio-accent {
-  background-color: var(--accent-color);
-}
-.bg-dark-grey {
-  background-color: var(--dark-grey);
+  height: 64px;
+  flex-shrink: 0;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.15),
+    0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .app-container {
+  flex: 1;
+  overflow-y: auto;
   width: 100%;
   padding-right: 2rem;
   padding-left: 2rem;
   margin-right: auto;
   margin-left: auto;
   margin-top: 1rem;
-  box-sizing: border-box;
 }
 
 @media (min-width: 576px) {
@@ -80,8 +97,4 @@
   .app-container {
     max-width: 1320px;
   }
-}
-
-.bg-gradient {
-  background: linear-gradient(to bottom, var(--primary-color), var(--white));
 }

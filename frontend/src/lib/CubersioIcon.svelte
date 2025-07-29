@@ -13,15 +13,15 @@ the cube face.
   // This is the starting arrangement of stickers on the cube,
   // which is also what the cube returns to once scrambling stops.
   let originalStickerState = [
-    'bg-cubersio-primary',
-    'bg-cubersio-primary',
-    'bg-cubersio-secondary',
-    'bg-cubersio-primary',
-    'bg-cubersio-secondary',
-    'bg-cubersio-accent',
-    'bg-cubersio-secondary',
-    'bg-cubersio-accent',
-    'bg-cubersio-accent'
+    'bg-primary',
+    'bg-primary',
+    'bg-white',
+    'bg-primary',
+    'bg-white',
+    'bg-accent',
+    'bg-white',
+    'bg-accent',
+    'bg-accent'
   ];
 
   let currentlyScrambling = $state(false);
@@ -72,28 +72,27 @@ the cube face.
 
 <style>
   .cube {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
     display: inline-grid;
     grid-template-rows: repeat(3, 12px);
     grid-template-columns: repeat(3, 12px);
     gap: 2px;
     line-height: 0;
+    padding: 3px;
   }
   .cube div {
     width: 12px;
     height: 12px;
   }
-  .cube > :nth-child(1) {
-    border-top-left-radius: 4px;
+
+  .bg-white {
+    background-color: white;
   }
-  .cube > :nth-child(3) {
-    border-top-right-radius: 4px;
+  .bg-primary {
+    background-color: var(--secondary-color);
   }
-  .cube > :nth-child(7) {
-    border-bottom-left-radius: 4px;
-  }
-  .cube > :nth-child(9) {
-    border-bottom-right-radius: 4px;
+  .bg-accent {
+    background-color: var(--accent-color);
   }
 </style>

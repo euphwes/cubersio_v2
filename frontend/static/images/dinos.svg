@@ -9,10 +9,13 @@
       --color-green: #54fd64;
       --color-yellow: #f0ff70;
       --color-orange: #f8b468;
+      --innard: #555555;
     }
   </style>
 
-  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" fill="var(--color-white)">
+  <path d="M 250 20 L 450 135 L 450 370 L 250 475 L 50 370 L 50 135 Z" fill="var(--innard)"/>
+
+  <g transform="translate(25 82.5) scale(1.41, .81) rotate(45) translate(50 -175)" fill="var(--color-white)" stroke="var(--innard)">
     <!-- commands in comments below are paths on a 200x200 canvas, before rounding -->
 
     <!-- M 5 0 L 195 0 L 100 95 Z -->
@@ -33,7 +36,7 @@
   </g>
 
 
-  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)" fill="var(--color-green)">
+  <g transform="translate(42.5 37.5) skewY(30) translate(0 100) scale(1 1.14)" fill="var(--color-green)" stroke="var(--innard)">
     <path
       d="M10.121,5.121A3,3,45,0,1,12.243,0L187.757,0A3,3,45,0,1,189.879,5.121L102.121,92.879A3,3,-270,0,1,97.879,92.879Z" />
     <path
@@ -44,7 +47,7 @@
       d="M5.121,189.879A3,3,45,0,1,0,187.757L0,12.243A3,3,45,0,1,5.121,10.121L92.879,97.879A3,3,90,0,1,92.879,102.121Z" />
   </g>
 
-  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" fill="var(--color-red)">
+  <g transform="translate(32.5 26) skewY(-30) translate(225 357.5) scale(1 1.14)" fill="var(--color-red)" stroke="var(--innard)">
     <path
       d="M10.121,5.121A3,3,45,0,1,12.243,0L187.757,0A3,3,45,0,1,189.879,5.121L102.121,92.879A3,3,-270,0,1,97.879,92.879Z" />
     <path
