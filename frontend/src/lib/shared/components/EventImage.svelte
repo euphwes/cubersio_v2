@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getImagePath } from './util/event_utils.js';
+  import { getImagePath } from '$lib/util/event_utils.js';
 
   const { eventSlug, solved = false } = $props<{
     solved: boolean;

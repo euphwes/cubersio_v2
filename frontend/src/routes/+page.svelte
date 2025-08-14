@@ -1,8 +1,7 @@
 <script lang="ts">
-  import '../app.css';
-  import EventCardList from '$lib/EventCardList.svelte';
+  import EventCardList from '$lib/competition/components/EventCardList.svelte';
   import TwoColumnLayout from '$lib/TwoColumnLayout.svelte';
-  import HubLandingInfo from '$lib/HubLandingInfo.svelte';
+  import HubLandingInfo from '$lib/competition/components/HubLandingInfo.svelte';
   import type { EventSlug } from '$lib/types.js';
 
   const {
@@ -20,6 +19,10 @@
 </script>
 
 <TwoColumnLayout>
+  <svelte:fragment slot="banner">
+    <h1>Hello</h1>
+  </svelte:fragment>
+
   <svelte:fragment slot="left">
     <EventCardList
       events={data.events}

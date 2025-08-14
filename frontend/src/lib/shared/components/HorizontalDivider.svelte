@@ -2,9 +2,6 @@
  
 TODO 
 -->
-<script lang="ts">
-  import '../app.css';
-</script>
 
 <hr class="divider" />
 

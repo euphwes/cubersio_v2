@@ -1,6 +1,6 @@
 <script lang="ts">
-  import '../app.css';
-  import CubersioIcon from '$lib/CubersioIcon.svelte';
+  import '$lib/../app.css';
+  import CubersioIcon from '$lib/shared/components/CubersioIcon.svelte';
 
   let { children } = $props();
 </script>

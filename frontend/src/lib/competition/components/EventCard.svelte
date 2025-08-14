@@ -12,10 +12,9 @@ Props:
 -->
 
 <script lang="ts">
-  import '../app.css';
-  import { nameByEventSlug } from './util/event_utils.js';
-  import type { EventSlug } from './types.js';
-  import EventImage from './EventImage.svelte';
+  import { nameByEventSlug } from '$lib/util/event_utils.js';
+  import type { EventSlug } from '$lib/types.js';
+  import EventImage from '$lib/shared/components/EventImage.svelte';
 
   interface IEventCardProps {
     onclick: () => void;
@@ -46,7 +45,6 @@ Props:
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-bottom: 1rem;
     color: var(--text-color-dark);
     background-color: var(--surface-color-dark);
     border-radius: 0.5rem;
@@ -54,16 +52,6 @@ Props:
     box-shadow:
       0 3px 6px rgba(0, 0, 0, 0.15),
       0 1px 2px rgba(0, 0, 0, 0.1);
-  }
-
-  .event-card.selected {
-    background-color: var(--accent-color);
-    transition: all 150ms ease;
-  }
-
-  .event-card:hover {
-    transform: translate(0.5rem, 0);
-    transition: all 150ms ease;
   }
 
   .event-image-container {
@@ -90,5 +78,44 @@ Props:
   .event-image {
     width: 75px;
     height: 75px;
+  }
+
+  /*
+  sm (mobile)
+  0 - 640px
+  */
+  @media (min-width: 640px) {
+  }
+
+  /*
+  md (tablets, small laptops)
+  641 - 768px
+  */
+  @media (min-width: 768px) {
+  }
+
+  /*
+  lg (desktops)
+  769 - 1024px
+  */
+  @media (min-width: 1024px) {
+    .event-card.selected {
+      background-color: var(--accent-color);
+      color: var(--text-color-dark);
+      transition: all 150ms ease;
+    }
+
+    .event-card:hover {
+      transition: all 150ms ease;
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+  }
+
+  /*
+  xl (wide monitors)
+  1025+ px
+  */
+  @media (min-width: 1280px) {
   }
 </style>
