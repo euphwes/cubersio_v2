@@ -1,8 +1,10 @@
 <script lang="ts">
+  import type { EventSlug } from '$lib/types.js';
+
+  import CompeteBanner from '$lib/competition/components/CompeteBanner.svelte';
   import EventCardList from '$lib/competition/components/EventCardList.svelte';
   import TwoColumnLayout from '$lib/TwoColumnLayout.svelte';
-  import HubLandingInfo from '$lib/competition/components/HubLandingInfo.svelte';
-  import type { EventSlug } from '$lib/types.js';
+  import EventInfoPanel from '$lib/competition/components/EventInfoPanel.svelte';
 
   const {
     data
@@ -12,7 +14,7 @@
     };
   } = $props();
 
-  let selectedEventSlug = $state<EventSlug | undefined>(undefined);
+  let selectedEventSlug = $state<EventSlug>('333');
   function handleEventSelect(slug: EventSlug) {
     selectedEventSlug = slug;
   }
@@ -20,7 +22,7 @@
 
 <TwoColumnLayout>
   <svelte:fragment slot="banner">
-    <h1>Hello</h1>
+    <CompeteBanner title="Aug 2025 Week 3" />
   </svelte:fragment>
 
   <svelte:fragment slot="left">
@@ -32,6 +34,6 @@
   </svelte:fragment>
 
   <svelte:fragment slot="right">
-    <HubLandingInfo {selectedEventSlug} competitionTitle={'July 2025 Week 4'} />
+    <EventInfoPanel {selectedEventSlug} />
   </svelte:fragment>
 </TwoColumnLayout>

@@ -111,11 +111,4 @@ Props:
       margin-left: 0.5rem;
     }
   }
-
-  /*
-  xl (wide monitors)
-  1025+ px
-  */
-  @media (min-width: 1280px) {
-  }
 </style>

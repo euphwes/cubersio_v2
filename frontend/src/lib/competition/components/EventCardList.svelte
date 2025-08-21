@@ -26,7 +26,7 @@
 
     <div
       id="event_{curr_slug}"
-      class="carousel-item relative box-border w-screen snap-center px-8 py-4 lg:mt-4 lg:w-full lg:px-4 lg:py-0"
+      class="carousel-item relative box-border w-screen snap-center px-8 py-2 lg:mt-4 lg:w-full lg:px-4 lg:py-0"
     >
       <EventCard
         eventSlug={event}
@@ -102,12 +102,5 @@
     .carousel-item:last-child {
       margin-bottom: calc(var(--spacing) * 4);
     }
-  }
-
-  /*
-  xl (wide monitors)
-  1025+ px
-  */
-  @media (min-width: 1280px) {
   }
 </style>

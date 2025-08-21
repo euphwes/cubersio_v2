@@ -24,7 +24,7 @@
 
   /* Top banner: fixed percentage of viewport height, full width */
   .banner {
-    flex: 0 0 10vh;
+    flex: 0 0 6vh;
     width: 100%;
     overflow: hidden; /* clip anything tall */
   }
@@ -81,6 +81,11 @@
       flex-direction: row;
     }
 
+    /* Top banner: fixed percentage of viewport height, full width */
+    .banner {
+      flex: 0 0 8vh;
+    }
+
     .sidebar {
       width: 25%;
       max-height: unset;
@@ -92,12 +97,5 @@
       height: 100%; /* fill remaining vertical space under banner */
       min-height: unset;
     }
-  }
-
-  /*
-  xl (wide monitors)
-  1025+ px
-  */
-  @media (min-width: 1280px) {
   }
 </style>

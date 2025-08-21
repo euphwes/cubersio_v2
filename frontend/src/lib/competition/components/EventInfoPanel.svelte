@@ -12,13 +12,13 @@ TODO
   import Spacer from '$lib/shared/components/Spacer.svelte';
   import HorizontalDivider from '$lib/shared/components/HorizontalDivider.svelte';
 
-  const { selectedEventSlug = '333' }: { selectedEventSlug: EventSlug } = $props();
+  const { selectedEventSlug }: { selectedEventSlug: EventSlug } = $props();
 
   const description = $derived(selectedEventSlug ? descriptionsByEventSlug[selectedEventSlug] : '');
 </script>
 
 <div class="info-panel">
-  <div class="event-info-container mt-12">
+  <div class="event-info-container mt-4">
     <div class="event-title-row">
       <div class="event-image-container">
         <EventImage eventSlug={selectedEventSlug} solved={false} />
@@ -39,10 +39,6 @@ TODO
 </div>
 
 <style>
-  /*
-  Mobile-first approach template
-  */
-
   .info-panel {
     height: calc(100% - 2rem); /* subtract vertical margins */
     color: var(--text-color-dark);
@@ -105,12 +101,5 @@ TODO
       justify-content: center;
       align-items: center;
     }
-  }
-
-  /*
-  xl (wide monitors)
-  1025+ px
-  */
-  @media (min-width: 1280px) {
   }
 </style>
