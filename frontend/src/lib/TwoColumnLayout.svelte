@@ -18,13 +18,13 @@
   .layout {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 64px); /* full viewport height, minus navbar */
+    height: calc(100vh - 4rem); /* full viewport height, minus navbar */
     min-height: 0; /* enable proper flex overflow behaviors */
   }
 
   /* Top banner: fixed percentage of viewport height, full width */
   .banner {
-    flex: 0 0 6vh;
+    height: 3rem;
     width: 100%;
     overflow: hidden; /* clip anything tall */
   }
@@ -83,7 +83,7 @@
 
     /* Top banner: fixed percentage of viewport height, full width */
     .banner {
-      flex: 0 0 8vh;
+      flex: 0 0 4rem;
     }
 
     .sidebar {

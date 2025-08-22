@@ -13,18 +13,14 @@ TODO
 </div>
 
 <style>
-  /*
-    Mobile-first approach template
-  */
-
   .compete-banner {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
-    background-color: var(--secondary-color);
-    color: var(--text-color-dark);
+    background-color: var(--brand-tint);
+    color: var(--text-primary);
   }
 
   /*
@@ -46,5 +42,14 @@ TODO
     769 - 1024px
     */
   @media (min-width: 1024px) {
+    .compete-banner {
+      background: linear-gradient(
+        110deg,
+        var(--secondary-tint) 0%,
+        var(--brand-tint) 20%,
+        var(--brand-tint) 80%,
+        var(--secondary-tint) 100%
+      );
+    }
   }
 </style>

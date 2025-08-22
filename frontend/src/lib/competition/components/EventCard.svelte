@@ -35,20 +35,22 @@ Props:
     </div>
   </div>
   <div class="event-info-container text-left">
-    <div class="event-title font-semibold">{eventName}</div>
-    <div class="participant-count">{participantCount} competitors</div>
+    <div class="event-title text-lg font-semibold">{eventName}</div>
+    <div class="participant-count text-sm">{participantCount} competitors</div>
   </div>
 </button>
 
 <style>
   .event-card {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     width: 100%;
-    color: var(--text-color-dark);
-    background-color: var(--surface-color-dark);
-    border-radius: 0.5rem;
-    transition: all 150ms ease;
+    color: var(--text-primary);
+    background-color: var(--surface-alt-dark);
+    border: 1px solid var(--surface-alt-dark);
+    border-radius: 0.25rem;
+    transition: all 100ms ease;
     box-shadow:
       0 3px 6px rgba(0, 0, 0, 0.15),
       0 1px 2px rgba(0, 0, 0, 0.1);
@@ -63,16 +65,17 @@ Props:
   .event-info-container {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-left: 1rem;
   }
 
   .event-title {
-    font-size: 1.25em;
+    color: var(--text-primary);
   }
 
   .participant-count {
-    font-size: 0.85em;
-    margin-top: auto;
+    color: var(--text-secondary);
   }
 
   .event-image {
@@ -100,15 +103,19 @@ Props:
   */
   @media (min-width: 1024px) {
     .event-card.selected {
-      background-color: var(--accent-color);
-      color: var(--text-color-dark);
-      transition: all 150ms ease;
+      background-color: var(--secondary-tint);
+      border: 1px solid var(--secondary);
+      color: var(--text-primary);
     }
 
     .event-card:hover {
-      transition: all 150ms ease;
-      cursor: pointer;
-      margin-left: 0.5rem;
+      background-color: var(--surface-alt-darker);
+      border: 1px solid var(--surface-alt-darker);
+    }
+
+    .event-card.selected:hover {
+      background-color: var(--secondary-tint);
+      border: 1px solid var(--secondary);
     }
   }
 </style>

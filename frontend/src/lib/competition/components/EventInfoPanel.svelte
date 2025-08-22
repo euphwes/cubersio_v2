@@ -10,7 +10,6 @@ TODO
   import EventImage from '$lib/shared/components/EventImage.svelte';
 
   import Spacer from '$lib/shared/components/Spacer.svelte';
-  import HorizontalDivider from '$lib/shared/components/HorizontalDivider.svelte';
 
   const { selectedEventSlug }: { selectedEventSlug: EventSlug } = $props();
 
@@ -32,8 +31,6 @@ TODO
     <div class="event-description text-l text-center">
       <span>{description}</span>
     </div>
-    <Spacer size="s" />
-    <HorizontalDivider />
   </div>
   <div class="results-info-container"></div>
 </div>
@@ -41,7 +38,7 @@ TODO
 <style>
   .info-panel {
     height: calc(100% - 2rem); /* subtract vertical margins */
-    color: var(--text-color-dark);
+    color: var(--text-primary);
     margin: 1rem;
     border-radius: 0.5rem;
     transition: all 150ms ease;

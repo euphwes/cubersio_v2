@@ -13,15 +13,15 @@ the cube face.
   // This is the starting arrangement of stickers on the cube,
   // which is also what the cube returns to once scrambling stops.
   let originalStickerState = [
-    'bg-primary',
-    'bg-primary',
-    'bg-white',
-    'bg-primary',
-    'bg-white',
-    'bg-accent',
-    'bg-white',
-    'bg-accent',
-    'bg-accent'
+    'bg-brand',
+    'bg-brand',
+    'bg-brand-tint',
+    'bg-brand',
+    'bg-brand-tint',
+    'bg-secondary',
+    'bg-brand-tint',
+    'bg-secondary',
+    'bg-secondary'
   ];
 
   let currentlyScrambling = $state(false);
@@ -85,14 +85,13 @@ the cube face.
     width: 12px;
     height: 12px;
   }
-
-  .bg-white {
-    background-color: white;
+  .bg-brand {
+    background-color: var(--brand);
   }
-  .bg-primary {
-    background-color: var(--secondary-color);
+  .bg-secondary {
+    background-color: var(--secondary);
   }
-  .bg-accent {
-    background-color: var(--accent-color);
+  .bg-brand-tint {
+    background-color: var(--brand-tint);
   }
 </style>
