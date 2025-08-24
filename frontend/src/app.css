@@ -44,6 +44,21 @@
   --secondary-shade: #ceb65e; /* darker variant of yellow */
 }
 
+.autumn-theme {
+  --surface-alt: #fdfdfd;
+  --surface: #fbf3e7;
+  --surface-card: #f8e9d2;
+  --surface-card-hover: #f4debe;
+
+  --brand-tint: #ce8f68; /* lighter variant of burnt orange */
+  --brand: #914110; /* burnt orange */
+  --brand-shade: #612c0b; /* darker variant of burnt orange */
+
+  --secondary-tint: #adb49c; /* lighter variant of muddy green */
+  --secondary: #849261; /* muddy green */
+  --secondary-shade: #6e7955; /* darker variant of muddy green */
+}
+
 html,
 body {
   margin: 0;
