@@ -64,22 +64,14 @@ the cube face.
   }
 </script>
 
-<button class="cube" onclick={handleIconClick}>
-  {#each stickerState as sticker}
-    <div class="cubelet {sticker}"></div>
-  {/each}
-</button>
+<div class="cube">
+  <img src="/images/cubersio_logo.svg" alt="cubersio logo" />
+</div>
 
 <style>
   .cube {
     width: 46px;
     height: 46px;
-    display: inline-grid;
-    grid-template-rows: repeat(3, 12px);
-    grid-template-columns: repeat(3, 12px);
-    gap: 2px;
-    line-height: 0;
-    padding: 3px;
   }
   .cube div {
     width: 12px;

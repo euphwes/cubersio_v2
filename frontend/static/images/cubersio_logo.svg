@@ -1,0 +1,192 @@
+<svg viewBox="0 0 200 200" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        :root {
+          --color-white: white;
+          --color-red: #f45e5e;
+          --color-blue: #4591f5;
+          --color-green: #54fd64;
+          --color-yellow: #f0ff70;
+          --color-orange: #f8b468;
+          --innard: #555555;
+        }
+    </style>
+    <!-- 
+import math
+
+def ring_segment_path(cx=100, cy=100, outer_radius=88, inner_radius=56,
+                      start_deg=320, end_deg=40):
+    """
+    Build an SVG path string for a filled ring segment ("C").
+    Angles are in degrees, measured clockwise from the +X axis.
+    """
+
+    def to_xy(r, deg):
+        t = math.radians(deg)
+        return (cx + r * math.cos(t),
+                cy + r * math.sin(t))
+
+    # Compute whether arc > 180°
+    delta_cw = (end_deg - start_deg) % 360
+    large_arc = 1 if delta_cw > 180 else 0
+
+    # Coordinates
+    x0, y0 = to_xy(outer_radius, start_deg)  # outer start
+    x1, y1 = to_xy(outer_radius, end_deg)    # outer end
+    x2, y2 = to_xy(inner_radius, end_deg)    # inner start
+    x3, y3 = to_xy(inner_radius, start_deg)  # inner end
+
+    d = [
+        f"M {x0:.4f} {y0:.4f}",
+        f"           A {outer_radius} {outer_radius} 0 {large_arc} 1 {x1:.4f} {y1:.4f}",
+        f"           L {x2:.4f} {y2:.4f}",
+        f"           A {inner_radius} {inner_radius} 0 {large_arc} 0 {x3:.4f} {y3:.4f}",
+        "           Z"
+    ]
+    return "\n".join(d)
+
+
+def path(d, color):
+    print(f"""
+    <path
+        d="{d}"
+        fill="var({color})"
+    />
+    """)
+
+def gen():
+    # inner and outer radius of the main letter C
+    orx = 92
+    irx = 52
+
+    # start and ending degrees of the letter C
+    start = 40
+    end = 320
+
+    # radius delta of blocks inside the letter
+    drx = 6
+    drx = 0
+
+    # degrees in between blocks
+    sep_deg = 8
+    sep_deg = 0
+
+    # width of blocks in degrees
+    w_deg = 25
+    w_deg = 30
+
+    path(
+      ring_segment_path(outer_radius=orx, inner_radius=irx, start_deg=start, end_deg=end),
+      '-' + '-innard'
+    )
+
+    colors = ['color-blue', 'color-green', 'color-white']
+    for i in range(3):
+        bstart = start + sep_deg + i*(sep_deg+w_deg)
+        bend = bstart + w_deg
+        path(
+          ring_segment_path(
+            outer_radius=orx-drx,
+            inner_radius=irx+drx,
+            start_deg=bstart,
+            end_deg=bend
+          ),
+          '-' + '-' + colors[i]
+        )
+
+    colors = ['color-red', 'color-orange', 'color-yellow']
+    for i in range(3):
+        bend = end - sep_deg - i*(sep_deg+w_deg)
+        bstart = bend - w_deg
+        path(
+          ring_segment_path(
+            outer_radius=orx-drx,
+            inner_radius=irx+drx,
+            start_deg=bstart,
+            end_deg=bend
+          ),
+          '-' + '-' + colors[i]
+        )
+    -->
+
+    <path
+        d="M 170.4761 159.1365
+           A 92 92 0 1 1 170.4761 40.8635
+           L 139.8343 66.5750
+           A 52 52 0 1 0 139.8343 133.4250
+           Z"
+        fill="var(--innard)"
+    />
+
+
+    <path
+        d="M 170.4761 159.1365
+           A 92 92 0 0 1 131.4659 186.4517
+           L 117.7850 148.8640
+           A 52 52 0 0 0 139.8343 133.4250
+           Z"
+        fill="var(--color-blue)"
+    />
+
+
+    <path
+        d="M 131.4659 186.4517
+           A 92 92 0 0 1 84.0244 190.6023
+           L 90.9703 151.2100
+           A 52 52 0 0 0 117.7850 148.8640
+           Z"
+        fill="var(--color-green)"
+    />
+
+
+    <path
+        d="M 84.0244 190.6023
+           A 92 92 0 0 1 40.8635 170.4761
+           L 66.5750 139.8343
+           A 52 52 0 0 0 90.9703 151.2100
+           Z"
+        fill="var(--color-white)"
+    />
+
+
+    <path
+        d="M 131.4659 13.5483
+           A 92 92 0 0 1 170.4761 40.8635
+           L 139.8343 66.5750
+           A 52 52 0 0 0 117.7850 51.1360
+           Z"
+        fill="var(--color-red)"
+    />
+
+
+    <path
+        d="M 84.0244 9.3977
+           A 92 92 0 0 1 131.4659 13.5483
+           L 117.7850 51.1360
+           A 52 52 0 0 0 90.9703 48.7900
+           Z"
+        fill="var(--color-orange)"
+    />
+
+
+    <path
+        d="M 40.8635 29.5239
+           A 92 92 0 0 1 84.0244 9.3977
+           L 90.9703 48.7900
+           A 52 52 0 0 0 66.5750 60.1657
+           Z"
+        fill="var(--color-yellow)"
+    />
+
+    <path
+        d="M 170.4761 159.1365
+        A 92 92 0 1 1 170.4761 40.8635
+        L 139.8343 66.5750
+        A 52 52 0 1 0 139.8343 133.4250
+        Z"
+        fill="none"
+        stroke="var(--innard)"
+        stroke-width="3"
+    />
+
+</svg>
+  

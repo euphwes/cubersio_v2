@@ -3,35 +3,21 @@
 
 /* Default theme */
 :root {
-  --dark-grey: #333333;
-  --med-grey: #555555;
-  --accent-grey: #b5b5b1;
+  --surface: #f0efff;
+  --surface-card: #ffffff;
+  --surface-card-hover: #f8eee9;
+  --surface-card-selected: #f1ddd3;
+  --surface-image-bg: #555555;
 
-  --surface-alt: #fdfdfd;
-  --surface: #e7e8e7; /* cool grey */
-  --surface-alt-dark: #cfd1d0;
-  --surface-alt-darker: #c7c9c8;
+  --text-primary: #1e1b4b;
+  --text-secondary: #52525b;
+  --text-muted: #707070;
 
-  --brand-tint: #9fc2ba; /* lighter variant of forest */
-  --brand: #00735c; /* forest */
-  --brand-shade: #00493a; /* darker variant of forest */
+  --brand-tint: #a8a5cc;
+  --brand: #7872a8;
 
-  --secondary-tint: #beb8b6; /* lighter variant of coffee */
-  --secondary: #83746e; /* coffee */
-  --secondary-shade: #695d58; /* darker variant of coffee */
-
-  --text-primary: #252925; /* deep gray-green, nearly black */
-  --text-secondary: #4b524b; /* medium gray-green */
-  --text-muted: #767c76; /* soft gray, lower emphasis */
-  --text-inverse: #e7f3ea; /* for use on brand buttons */
-}
-
-.halloween-theme {
-  --primary-color: #39243b;
-  --secondary-color: #ad612d;
-  --accent-color: #b3c08e;
-  --surface-color: #d3ab8a;
-  --surface-color-dark: #af8b6e;
+  --secondary-tint: #a8d0bc;
+  --secondary: #361e11;
 }
 
 html,

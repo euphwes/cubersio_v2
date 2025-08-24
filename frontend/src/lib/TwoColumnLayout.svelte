@@ -1,8 +1,4 @@
 <div class="layout">
-  <div class="banner">
-    <slot name="banner" />
-  </div>
-
   <div class="body">
     <aside class="sidebar">
       <slot name="left" />
@@ -22,14 +18,6 @@
     min-height: 0; /* enable proper flex overflow behaviors */
   }
 
-  /* Top banner: fixed percentage of viewport height, full width */
-  .banner {
-    height: 3rem;
-    width: 100%;
-    overflow: hidden; /* clip anything tall */
-  }
-
-  /* Area below the banner */
   .body {
     flex: 1 1 auto; /* fill remaining space */
     display: flex;
@@ -79,11 +67,6 @@
     /* keep column layout overall; only the body switches to two columns */
     .body {
       flex-direction: row;
-    }
-
-    /* Top banner: fixed percentage of viewport height, full width */
-    .banner {
-      flex: 0 0 4rem;
     }
 
     .sidebar {

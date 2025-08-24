@@ -5,53 +5,83 @@
   const {
     events,
     eventSelectionSetter,
-    selectedEventSlug = '333'
+    selectedEventSlug = '333',
+    competitionTitle
   }: {
     events: EventSlug[];
     selectedEventSlug: EventSlug | undefined;
     eventSelectionSetter: (slug: EventSlug) => void;
+    competitionTitle?: string;
   } = $props();
 </script>
 
-<div
-  class="carousel carousel-center no-swipe no-scrollbar lg:carousel-vertical w-screen snap-mandatory overflow-x-auto scroll-smooth lg:w-full lg:overflow-x-visible"
->
-  {#each events as event, i (event)}
-    {@const prev_i = i === 0 ? events.length - 1 : i - 1}
-    {@const next_i = i === events.length - 1 ? 0 : i + 1}
+<div class="event-list-wrapper">
+  {#if competitionTitle}
+    <p class="competition-label">{competitionTitle}</p>
+  {/if}
 
-    {@const curr_slug = event}
-    {@const prev_slug = events[prev_i]}
-    {@const next_slug = events[next_i]}
+  <div
+    class="carousel carousel-center no-swipe no-scrollbar lg:carousel-vertical w-screen snap-mandatory overflow-x-auto scroll-smooth lg:w-full lg:overflow-x-visible"
+  >
+    {#each events as event, i (event)}
+      {@const prev_i = i === 0 ? events.length - 1 : i - 1}
+      {@const next_i = i === events.length - 1 ? 0 : i + 1}
 
-    <div
-      id="event_{curr_slug}"
-      class="carousel-item relative box-border w-screen snap-center px-16 py-4 lg:mt-4 lg:w-full lg:px-4 lg:py-0"
-    >
-      <EventCard
-        eventSlug={event}
-        onclick={() => eventSelectionSetter(event)}
-        isSelected={event == selectedEventSlug}
-      />
+      {@const curr_slug = event}
+      {@const prev_slug = events[prev_i]}
+      {@const next_slug = events[next_i]}
+
       <div
-        class="mobile-only-indicators absolute left-2 right-2 top-1/2 flex -translate-y-1/2 transform justify-between"
+        id="event_{curr_slug}"
+        class="carousel-item relative box-border w-screen snap-center px-16 py-4 lg:mt-4 lg:w-full lg:px-4 lg:py-0"
       >
-        <a
-          href="#event_{prev_slug}"
-          class="btn btn-lg btn-circle"
-          onclick={() => eventSelectionSetter(prev_slug)}>❮</a
+        <EventCard
+          eventSlug={event}
+          onclick={() => eventSelectionSetter(event)}
+          isSelected={event == selectedEventSlug}
+        />
+        <div
+          class="mobile-only-indicators absolute top-1/2 right-2 left-2 flex -translate-y-1/2 transform justify-between"
         >
-        <a
-          href="#event_{next_slug}"
-          class="btn btn-lg btn-circle"
-          onclick={() => eventSelectionSetter(next_slug)}>❯</a
-        >
+          <a
+            href="#event_{prev_slug}"
+            class="btn btn-lg btn-circle"
+            onclick={() => eventSelectionSetter(prev_slug)}>❮</a
+          >
+          <a
+            href="#event_{next_slug}"
+            class="btn btn-lg btn-circle"
+            onclick={() => eventSelectionSetter(next_slug)}>❯</a
+          >
+        </div>
       </div>
-    </div>
-  {/each}
+    {/each}
+  </div>
 </div>
 
 <style>
+  .event-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .competition-label {
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 1rem 0 0;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 1024px) {
+    .competition-label {
+      padding: 1rem 1rem 0;
+    }
+  }
+
   .mobile-only-indicators .btn-circle {
     background-color: var(--secondary-tint);
     border-color: var(--secondary-tint);

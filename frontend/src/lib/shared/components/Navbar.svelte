@@ -15,10 +15,9 @@
 
 <div class="navbar">
   <div class="navbar-start">
-    <div class="mr-2 lg:block" style="line-height: 0;">
+    <div class="lg:block" style="line-height: 0;">
       <CubersioIcon />
     </div>
-    <div class="text-xl">cubers.io</div>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal">
@@ -61,7 +60,7 @@
 <style>
   .navbar {
     color: var(--text-primary);
-    background-color: var(--surface-alt);
+    background-color: var(--surface-card);
     height: 4rem;
     border-bottom: 1px solid var(--brand);
     box-shadow:

@@ -66,7 +66,7 @@ TODO
     max-width: 75%;
     white-space: pre-wrap;
     line-height: 1.75;
-    color: var(--med-grey);
+    color: var(--text-muted);
   }
 
   /*

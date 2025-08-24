@@ -47,8 +47,8 @@ Props:
     flex-direction: row;
     width: 100%;
     color: var(--text-primary);
-    background-color: var(--surface-alt-dark);
-    border: 1px solid var(--surface-alt-dark);
+    background-color: var(--surface-card);
+    border: 1px solid var(--surface-card);
     border-radius: 0.25rem;
     transition: all 100ms ease;
     box-shadow:
@@ -58,7 +58,7 @@ Props:
 
   .event-image-container {
     margin-left: 0.75rem;
-    background-color: var(--med-grey);
+    background-color: var(--surface-image-bg);
     padding: 0.5rem;
   }
 
@@ -103,19 +103,20 @@ Props:
   */
   @media (min-width: 1024px) {
     .event-card.selected {
-      background-color: var(--secondary-tint);
+      background-color: var(--surface-card-selected);
       border: 1px solid var(--secondary);
       color: var(--text-primary);
     }
 
     .event-card:hover {
-      background-color: var(--surface-alt-darker);
-      border: 1px solid var(--surface-alt-darker);
+      background-color: var(--surface-card-hover);
+      border: 1px solid var(--surface-card-hover);
     }
 
     .event-card.selected:hover {
-      background-color: var(--secondary-tint);
+      background-color: var(--surface-card-selected);
       border: 1px solid var(--secondary);
+      color: var(--text-primary);
     }
   }
 </style>
