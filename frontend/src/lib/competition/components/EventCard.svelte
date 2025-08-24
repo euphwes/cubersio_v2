@@ -47,8 +47,8 @@ Props:
     flex-direction: row;
     width: 100%;
     color: var(--text-primary);
-    background-color: var(--surface-alt-dark);
-    border: 1px solid var(--surface-alt-dark);
+    background-color: var(--surface-card);
+    border: 1px solid var(--surface-card);
     border-radius: 0.25rem;
     transition: all 100ms ease;
     box-shadow:
@@ -109,8 +109,8 @@ Props:
     }
 
     .event-card:hover {
-      background-color: var(--surface-alt-darker);
-      border: 1px solid var(--surface-alt-darker);
+      background-color: var(--surface-card-hover);
+      border: 1px solid var(--surface-card-hover);
     }
 
     .event-card.selected:hover {

@@ -8,9 +8,14 @@
   --accent-grey: #b5b5b1;
 
   --surface-alt: #fdfdfd;
-  --surface: #e7e8e7; /* cool grey */
-  --surface-alt-dark: #cfd1d0;
-  --surface-alt-darker: #c7c9c8;
+  --surface: #f2f2f2;
+  --surface-card: #e8e8e8;
+  --surface-card-hover: #dadada;
+
+  --text-primary: #252925; /* deep gray-green, nearly black */
+  --text-secondary: #4b524b; /* medium gray-green */
+  --text-muted: #767c76; /* soft gray, lower emphasis */
+  --text-inverse: #e7f3ea; /* for use on brand buttons */
 
   --brand-tint: #9fc2ba; /* lighter variant of forest */
   --brand: #00735c; /* forest */
@@ -19,11 +24,6 @@
   --secondary-tint: #beb8b6; /* lighter variant of coffee */
   --secondary: #83746e; /* coffee */
   --secondary-shade: #695d58; /* darker variant of coffee */
-
-  --text-primary: #252925; /* deep gray-green, nearly black */
-  --text-secondary: #4b524b; /* medium gray-green */
-  --text-muted: #767c76; /* soft gray, lower emphasis */
-  --text-inverse: #e7f3ea; /* for use on brand buttons */
 }
 
 .halloween-theme {
@@ -32,6 +32,16 @@
   --accent-color: #b3c08e;
   --surface-color: #d3ab8a;
   --surface-color-dark: #af8b6e;
+}
+
+.spring-theme {
+  --brand-tint: #7bc7ff; /* lighter variant of blue grotto */
+  --brand: #0067b3; /* blue grotto */
+  --brand-shade: #004d86; /* darker variant of blue grotto */
+
+  --secondary-tint: #ecdeac; /* lighter variant of yellow */
+  --secondary: #f0d161; /* yellow */
+  --secondary-shade: #ceb65e; /* darker variant of yellow */
 }
 
 html,

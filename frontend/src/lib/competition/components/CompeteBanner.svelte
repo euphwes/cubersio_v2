@@ -46,8 +46,8 @@ TODO
       background: linear-gradient(
         110deg,
         var(--secondary-tint) 0%,
-        var(--brand-tint) 20%,
-        var(--brand-tint) 80%,
+        var(--brand-tint) 40%,
+        var(--brand-tint) 60%,
         var(--secondary-tint) 100%
       );
     }
