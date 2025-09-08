@@ -61,7 +61,7 @@
 <style>
   .navbar {
     color: var(--text-primary);
-    background-color: var(--surface-alt);
+    background-color: var(--surface-card);
     height: 4rem;
     border-bottom: 1px solid var(--brand);
     box-shadow:

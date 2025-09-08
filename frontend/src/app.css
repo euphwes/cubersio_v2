@@ -7,10 +7,12 @@
   --med-grey: #555555;
   --accent-grey: #b5b5b1;
 
-  --surface-alt: #fdfdfd;
-  --surface: #f2f2f2;
-  --surface-card: #e8e8e8;
-  --surface-card-hover: #dadada;
+  --surface: #f0f0f0;
+  --surface-card: #fdfdfd;
+
+  /* TODO too similar to surface, */
+  /* maybe just make this a "brand shade extra light" */
+  --surface-card-hover: #eeeeee;
 
   --text-primary: #252925; /* deep gray-green, nearly black */
   --text-secondary: #4b524b; /* medium gray-green */
@@ -44,8 +46,17 @@
   --secondary-shade: #ceb65e; /* darker variant of yellow */
 }
 
+.summer-theme {
+  --brand-tint: #7bc7ff; /* lighter variant of blue grotto */
+  --brand: #0067b3; /* blue grotto */
+  --brand-shade: #004d86; /* darker variant of blue grotto */
+
+  --secondary-tint: #ecdeac; /* lighter variant of yellow */
+  --secondary: #f0d161; /* yellow */
+  --secondary-shade: #ceb65e; /* darker variant of yellow */
+}
+
 .autumn-theme {
-  --surface-alt: #fdfdfd;
   --surface: #fbf3e7;
   --surface-card: #f8e9d2;
   --surface-card-hover: #f4debe;
