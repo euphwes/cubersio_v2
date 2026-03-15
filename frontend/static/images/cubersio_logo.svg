@@ -1,192 +1,186 @@
 <svg viewBox="0 0 200 200" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
     <style>
         :root {
-          --color-white: white;
-          --color-red: #f45e5e;
-          --color-blue: #4591f5;
-          --color-green: #54fd64;
-          --color-yellow: #f0ff70;
-          --color-orange: #f8b468;
-          --innard: #555555;
+          --innard: #000000;
         }
     </style>
-    <!-- 
-import math
 
-def ring_segment_path(cx=100, cy=100, outer_radius=88, inner_radius=56,
-                      start_deg=320, end_deg=40):
-    """
-    Build an SVG path string for a filled ring segment ("C").
-    Angles are in degrees, measured clockwise from the +X axis.
-    """
+    <defs>
+        <!-- Drop shadow applied to the whole C group -->
+        <filter id="c-shadow" x="-15%" y="-15%" width="130%" height="130%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+            <feOffset dx="2" dy="4" result="offset"/>
+            <feFlood flood-color="#000000" flood-opacity="0.65" result="color"/>
+            <feComposite in="color" in2="offset" operator="in" result="shadow"/>
+            <feMerge>
+                <feMergeNode in="shadow"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
 
-    def to_xy(r, deg):
-        t = math.radians(deg)
-        return (cx + r * math.cos(t),
-                cy + r * math.sin(t))
+        <!-- Gloss highlight: diagonal gradient simulating a top-left light source -->
+        <linearGradient id="gloss" x1="0.1" y1="0" x2="0.75" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0%"   stop-color="white" stop-opacity="0.38"/>
+            <stop offset="35%"  stop-color="white" stop-opacity="0.10"/>
+            <stop offset="100%" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
 
-    # Compute whether arc > 180°
-    delta_cw = (end_deg - start_deg) % 360
-    large_arc = 1 if delta_cw > 180 else 0
+        <!--
+            Per-color radial gradients centered at the arc center (100,100).
+            r="92" = outer ring. The sticker band runs from r=52 (56.5%) to r=92 (100%).
+            Each gradient goes lighter at the inner edge → slightly darker at the outer edge.
+        -->
+        <radialGradient id="grad-red" cx="100" cy="100" r="92" gradientUnits="userSpaceOnUse">
+            <stop offset="56%" stop-color="#ff9898"/>
+            <stop offset="100%" stop-color="#f25050"/>
+        </radialGradient>
+        <radialGradient id="grad-yellow" cx="100" cy="100" r="92" gradientUnits="userSpaceOnUse">
+            <stop offset="56%" stop-color="#faffaa"/>
+            <stop offset="100%" stop-color="#e8f550"/>
+        </radialGradient>
+        <radialGradient id="grad-blue" cx="100" cy="100" r="92" gradientUnits="userSpaceOnUse">
+            <stop offset="56%" stop-color="#88c8ff"/>
+            <stop offset="100%" stop-color="#4a8ef5"/>
+        </radialGradient>
+        <radialGradient id="grad-white" cx="100" cy="100" r="92" gradientUnits="userSpaceOnUse">
+            <stop offset="56%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#dedede"/>
+        </radialGradient>
+        <radialGradient id="grad-green" cx="100" cy="100" r="92" gradientUnits="userSpaceOnUse">
+            <stop offset="56%" stop-color="#90ffaa"/>
+            <stop offset="100%" stop-color="#50e860"/>
+        </radialGradient>
+        <radialGradient id="grad-orange" cx="100" cy="100" r="92" gradientUnits="userSpaceOnUse">
+            <stop offset="56%" stop-color="#ffd090"/>
+            <stop offset="100%" stop-color="#f0a840"/>
+        </radialGradient>
 
-    # Coordinates
-    x0, y0 = to_xy(outer_radius, start_deg)  # outer start
-    x1, y1 = to_xy(outer_radius, end_deg)    # outer end
-    x2, y2 = to_xy(inner_radius, end_deg)    # inner start
-    x3, y3 = to_xy(inner_radius, start_deg)  # inner end
+        <!-- Clip path for the gloss overlay -->
+        <clipPath id="c-clip">
+            <path d="M 170.4761 159.1365
+                     A 92 92 0 1 1 170.4761 40.8635
+                     L 139.8343 66.5750
+                     A 52 52 0 1 0 139.8343 133.4250
+                     Z"/>
+        </clipPath>
+    </defs>
 
-    d = [
-        f"M {x0:.4f} {y0:.4f}",
-        f"           A {outer_radius} {outer_radius} 0 {large_arc} 1 {x1:.4f} {y1:.4f}",
-        f"           L {x2:.4f} {y2:.4f}",
-        f"           A {inner_radius} {inner_radius} 0 {large_arc} 0 {x3:.4f} {y3:.4f}",
-        "           Z"
-    ]
-    return "\n".join(d)
+    <g filter="url(#c-shadow)">
 
+        <!-- Dark C background -->
+        <path
+            d="M 170.4761 159.1365
+               A 92 92 0 1 1 170.4761 40.8635
+               L 139.8343 66.5750
+               A 52 52 0 1 0 139.8343 133.4250
+               Z"
+            fill="var(--innard)"
+        />
 
-def path(d, color):
-    print(f"""
-    <path
-        d="{d}"
-        fill="var({color})"
-    />
-    """)
+        <!-- 9 evenly-spaced stickers, each 31.111° wide -->
 
-def gen():
-    # inner and outer radius of the main letter C
-    orx = 92
-    irx = 52
+        <!-- red (40.000° to 71.111°) -->
+        <path d="M 170.4761 159.1365
+           A 92 92 0 0 1 129.7835 187.0456
+           L 116.8342 149.1997
+           A 52 52 0 0 0 139.8343 133.4250
+           Z" fill="url(#grad-red)"/>
 
-    # start and ending degrees of the letter C
-    start = 40
-    end = 320
+        <!-- blue (71.111° to 102.222°) -->
+        <path d="M 129.7835 187.0456
+           A 92 92 0 0 1 80.5232 189.9147
+           L 88.9914 150.8214
+           A 52 52 0 0 0 116.8342 149.1997
+           Z" fill="url(#grad-blue)"/>
 
-    # radius delta of blocks inside the letter
-    drx = 6
-    drx = 0
+        <!-- yellow (102.222° to 133.333°) -->
+        <path d="M 80.5232 189.9147
+           A 92 92 0 0 1 36.8658 166.9184
+           L 64.3154 137.8234
+           A 52 52 0 0 0 88.9914 150.8214
+           Z" fill="url(#grad-yellow)"/>
 
-    # degrees in between blocks
-    sep_deg = 8
-    sep_deg = 0
+        <!-- green (133.333° to 164.444°) -->
+        <path d="M 36.8658 166.9184
+           A 92 92 0 0 1 11.3699 124.6719
+           L 49.9047 113.9450
+           A 52 52 0 0 0 64.3154 137.8234
+           Z" fill="url(#grad-green)"/>
 
-    # width of blocks in degrees
-    w_deg = 25
-    w_deg = 30
+        <!-- white (164.444° to 195.556°) -->
+        <path d="M 11.3699 124.6719
+           A 92 92 0 0 1 11.3699 75.3281
+           L 49.9047 86.0550
+           A 52 52 0 0 0 49.9047 113.9450
+           Z" fill="url(#grad-white)"/>
 
-    path(
-      ring_segment_path(outer_radius=orx, inner_radius=irx, start_deg=start, end_deg=end),
-      '-' + '-innard'
-    )
+        <!-- orange (195.556° to 226.667°) -->
+        <path d="M 11.3699 75.3281
+           A 92 92 0 0 1 36.8658 33.0816
+           L 64.3154 62.1766
+           A 52 52 0 0 0 49.9047 86.0550
+           Z" fill="url(#grad-orange)"/>
 
-    colors = ['color-blue', 'color-green', 'color-white']
-    for i in range(3):
-        bstart = start + sep_deg + i*(sep_deg+w_deg)
-        bend = bstart + w_deg
-        path(
-          ring_segment_path(
-            outer_radius=orx-drx,
-            inner_radius=irx+drx,
-            start_deg=bstart,
-            end_deg=bend
-          ),
-          '-' + '-' + colors[i]
-        )
+        <!-- green (226.667° to 257.778°) -->
+        <path d="M 36.8658 33.0816
+           A 92 92 0 0 1 80.5232 10.0853
+           L 88.9914 49.1786
+           A 52 52 0 0 0 64.3154 62.1766
+           Z" fill="url(#grad-green)"/>
 
-    colors = ['color-red', 'color-orange', 'color-yellow']
-    for i in range(3):
-        bend = end - sep_deg - i*(sep_deg+w_deg)
-        bstart = bend - w_deg
-        path(
-          ring_segment_path(
-            outer_radius=orx-drx,
-            inner_radius=irx+drx,
-            start_deg=bstart,
-            end_deg=bend
-          ),
-          '-' + '-' + colors[i]
-        )
-    -->
+        <!-- red (257.778° to 288.889°) -->
+        <path d="M 80.5232 10.0853
+           A 92 92 0 0 1 129.7835 12.9544
+           L 116.8342 50.8003
+           A 52 52 0 0 0 88.9914 49.1786
+           Z" fill="url(#grad-red)"/>
 
+        <!-- blue (288.889° to 320.000°) -->
+        <path d="M 129.7835 12.9544
+           A 92 92 0 0 1 170.4761 40.8635
+           L 139.8343 66.5750
+           A 52 52 0 0 0 116.8342 50.8003
+           Z" fill="url(#grad-blue)"/>
+
+    </g>
+
+    <!-- Gloss overlay — outside shadow group so it sits on top clean -->
     <path
         d="M 170.4761 159.1365
            A 92 92 0 1 1 170.4761 40.8635
            L 139.8343 66.5750
            A 52 52 0 1 0 139.8343 133.4250
            Z"
-        fill="var(--innard)"
+        fill="url(#gloss)"
+        clip-path="url(#c-clip)"
     />
 
-
+    <!-- Divider strokes and outline drawn after the gloss so they are unaffected by it -->
+    <line x1="118.4528" y1="153.9304" x2="128.1649" y2="182.3149"
+          stroke="var(--innard)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="87.9329"  y1="155.7080" x2="81.5818"  y2="185.0280"
+          stroke="var(--innard)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="60.8842"  y1="141.4603" x2="40.2970"  y2="163.2815"
+          stroke="var(--innard)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="45.0879"  y1="115.2858" x2="16.1867"  y2="123.3310"
+          stroke="var(--innard)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="45.0879"  y1="84.7142"  x2="16.1867"  y2="76.6690"
+          stroke="var(--innard)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="60.8842"  y1="58.5397"  x2="40.2970"  y2="36.7185"
+          stroke="var(--innard)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="87.9329"  y1="44.2920"  x2="81.5818"  y2="14.9720"
+          stroke="var(--innard)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="118.4528" y1="46.0696"  x2="128.1649" y2="17.6851"
+          stroke="var(--innard)" stroke-width="7" stroke-linecap="round"/>
     <path
         d="M 170.4761 159.1365
-           A 92 92 0 0 1 131.4659 186.4517
-           L 117.7850 148.8640
-           A 52 52 0 0 0 139.8343 133.4250
-           Z"
-        fill="var(--color-blue)"
-    />
-
-
-    <path
-        d="M 131.4659 186.4517
-           A 92 92 0 0 1 84.0244 190.6023
-           L 90.9703 151.2100
-           A 52 52 0 0 0 117.7850 148.8640
-           Z"
-        fill="var(--color-green)"
-    />
-
-
-    <path
-        d="M 84.0244 190.6023
-           A 92 92 0 0 1 40.8635 170.4761
-           L 66.5750 139.8343
-           A 52 52 0 0 0 90.9703 151.2100
-           Z"
-        fill="var(--color-white)"
-    />
-
-
-    <path
-        d="M 131.4659 13.5483
-           A 92 92 0 0 1 170.4761 40.8635
+           A 92 92 0 1 1 170.4761 40.8635
            L 139.8343 66.5750
-           A 52 52 0 0 0 117.7850 51.1360
+           A 52 52 0 1 0 139.8343 133.4250
            Z"
-        fill="var(--color-red)"
-    />
-
-
-    <path
-        d="M 84.0244 9.3977
-           A 92 92 0 0 1 131.4659 13.5483
-           L 117.7850 51.1360
-           A 52 52 0 0 0 90.9703 48.7900
-           Z"
-        fill="var(--color-orange)"
-    />
-
-
-    <path
-        d="M 40.8635 29.5239
-           A 92 92 0 0 1 84.0244 9.3977
-           L 90.9703 48.7900
-           A 52 52 0 0 0 66.5750 60.1657
-           Z"
-        fill="var(--color-yellow)"
-    />
-
-    <path
-        d="M 170.4761 159.1365
-        A 92 92 0 1 1 170.4761 40.8635
-        L 139.8343 66.5750
-        A 52 52 0 1 0 139.8343 133.4250
-        Z"
         fill="none"
         stroke="var(--innard)"
-        stroke-width="3"
+        stroke-width="6"
     />
 
 </svg>
-  
