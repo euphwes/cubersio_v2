@@ -5,13 +5,13 @@
 :root {
   --surface: #f0efff;
   --surface-card: #ffffff;
-  --surface-card-hover: #f8eee9;
-  --surface-card-selected: #f1ddd3;
+  --surface-card-hover: #f1f8ef;
+  --surface-card-selected: #daf1d3;
   --surface-image-bg: #555555;
 
   --text-primary: #1e1b4b;
   --text-secondary: #52525b;
-  --text-muted: #707070;
+  --text-muted: #424242;
 
   --brand-tint: #a8a5cc;
   --brand: #7872a8;
@@ -33,7 +33,16 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--surface);
+  background-color: var(--surface);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.35'/%3E%3C/svg%3E");
+  /* radial-gradient(ellipse 70% 60% at 35% 40%, rgba(170, 167, 202, 0.65) 0%, transparent 70%), */
+  /* radial-gradient(ellipse 60% 70% at 65% 60%, rgba(168, 208, 188, 0.55) 0%, transparent 70%); */
+  background-attachment: fixed, fixed, fixed;
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size:
+    300px 300px,
+    auto,
+    auto;
 }
 
 /*

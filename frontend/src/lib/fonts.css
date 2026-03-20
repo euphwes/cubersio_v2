@@ -1,0 +1,7 @@
+/* csTimer 'lcd' font, extracted from https://github.com/cs0x7f/cstimer (MIT license) */
+@font-face {
+  font-family: 'csTimer';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/cstimer-lcd.woff') format('woff');
+}

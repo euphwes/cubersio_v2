@@ -53,32 +53,38 @@
   }
 
   /*
-  md (tablets, small laptops)
-  641 - 768px
+  md (tablets, small laptops) — two-column layout kicks in here.
+  Sidebar is slightly wider (30%) to give event cards enough room.
   */
   @media (min-width: 768px) {
-  }
-
-  /*
-  lg (desktops)
-  769 - 1024px
-  */
-  @media (min-width: 1024px) {
     /* keep column layout overall; only the body switches to two columns */
     .body {
       flex-direction: row;
     }
 
     .sidebar {
-      width: 25%;
+      width: 30%;
       max-height: unset;
       height: 100%; /* fill remaining vertical space under banner */
     }
 
     .content {
-      width: 75%;
+      width: 70%;
       height: 100%; /* fill remaining vertical space under banner */
       min-height: unset;
+    }
+  }
+
+  /*
+  lg (desktops) — revert to the standard 25/75 split now that there's enough room.
+  */
+  @media (min-width: 1024px) {
+    .sidebar {
+      width: 25%;
+    }
+
+    .content {
+      width: 75%;
     }
   }
 </style>

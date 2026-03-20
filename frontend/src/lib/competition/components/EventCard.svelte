@@ -35,7 +35,7 @@ Props:
     </div>
   </div>
   <div class="event-info-container text-left">
-    <div class="event-title text-lg font-semibold">{eventName}</div>
+    <div class="event-title text-base font-medium">{eventName}</div>
     <div class="participant-count text-sm">{participantCount} competitors</div>
   </div>
 </button>
@@ -57,30 +57,32 @@ Props:
   }
 
   .event-image-container {
-    margin-left: 0.75rem;
+    margin-left: 0.5rem;
     background-color: var(--surface-image-bg);
-    padding: 0.5rem;
+    padding: 0.375rem;
   }
 
   .event-info-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.5rem;
-    padding-left: 1rem;
+    gap: 0.25rem;
+    padding-left: 0.625rem;
   }
 
   .event-title {
     color: var(--text-primary);
+    font-size: 0.875rem;
   }
 
   .participant-count {
     color: var(--text-secondary);
+    font-size: 0.75rem;
   }
 
   .event-image {
-    width: 75px;
-    height: 75px;
+    width: 52px;
+    height: 52px;
   }
 
   /*
@@ -91,17 +93,10 @@ Props:
   }
 
   /*
-  md (tablets, small laptops)
-  641 - 768px
+  md — sidebar is active here, so enable selected/hover states.
+  Compact image and padding to fit the narrower 30% sidebar column.
   */
   @media (min-width: 768px) {
-  }
-
-  /*
-  lg (desktops)
-  769 - 1024px
-  */
-  @media (min-width: 1024px) {
     .event-card.selected {
       background-color: var(--surface-card-selected);
       border: 1px solid var(--secondary);
@@ -117,6 +112,49 @@ Props:
       background-color: var(--surface-card-selected);
       border: 1px solid var(--secondary);
       color: var(--text-primary);
+    }
+
+    .event-image {
+      width: 52px;
+      height: 52px;
+    }
+
+    .event-image-container {
+      margin-left: 0.5rem;
+      padding: 0.375rem;
+    }
+
+    .event-info-container {
+      padding-left: 0.625rem;
+      gap: 0.25rem;
+    }
+  }
+
+  /*
+  lg — more room, but keep the leaner proportions from md.
+  */
+  @media (min-width: 1024px) {
+    .event-image {
+      width: 62px;
+      height: 62px;
+    }
+
+    .event-image-container {
+      margin-left: 0.625rem;
+      padding: 0.4rem;
+    }
+
+    .event-info-container {
+      padding-left: 0.75rem;
+      gap: 0.3rem;
+    }
+
+    .event-title {
+      font-size: 1rem;
+    }
+
+    .participant-count {
+      font-size: 0.875rem;
     }
   }
 </style>

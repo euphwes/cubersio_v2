@@ -3,7 +3,7 @@
 
   import EventCardList from '$lib/competition/components/EventCardList.svelte';
   import TwoColumnLayout from '$lib/TwoColumnLayout.svelte';
-  import EventInfoPanel from '$lib/competition/components/EventInfoPanel.svelte';
+  import CompetitionTimerPanel from '$lib/competition/components/CompetitionTimerPanel.svelte';
 
   const {
     data
@@ -30,6 +30,6 @@
   </svelte:fragment>
 
   <svelte:fragment slot="right">
-    <EventInfoPanel {selectedEventSlug} />
+    <CompetitionTimerPanel {selectedEventSlug} />
   </svelte:fragment>
 </TwoColumnLayout>
