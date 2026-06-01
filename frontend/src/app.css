@@ -1,11 +1,39 @@
-@import 'tailwindcss';
-@plugin "daisyui";
+/* Replaces the Tailwind Preflight resets the app was relying on */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* System font stack - matches what Preflight set as the base sans-serif */
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  /* Grayscale antialiasing - Preflight set this; without it fonts render slightly heavier */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* Preflight makes form elements inherit the page font; browsers default to their own */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* Preflight strips the default browser link styles (blue + underline) */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 
 /* Default theme */
 :root {
   --surface: #f0efff;
   --surface-card: #ffffff;
-  --surface-card-hover: #f1f8ef;
+  --surface-card-hover: #eeeef6;
   --surface-card-selected: #daf1d3;
   --surface-image-bg: #555555;
 
@@ -35,37 +63,7 @@ body {
   flex-direction: column;
   background-color: var(--surface);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.35'/%3E%3C/svg%3E");
-  /* radial-gradient(ellipse 70% 60% at 35% 40%, rgba(170, 167, 202, 0.65) 0%, transparent 70%), */
-  /* radial-gradient(ellipse 60% 70% at 65% 60%, rgba(168, 208, 188, 0.55) 0%, transparent 70%); */
-  background-attachment: fixed, fixed, fixed;
-  background-repeat: repeat, no-repeat, no-repeat;
-  background-size:
-    300px 300px,
-    auto,
-    auto;
-}
-
-/*
-Mobile-first approach template
-*/
-
-/*
-sm (mobile)
-0 - 640px
-*/
-@media (min-width: 640px) {
-}
-
-/*
-md (tablets, small laptops)
-641 - 768px
-*/
-@media (min-width: 768px) {
-}
-
-/*
-lg (desktops)
-769 - 1024px
-*/
-@media (min-width: 1024px) {
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: 300px 300px;
 }

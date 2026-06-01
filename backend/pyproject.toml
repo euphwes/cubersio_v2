@@ -1,0 +1,24 @@
+[project]
+name = "cubersio"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic>=2.11",
+    "sqlalchemy",
+]
+
+[dependency-groups]
+dev = [
+    "ipython",
+    "ruff",
+]
+
+[tool.ruff]
+line-length = 96
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+

@@ -1,3 +1,9 @@
+<!--
+@component
+Two-column layout shell with a fixed sidebar (left slot) and a scrollable main area (right slot).
+Stacks vertically on mobile; switches to side-by-side at >= 1024px.
+-->
+
 <div class="layout">
   <div class="body">
     <aside class="sidebar">
@@ -11,17 +17,21 @@
 </div>
 
 <style>
+  /* --------------------------------------------- */
+  /* ----------- Mobile-first defaults ----------- */
+  /* --------------------------------------------- */
+
   .layout {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 4rem); /* full viewport height, minus navbar */
+    height: calc(100vh - 3.25rem); /* full viewport height, minus mobile navbar */
     min-height: 0; /* enable proper flex overflow behaviors */
   }
 
   .body {
     flex: 1 1 auto; /* fill remaining space */
     display: flex;
-    flex-direction: column; /* stack on mobile */
+    flex-direction: column;
     min-height: 0; /* allow children to scroll */
   }
 
@@ -41,50 +51,29 @@
     min-height: 0;
   }
 
-  /*
-  Mobile-first approach template
-  */
+  /* --------------------------------------------- */
+  /* ---------- Desktop style overrides ---------- */
+  /* --------------------------------------------- */
 
-  /*
-  sm (mobile)
-  0 - 640px
-  */
-  @media (min-width: 640px) {
-  }
+  @media (min-width: 1024px) {
+    .layout {
+      height: calc(100vh - 4rem); /* desktop navbar is taller */
+    }
 
-  /*
-  md (tablets, small laptops) — two-column layout kicks in here.
-  Sidebar is slightly wider (30%) to give event cards enough room.
-  */
-  @media (min-width: 768px) {
-    /* keep column layout overall; only the body switches to two columns */
     .body {
       flex-direction: row;
     }
 
     .sidebar {
-      width: 30%;
+      width: max(350px, 20%);
       max-height: unset;
-      height: 100%; /* fill remaining vertical space under banner */
+      height: 100%;
     }
 
     .content {
-      width: 70%;
-      height: 100%; /* fill remaining vertical space under banner */
+      flex: 1;
+      height: 100%;
       min-height: unset;
-    }
-  }
-
-  /*
-  lg (desktops) — revert to the standard 25/75 split now that there's enough room.
-  */
-  @media (min-width: 1024px) {
-    .sidebar {
-      width: 25%;
-    }
-
-    .content {
-      width: 75%;
     }
   }
 </style>

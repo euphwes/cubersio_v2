@@ -58,7 +58,7 @@ export const descriptionsByEventSlug: Record<EventSlug, string> = {
     "Rubik's Clock is a mechanical puzzle with nine clocks to align on each side.\nIt's a race against time!",
   fmc: '3x3 Fewest Moves is a battle of efficiency.\nSolvers have one hour to find the shortest possible solution to a given scramble.',
   '3oh':
-    "This is exactly what it sounds like — solve the 3x3 using only one hand!\nDexterity is key, but don't be afraid to use the table, too.",
+    "This is exactly what it sounds like - solve the 3x3 using only one hand!\nDexterity is key, but don't be afraid to use the table, too.",
   '3bld':
     '3x3 Blindfolded is the classic memory challenge.\nCompetitors memorize the cube, don a blindfold, and solve it without peeking.',
   '4bld':

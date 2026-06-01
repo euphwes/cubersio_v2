@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { EventSlug } from '$lib/types.js';
 
-  import EventCardList from '$lib/competition/components/EventCardList.svelte';
+  import CompeteSidebar from './CompeteSidebar.svelte';
   import TwoColumnLayout from '$lib/TwoColumnLayout.svelte';
-  import CompetitionTimerPanel from '$lib/competition/components/CompetitionTimerPanel.svelte';
+  import CompetitionTimerPanel from './CompetitionTimerPanel.svelte';
 
   const {
     data
@@ -21,11 +21,12 @@
 
 <TwoColumnLayout>
   <svelte:fragment slot="left">
-    <EventCardList
+    <CompeteSidebar
       events={data.events}
-      eventSelectionSetter={handleEventSelect}
       {selectedEventSlug}
-      competitionTitle="Aug 2025 · Week 3"
+      eventSelectionSetter={handleEventSelect}
+      weekLabel="Week 24 · Jun 2026"
+      weekTitle="Weekly Open"
     />
   </svelte:fragment>
 

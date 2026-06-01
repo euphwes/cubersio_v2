@@ -22,7 +22,10 @@
       "Bash(jq:*)",
       "Bash(grep:*)",
       "Bash(xargs:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "PowerShell(npx prettier *)",
+      "PowerShell(uv run ruff format *)",
+      "PowerShell(cd *)"
     ]
   }
 }

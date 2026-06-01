@@ -5,6 +5,7 @@ from cubersio.types import EventSlug
 
 app = FastAPI()
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
@@ -12,6 +13,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 _GLOBAL_SORT_ORDER = [
     # Weekly NxN
