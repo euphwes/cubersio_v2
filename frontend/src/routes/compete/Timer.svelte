@@ -1,28 +1,64 @@
 <!--
 @component
-Displays the current solve time and hint text, driven by an internal inspection/solve state machine.
+Displays the current solve time and hint text, driven by an internal inspection/solve state
+machine.
 
-State machine transitions:
-  waiting → inspection → running → stopped
-  inspection or running → waiting  (Escape cancel; fires onTimerCancel)
-  inspection expires past -2s → dnf  (acknowledging fires onTimerComplete with dnf=true)
-
-TODO: clean up state transition description above once kinks are ironed out
+Owns the solve's state (final time, DNF and +2 penalty flags); parents can read a complete solve
+through the export `solve` accessor.
 -->
 
 <script lang="ts">
-  import { onDestroy } from 'svelte';
-  import { getHintText, getMobileHintText, type TimerMode } from './timerUtils.js';
+  import { getContext, onDestroy } from 'svelte';
+  import { formatSolve } from '$lib/formatSolve.js';
+  import type { NavigationLock } from '$lib/navigationLock.svelte.js';
 
   interface Props {
     onDnf?: () => void;
     onTimerCancel?: () => void;
-    onTimerComplete?: (timeMs: number, inspectionPenalty: boolean, dnf: boolean) => void;
+    onTimerComplete?: () => void;
   }
 
   const { onDnf, onTimerComplete, onTimerCancel }: Props = $props();
 
+  const navigationLock = getContext<NavigationLock>('navigationLock');
+
   const INSPECTION_TIME_TOTAL = 15;
+
+  type TimerMode = 'waiting' | 'inspection' | 'running' | 'stopped' | 'dnf';
+
+  function getHintText(mode: TimerMode): string {
+    switch (mode) {
+      case 'waiting':
+        return 'Press Space to begin inspection';
+      case 'inspection':
+        return 'Press Space to start - Esc to cancel';
+      case 'running':
+        return 'Press any key to stop';
+
+      // No hint for the DNF or stopped states; the Timer component consumers handle behavior.
+      case 'dnf':
+        return '';
+      case 'stopped':
+        return '';
+    }
+  }
+
+  function getMobileHintText(mode: TimerMode): string {
+    switch (mode) {
+      case 'waiting':
+        return 'Tap to begin inspection';
+      case 'inspection':
+        return 'Tap to start timer';
+      case 'running':
+        return 'Tap to stop';
+
+      // No hint for the DNF or stopped states; the Timer component consumers handle behavior.
+      case 'dnf':
+        return '';
+      case 'stopped':
+        return '';
+    }
+  }
 
   // ------------------------
   // ---- Reactive state ----
@@ -32,9 +68,15 @@ TODO: clean up state transition description above once kinks are ironed out
   let finalMillis = $state(0);
   let elapsedMillis = $state(0);
 
-  // Whether the current solve is a DNF, or had inspection penalty
+  // Penalty flags for the current solve. The +2 flag is set automatically when inspection
+  // runs past 15 seconds; both flags can also be toggled by the parent via the exported
+  // `solve` accessor after a solve completes.
   let isDnf = $state(false);
-  let isInspectionPenalty = $state(false);
+  let isPlusTwo = $state(false);
+
+  // Set when the solve becomes DNF by overflowing inspection time. In that case the penalty
+  // flags are locked (the DNF is not optional), so the user can only submit or discard.
+  let dnfViaInspection = $state(false);
 
   // The currently-remaining number of seconds on the inspection timer, used to drive the
   // visual inspection time countdown.
@@ -60,9 +102,24 @@ TODO: clean up state transition description above once kinks are ironed out
       case 'dnf':
         return 'DNF';
       case 'running':
-        return formatMs(elapsedMillis);
+        return formatSolve({
+          timeMs: elapsedMillis,
+          // Penalties aren't shown while the solve is still in progress
+          dnf: false,
+          plusTwo: false,
+          // Irrelevant here, the solve is still in-progress
+          omittedFromAverage: false,
+          pbSingle: false
+        });
       case 'stopped':
-        return formatMs(finalMillis);
+        return formatSolve({
+          timeMs: finalMillis,
+          // Reflects the penalty flags so the display matches the pending solve's notation
+          dnf: isDnf,
+          plusTwo: isPlusTwo,
+          omittedFromAverage: false,
+          pbSingle: false
+        });
     }
   });
 
@@ -116,18 +173,14 @@ TODO: clean up state transition description above once kinks are ironed out
   }
 
   /**
-   * Format a millisecond value as seconds with 2 decimals,
-   * or if greater than 1 minute, as minutes + seconds with 2 decimals.
+   * Drops focus from whatever element currently has it (e.g. an event card the user just
+   * clicked in the sidebar). Called when the timer captures a keypress, so the focused
+   * element doesn't also react to it (a focused button activates on Space).
    */
-  function formatMs(ms: number): string {
-    const totalSecs = Math.floor(ms / 1000);
-    const centis = Math.floor((ms % 1000) / 10);
-    if (totalSecs < 60) {
-      return `${totalSecs}.${centis.toString().padStart(2, '0')}`;
+  function blurFocusedElement() {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
     }
-    const mins = Math.floor(totalSecs / 60);
-    const secs = totalSecs % 60;
-    return `${mins}:${secs.toString().padStart(2, '0')}.${centis.toString().padStart(2, '0')}`;
   }
 
   // --------------------------------
@@ -151,7 +204,8 @@ TODO: clean up state transition description above once kinks are ironed out
     remainingInspectionTimeSeconds = INSPECTION_TIME_TOTAL;
 
     isDnf = false;
-    isInspectionPenalty = false;
+    isPlusTwo = false;
+    dnfViaInspection = false;
   }
 
   /**
@@ -167,7 +221,8 @@ TODO: clean up state transition description above once kinks are ironed out
 
     // Clear any penalties from a previous solve.
     isDnf = false;
-    isInspectionPenalty = false;
+    isPlusTwo = false;
+    dnfViaInspection = false;
 
     // Reset the remaining inspection time back to the base amount
     remainingInspectionTimeSeconds = INSPECTION_TIME_TOTAL;
@@ -192,7 +247,7 @@ TODO: clean up state transition description above once kinks are ironed out
 
     // There's an inspection time penalty (+2 seconds) if the user exceeds 15 seconds during
     // their inspection before starting the timer.
-    isInspectionPenalty = remainingInspectionTimeSeconds < 0;
+    isPlusTwo = remainingInspectionTimeSeconds < 0;
 
     // Clear the elapsed time from any previous solves, and record the time this current solve
     // started. Kick off an interval that periodically calculates the elapsed time for the
@@ -212,11 +267,10 @@ TODO: clean up state transition description above once kinks are ironed out
 
     timerState = 'stopped';
 
-    // Calculate the final elapsed time for this solve, and then execute the callback function
-    // to either record the solve for this week's competition if currently competing, or save
-    // the solve to their practice session if practicing.
+    // Calculate the final elapsed time for this solve, then notify the parent. The parent
+    // reads the solve details (time and penalty flags) through the `solve` accessor.
     finalMillis = Date.now() - runStartTime;
-    onTimerComplete?.(finalMillis, isInspectionPenalty, false);
+    onTimerComplete?.();
   }
 
   /**
@@ -233,10 +287,52 @@ TODO: clean up state transition description above once kinks are ironed out
 
     // Set the DNF flag and then execute the callback function to either record the solve for
     // this week's competition if currently competing, or save the solve to their practice
-    // session if practicing.
+    // session if practicing. This DNF came from overflowing inspection, so the penalty flags
+    // are locked; the solve can only be submitted as DNF or discarded.
     isDnf = true;
+    dnfViaInspection = true;
     onDnf?.();
   }
+
+  /**
+   * Resets the timer back to the waiting state (0.00). Exposed so the parent can clear the
+   * displayed result, e.g. when the user discards a pending solve.
+   */
+  export function reset() {
+    transitionToWaiting();
+  }
+
+  /**
+   * Read/write access to the current solve's state. Parents pull the final time and penalty
+   * flags from here when a solve completes, and may toggle the penalty flags before the solve
+   * is recorded. DNF and +2 are mutually exclusive; setting one clears the other. When the
+   * DNF came from overflowing inspection (`dnfViaInspection`), the penalty flags are locked
+   * and the setters ignore writes.
+   */
+  export const solve = {
+    get timeMs() {
+      return finalMillis;
+    },
+    get dnfViaInspection() {
+      return dnfViaInspection;
+    },
+    get dnf() {
+      return isDnf;
+    },
+    set dnf(value: boolean) {
+      if (dnfViaInspection) return;
+      isDnf = value;
+      if (value) isPlusTwo = false;
+    },
+    get plusTwo() {
+      return isPlusTwo;
+    },
+    set plusTwo(value: boolean) {
+      if (dnfViaInspection) return;
+      isPlusTwo = value;
+      if (value) isDnf = false;
+    }
+  };
 
   function handleKeydown(e: KeyboardEvent) {
     if (e.repeat) return;
@@ -250,17 +346,27 @@ TODO: clean up state transition description above once kinks are ironed out
       return;
     }
 
-    // Any key stops the running timer to complete the solve.
+    // Any key stops the running timer to complete the solve. Blurring first means the
+    // keyup won't activate a still-focused element elsewhere on the page. Space also
+    // needs its default suppressed, or it scrolls the page or a focused scroll
+    // container (e.g. the event card list) after stopping the timer.
     if (timerState === 'running') {
+      if (e.key === ' ') {
+        e.preventDefault();
+      }
+      blurFocusedElement();
       transitionToStopped();
       return;
     }
 
-    // Pressing *down* space will "arm" the timer (spaceHeld=true) to transition to a running
-    // timer from waiting/inspection/stopped.
+    // Pressing *down* space will "arm" the timer (spaceHeld=true) to transition from
+    // waiting to inspection, or from inspection to running. The stopped state ignores
+    // space: the pending solve is resolved through the submit/discard controls, and the
+    // parent resets the timer afterward.
     if (e.key === ' ') {
       e.preventDefault();
-      if (timerState === 'waiting' || timerState === 'inspection' || timerState === 'stopped') {
+      if (timerState === 'waiting' || timerState === 'inspection') {
+        blurFocusedElement();
         spaceHeld = true;
       }
     }
@@ -275,8 +381,6 @@ TODO: clean up state transition description above once kinks are ironed out
       transitionToInspection();
     } else if (timerState === 'inspection') {
       transitionToRunning();
-    } else if (timerState === 'stopped') {
-      transitionToWaiting();
     }
   }
 
@@ -289,27 +393,22 @@ TODO: clean up state transition description above once kinks are ironed out
     e.preventDefault();
     spaceHeld = false;
 
-    if (timerState === 'dnf') {
-      const wasDnf = isDnf;
-      transitionToWaiting();
-      onTimerComplete?.(0, false, wasDnf);
-      return;
-    }
+    // Like space on desktop, taps are ignored in the stopped and dnf states; the pending
+    // solve keeps its time and penalty flags until it's resolved through the submit/discard
+    // controls, after which the parent resets the timer
     if (timerState === 'waiting') transitionToInspection();
     else if (timerState === 'running') transitionToStopped();
-    else if (timerState === 'stopped') transitionToWaiting();
     else if (timerState === 'inspection') transitionToRunning();
   }
 
-  // Signals to the navbar and event selector (via CSS) that they should be locked while
-  // the timer is active. Body class is used because those elements are outside this
-  // component's subtree and don't share a common parent that could hold this state.
+  // Lock navigation (navbar and event sidebar) while the timer is active. The lock lives in
+  // a shared context because those elements are outside this component's subtree. The cleanup
+  // clears the flag so the lock can't outlive an unmounted timer.
   $effect(() => {
-    document.body.classList.toggle(
-      'timer-active',
-      timerState === 'inspection' || timerState === 'running'
-    );
-    return () => document.body.classList.remove('timer-active');
+    navigationLock.timerActive = timerState === 'inspection' || timerState === 'running';
+    return () => {
+      navigationLock.timerActive = false;
+    };
   });
 
   onDestroy(clearIntervals);
@@ -321,9 +420,17 @@ TODO: clean up state transition description above once kinks are ironed out
   Nearly full-screen overlay on mobile during inspection and running; covers all other UI so
   the user has a large tap target for their timer interactions.
 -->
+<!--
+  Both touch surfaces are role="button" with tabindex="-1": they act as buttons for touch
+  users, but stay out of the tab order because keyboard users interact with the timer
+  through the window-level Space/Escape handlers instead.
+-->
 <div
   class="mobile-overlay"
   class:active={timerState === 'inspection' || timerState === 'running'}
+  role="button"
+  tabindex="-1"
+  aria-label="Timer touch area"
   ontouchstart={handleTouchStart}
   ontouchend={handleTouchEnd}
 ></div>
@@ -331,6 +438,8 @@ TODO: clean up state transition description above once kinks are ironed out
 <div
   class="timer-area"
   class:elevated={timerState === 'inspection' || timerState === 'running'}
+  role="button"
+  tabindex="-1"
   ontouchstart={handleTouchStart}
   ontouchend={handleTouchEnd}
 >

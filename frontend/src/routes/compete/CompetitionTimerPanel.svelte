@@ -1,13 +1,21 @@
 <!--
 @component
-Main panel for the compete view. Contains the scramble bar, solve timer, submit/discard
-actions, and a tabbed results area showing the user's solves and the event leaderboard.
+Main panel for the compete view. Contains the scramble bar, solve timer, post-solve actions
+(DNF/+2 penalty toggles, submit, discard), and a results area showing the user's solves in
+the active event. Once the event is complete, the scramble bar is hidden and a summary
+display replaces the timer.
 -->
 
 <script lang="ts">
+  import { getContext } from 'svelte';
+  import { formatSolve } from '$lib/formatSolve.js';
   import type { EventSlug } from '$lib/types.js';
+  import type { CompetitionStore } from '$lib/competition.svelte.js';
+  import type { NavigationLock } from '$lib/navigationLock.svelte.js';
   import Timer from './Timer.svelte';
   import EventImage from './EventImage.svelte';
+  import EventCompleteBanner from './EventCompleteBanner.svelte';
+  import EventResultsCard from './EventResultsCard.svelte';
 
   interface Props {
     selectedEventSlug: EventSlug;
@@ -15,265 +23,152 @@ actions, and a tabbed results area showing the user's solves and the event leade
 
   const { selectedEventSlug }: Props = $props();
 
-  // TODO: replace with API-fetched scramble for the active event
-  const scrambles = [
-    "R U R' U' R U2 R' F R U R' U' F' R U R' U'",
-    "F2 U' B2 D2 L2 F2 U' L2 B2 R' F D' R B U' L U2 F' U'",
-    "D2 B2 U2 R2 B2 D R2 U F2 L2 U' F R' U2 B' R2 D F2 R' D2"
-  ];
-  let scrambleIndex = $state(0);
-  const scramble = $derived(scrambles[scrambleIndex]);
+  const competitionContext = getContext<CompetitionStore>('competition');
+  const navigationLock = getContext<NavigationLock>('navigationLock');
 
-  // Timer state
-  let pendingSolveMs = $state<number | null>(null);
-  let showSubmitDiscard = $state(false);
+  // TODO runtime validation that we actually have scrambles for every event
+  const eventScrambles = $derived(competitionContext.scrambles[selectedEventSlug] ?? []);
+  // TODO runtime validation that we actually have a participation record for every event,
+  // so downstream stuff doesn't have to null-coalesce (participation?.solves, etc)
+  const participation = $derived(competitionContext.userParticipation[selectedEventSlug]);
 
-  // Results tabs
-  type Tab = 'my-solves' | 'results';
-  let activeTab = $state<Tab>('my-solves');
+  const eventInfo = $derived(competitionContext.events[selectedEventSlug]);
+  const eventFormat = $derived(eventInfo.format);
 
-  // TODO: replace with real data from the API
-  const mockResults = [
-    {
-      rank: 1,
-      name: 'SpeedSolver42',
-      avg: '8.23',
-      best: '7.14',
-      solves: ['7.45', '8.12', '9.13'],
-      isMe: false
-    },
-    {
-      rank: 2,
-      name: 'CubeKing99',
-      avg: '9.15',
-      best: '8.32',
-      solves: ['9.12', '8.32', '9.88'],
-      isMe: false
-    },
-    {
-      rank: 3,
-      name: 'TwistMaster',
-      avg: '9.87',
-      best: '8.91',
-      solves: ['8.91', '10.23', '9.45'],
-      isMe: false
-    },
-    {
-      rank: 4,
-      name: 'LayerLord',
-      avg: '11.23',
-      best: '9.78',
-      solves: ['11.45', '9.78', '12.45'],
-      isMe: false
-    },
-    {
-      rank: 5,
-      name: 'PLL_Pro',
-      avg: '12.01',
-      best: '10.55',
-      solves: ['12.45', '10.55', 'DNF'],
-      isMe: false
-    },
-    {
-      rank: 6,
-      name: 'euphwes',
-      avg: '14.23',
-      best: '12.88',
-      solves: ['14.23', '12.88', '—'],
-      isMe: true
-    },
-    {
-      rank: 7,
-      name: 'CrossExpert',
-      avg: '15.67',
-      best: '14.22',
-      solves: ['15.67', '14.22', '17.12'],
-      isMe: false
-    },
-    {
-      rank: 8,
-      name: 'FingertrickFan',
-      avg: '18.34',
-      best: '16.77',
-      solves: ['18.34', '16.77', '20.01'],
-      isMe: false
-    }
-  ];
+  // Derive the current scramble based on how many solves the user has recorded for this event.
+  const solveCount = $derived(participation?.solves.length ?? 0);
+  const scramble = $derived(eventScrambles[solveCount] ?? '');
 
-  // TODO: replace with real solve history from the API
-  const mySolves = [
-    { n: 1, time: '14.23' },
-    { n: 2, time: '12.88', isPb: true },
-    { n: 3, time: '—' }
-  ];
+  // Once all solves are recorded, the scramble bar is hidden and the timer is replaced by
+  // a text-based summary of the user's participation in this event.
+  const eventIsComplete = $derived(participation?.status === 'complete');
 
-  function handleTimerComplete(timeMs: number, _inspectionPenalty: boolean, dnf: boolean) {
-    if (dnf) {
-      pendingSolveMs = null;
-      showSubmitDiscard = false;
-      return;
-    }
-    pendingSolveMs = timeMs;
-    showSubmitDiscard = true;
+  // Whether a completed solve is awaiting submit/discard. The solve itself (final time and
+  // penalty flags) lives in the Timer and is read/written via its exported `solve` accessor.
+  let showSolveSubmissionControls = $state(false);
+  let timer = $state<Timer>();
+
+  // Display for the pending solve on the submit button, reflecting any penalties
+  const solveTimeOnSumbitButton = $derived.by(() => {
+    if (!timer || !showSolveSubmissionControls) return '';
+    return formatSolve({
+      timeMs: timer.solve.timeMs,
+      dnf: timer.solve.dnf,
+      plusTwo: timer.solve.plusTwo,
+      omittedFromAverage: false,
+      pbSingle: false
+    });
+  });
+
+  // When the DNF came from overflowing inspection, the penalty is not optional; the DNF and
+  // +2 toggles are disabled and the user can only submit or discard.
+  const penaltyTogglesLocked = $derived(timer?.solve.dnfViaInspection ?? false);
+
+  function showSubmitControls() {
+    showSolveSubmissionControls = true;
   }
 
-  function handleTimerCancel() {
-    pendingSolveMs = null;
-    showSubmitDiscard = false;
+  function hideSubmitControls() {
+    showSolveSubmissionControls = false;
   }
 
-  function formatMs(ms: number): string {
-    const totalSecs = Math.floor(ms / 1000);
-    const centis = Math.floor((ms % 1000) / 10);
-    if (totalSecs < 60) return `${totalSecs}.${centis.toString().padStart(2, '0')}`;
-    const mins = Math.floor(totalSecs / 60);
-    const secs = totalSecs % 60;
-    return `${mins}:${secs.toString().padStart(2, '0')}.${centis.toString().padStart(2, '0')}`;
+  function toggleDnf() {
+    if (timer) timer.solve.dnf = !timer.solve.dnf;
   }
 
-  function handleSubmit() {
-    // TODO: POST solve to API
-    pendingSolveMs = null;
-    showSubmitDiscard = false;
+  function togglePlusTwo() {
+    if (timer) timer.solve.plusTwo = !timer.solve.plusTwo;
+  }
+
+  async function handleSubmit() {
+    if (!timer || !showSolveSubmissionControls) return;
+    const { timeMs, dnf, plusTwo } = timer.solve;
+    await competitionContext.submitSolve(selectedEventSlug, {
+      dnf,
+      timeMs,
+      plusTwo
+    });
+    showSolveSubmissionControls = false;
+    // The final solve of an event unmounts the Timer (summary banner replaces it), which can
+    // clear the binding during the await above; skip the reset in that case
+    timer?.reset();
   }
 
   function handleDiscard() {
-    pendingSolveMs = null;
-    showSubmitDiscard = false;
+    showSolveSubmissionControls = false;
+    timer?.reset();
   }
+
+  // Keep navigation locked while a completed solve is awaiting submit/discard; otherwise the
+  // user could switch events and the pending solve would be submitted against the wrong event.
+  // The cleanup clears the flag so the lock can't outlive this panel.
+  $effect(() => {
+    navigationLock.solvePending = showSolveSubmissionControls;
+    return () => {
+      navigationLock.solvePending = false;
+    };
+  });
 </script>
 
 <!-- Timer zone -->
 <div class="compete-panel">
   <div class="timer-zone">
-    <!-- Scramble bar -->
-    <div class="scramble-bar">
-      <p class="scramble-text">{scramble}</p>
-      <div class="scramble-bar-preview">
-        <EventImage eventSlug={selectedEventSlug} solved={false} />
+    <!-- Scramble bar (hidden once the event is complete) -->
+    {#if !eventIsComplete}
+      <div class="scramble-bar">
+        <p class="scramble-text">{scramble}</p>
+        <div class="scramble-bar-preview">
+          <EventImage eventSlug={selectedEventSlug} solved={false} />
+        </div>
       </div>
-    </div>
+    {/if}
 
-    <!-- Timer -->
+    <!-- Timer, replaced by the event summary once the event is complete -->
     <div class="timer-wrapper">
-      <Timer
-        onTimerComplete={handleTimerComplete}
-        onTimerCancel={handleTimerCancel}
-        onDnf={undefined}
-      />
+      {#if eventIsComplete && participation}
+        <EventCompleteBanner eventName={eventInfo.name} {eventFormat} result={participation} />
+      {:else}
+        <Timer
+          bind:this={timer}
+          onTimerComplete={showSubmitControls}
+          onTimerCancel={hideSubmitControls}
+          onDnf={showSubmitControls}
+        />
+      {/if}
     </div>
 
     <!-- Action buttons -->
     <div class="timer-actions">
-      {#if showSubmitDiscard}
+      {#if showSolveSubmissionControls}
+        <button
+          class="btn-action btn-toggle"
+          class:active={timer?.solve.plusTwo}
+          aria-pressed={timer?.solve.plusTwo ?? false}
+          disabled={penaltyTogglesLocked}
+          onclick={togglePlusTwo}
+        >
+          +2
+        </button>
+        <button
+          class="btn-action btn-toggle"
+          class:active={timer?.solve.dnf}
+          aria-pressed={timer?.solve.dnf ?? false}
+          disabled={penaltyTogglesLocked}
+          onclick={toggleDnf}
+        >
+          DNF
+        </button>
         <button class="btn-action btn-submit" onclick={handleSubmit}>
-          Submit {pendingSolveMs !== null ? formatMs(pendingSolveMs) : ''}
+          Submit {solveTimeOnSumbitButton}
         </button>
         <button class="btn-action btn-discard" onclick={handleDiscard}>Discard</button>
       {/if}
     </div>
   </div>
 
-  <!-- Bottom zone: tabbed results + scramble preview -->
+  <!-- Bottom zone: my-solves results + scramble preview -->
   <div class="bottom-zone">
-    <!-- Results box -->
-    <div class="results-zone">
-      <!-- Tab bar -->
-      <div class="tab-bar">
-        <button
-          class="tab"
-          class:active={activeTab === 'my-solves'}
-          onclick={() => (activeTab = 'my-solves')}
-        >
-          My Solves
-        </button>
-        <button
-          class="tab"
-          class:active={activeTab === 'results'}
-          onclick={() => (activeTab = 'results')}
-        >
-          Results
-        </button>
-      </div>
-
-      <!-- Stats header: only shown on my-solves tab -->
-      {#if activeTab === 'my-solves'}
-        <div class="results-header">
-          <!-- TODO: replace hardcoded stats with real event avg + best from API -->
-          <div class="stat-chips">
-            <div class="stat-chip">
-              <span class="stat-label">Event avg</span>
-              <span class="stat-value">11.43</span>
-            </div>
-            <div class="stat-chip">
-              <span class="stat-label">Best time</span>
-              <span class="stat-value">7.14</span>
-            </div>
-          </div>
-        </div>
-      {/if}
-
-      <!-- Tab content -->
-      <div class="table-wrapper">
-        {#if activeTab === 'my-solves'}
-          <table class="leaderboard">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              {#each mySolves as s}
-                <tr>
-                  <td class="rank-cell"><span class="rank-plain">{s.n}</span></td>
-                  <td class="mono">
-                    {s.time}
-                    {#if s.isPb}<span class="pb-chip">pb</span>{/if}
-                  </td>
-                </tr>
-              {/each}
-            </tbody>
-          </table>
-        {:else}
-          <table class="leaderboard">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Competitor</th>
-                <th>Avg of 5</th>
-                <th>Best</th>
-                <th>Solves</th>
-              </tr>
-            </thead>
-            <tbody>
-              {#each mockResults as row}
-                <tr class:me-row={row.isMe}>
-                  <td class="rank-cell">
-                    {#if row.rank === 1}
-                      <span class="rank-badge rank-gold">{row.rank}</span>
-                    {:else if row.rank === 2}
-                      <span class="rank-badge rank-silver">{row.rank}</span>
-                    {:else if row.rank === 3}
-                      <span class="rank-badge rank-bronze">{row.rank}</span>
-                    {:else}
-                      <span class="rank-plain">{row.rank}</span>
-                    {/if}
-                  </td>
-                  <td class="name-cell">
-                    {row.name}
-                    {#if row.isMe}<span class="you-chip">you</span>{/if}
-                  </td>
-                  <td class="mono">{row.avg}</td>
-                  <td class="mono">{row.best}</td>
-                  <td class="mono">{row.solves.join(', ')}</td>
-                </tr>
-              {/each}
-            </tbody>
-          </table>
-        {/if}
-      </div>
-    </div>
+    <EventResultsCard {participation} {eventInfo} />
 
     <!-- Scramble preview image (desktop only) -->
     <div class="scramble-preview">
@@ -292,7 +187,6 @@ actions, and a tabbed results area showing the user's solves and the event leade
   /* Local color tokens for values not yet in the global design system */
   .compete-panel {
     --color-danger: #e53e3e;
-    --color-pb: #38a169;
 
     position: relative;
     display: flex;
@@ -375,6 +269,28 @@ actions, and a tabbed results area showing the user's solves and the event leade
       color 0.15s ease;
   }
 
+  .btn-toggle {
+    background: transparent;
+    border: 1px solid color-mix(in srgb, var(--text-primary) 20%, transparent);
+    color: var(--text-muted);
+  }
+
+  .btn-toggle:hover:not(:disabled) {
+    border-color: color-mix(in srgb, var(--text-primary) 40%, transparent);
+    color: var(--text-primary);
+  }
+
+  .btn-toggle.active {
+    background: color-mix(in srgb, var(--color-danger) 12%, transparent);
+    border-color: var(--color-danger);
+    color: var(--color-danger);
+  }
+
+  .btn-toggle:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
   .btn-submit {
     background: var(--brand);
     border: 1px solid var(--brand);
@@ -408,225 +324,9 @@ actions, and a tabbed results area showing the user's solves and the event leade
     min-height: 0;
   }
 
-  .results-zone {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background: var(--surface-card);
-    border-radius: 0.375rem;
-    border: 1px solid color-mix(in srgb, var(--text-primary) 8%, transparent);
-  }
-
   /* Hidden on mobile; desktop shows it alongside the results table */
   .scramble-preview {
     display: none;
-  }
-
-  /* ----- Tab bar ----- */
-
-  .tab-bar {
-    display: flex;
-    gap: 0.125rem;
-    padding: 0 0.75rem;
-    border-bottom: 1px solid color-mix(in srgb, var(--text-primary) 10%, transparent);
-    flex-shrink: 0;
-  }
-
-  .tab {
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    padding: 0.6rem 0.625rem;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    cursor: pointer;
-    margin-bottom: -1px;
-    transition:
-      color 0.15s ease,
-      border-color 0.15s ease;
-  }
-
-  .tab:hover {
-    color: var(--text-primary);
-  }
-
-  .tab.active {
-    color: var(--brand);
-    border-bottom-color: var(--brand);
-  }
-
-  /* ----- Results header ----- */
-
-  .results-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid color-mix(in srgb, var(--text-primary) 7%, transparent);
-    flex-shrink: 0;
-    gap: 2rem;
-  }
-
-  .stat-chips {
-    display: flex;
-    gap: 2rem;
-    flex-shrink: 0;
-  }
-
-  .stat-chip {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.05rem;
-  }
-
-  .stat-label {
-    font-size: 0.6rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-muted);
-    opacity: 0.7;
-  }
-
-  .stat-value {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-primary);
-  }
-
-  /* ----- Leaderboard table ----- */
-
-  .table-wrapper {
-    flex: 1;
-    overflow-y: auto;
-    padding: 0 0.5rem 1rem;
-  }
-
-  .leaderboard {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  .leaderboard thead tr {
-    position: sticky;
-    top: 0;
-    background: var(--surface-card);
-    z-index: 1;
-  }
-
-  .leaderboard th {
-    text-align: left;
-    padding: 0.5rem 0.625rem;
-    font-size: 0.6rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: var(--text-muted);
-    border-bottom: 1px solid color-mix(in srgb, var(--text-primary) 10%, transparent);
-    white-space: nowrap;
-  }
-
-  .leaderboard td {
-    padding: 0.45rem 0.625rem;
-    border-bottom: 1px solid color-mix(in srgb, var(--text-primary) 5%, transparent);
-    font-size: 0.8rem;
-    color: var(--text-primary);
-    white-space: nowrap;
-  }
-
-  .leaderboard tbody tr:hover:not(.me-row) {
-    background: color-mix(in srgb, var(--brand) 4%, transparent);
-  }
-
-  .me-row {
-    background: color-mix(in srgb, var(--brand) 8%, transparent);
-  }
-
-  .rank-cell {
-    text-align: center;
-    width: 2.25rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .rank-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.4rem;
-    height: 1.4rem;
-    border-radius: 50%;
-    font-size: 0.65rem;
-    font-weight: 700;
-  }
-
-  .rank-gold {
-    background: #f6d860;
-    color: #5c3d00;
-  }
-
-  .rank-silver {
-    background: #c0c0c0;
-    color: #383838;
-  }
-
-  .rank-bronze {
-    background: #cd7f32;
-    color: #fff;
-  }
-
-  .rank-plain {
-    font-size: 0.72rem;
-    color: var(--text-muted);
-  }
-
-  .name-cell {
-    font-weight: 500;
-  }
-
-  /* Collapse the Solves column on mobile - too wide for small screens */
-  .leaderboard th:nth-child(n + 5),
-  .leaderboard td:nth-child(n + 5) {
-    display: none;
-  }
-
-  /* ----- Chips ----- */
-
-  .you-chip {
-    display: inline-block;
-    background: color-mix(in srgb, var(--brand) 15%, transparent);
-    color: var(--brand);
-    font-size: 0.58rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 0.1rem 0.3rem;
-    border-radius: 0.2rem;
-    margin-left: 0.35rem;
-    vertical-align: middle;
-  }
-
-  .pb-chip {
-    display: inline-block;
-    background: color-mix(in srgb, var(--color-pb) 15%, transparent);
-    color: var(--color-pb);
-    font-size: 0.58rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 0.1rem 0.3rem;
-    border-radius: 0.2rem;
-    margin-left: 0.35rem;
-    vertical-align: middle;
-  }
-
-  .mono {
-    font-family: monospace;
-    font-variant-numeric: tabular-nums;
   }
 
   /* --------------------------------------------- */
@@ -673,23 +373,6 @@ actions, and a tabbed results area showing the user's solves and the event leade
     .scramble-preview-image {
       width: 180px;
       height: 180px;
-    }
-
-    .tab-bar {
-      padding: 0 1.25rem;
-    }
-
-    .results-header {
-      padding: 0.625rem 1.5rem;
-    }
-
-    .table-wrapper {
-      padding: 0 1.25rem 1rem;
-    }
-
-    .leaderboard th:nth-child(n + 5),
-    .leaderboard td:nth-child(n + 5) {
-      display: table-cell;
     }
   }
 </style>

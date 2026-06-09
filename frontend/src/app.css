@@ -46,6 +46,9 @@ a {
 
   --secondary-tint: #a8d0bc;
   --secondary: #361e11;
+
+  /* Golden glow marking personal-best solve times */
+  --pb-glow: #fbbf24;
 }
 
 html,

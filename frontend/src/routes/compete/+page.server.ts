@@ -1,8 +1,7 @@
-export const load = async ({ fetch }) => {
-  const response = await fetch('/api/');
-  const responseData = await response.json();
+import type { WeeklyCompetitionRecord } from './types.js';
 
-  return {
-    events: responseData.events
-  };
+export const load = async ({ fetch }) => {
+  const response = await fetch('/api/competition/current');
+  const data: WeeklyCompetitionRecord = await response.json();
+  return data;
 };

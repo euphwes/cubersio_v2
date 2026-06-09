@@ -12,9 +12,10 @@ On desktop (>= 1024px): renders all events as a plain vertical scrollable list.
   import { cubicOut } from 'svelte/easing';
   import EventCard from './EventCard.svelte';
   import type { EventSlug } from '$lib/types.js';
+  import type { EventInfo } from './types.js';
 
   interface Props {
-    events: EventSlug[];
+    events: EventInfo[];
     selectedEventSlug?: EventSlug;
     eventSelectionSetter: (slug: EventSlug) => void;
     competitionTitle?: string;
@@ -26,6 +27,8 @@ On desktop (>= 1024px): renders all events as a plain vertical scrollable list.
     selectedEventSlug = '333',
     competitionTitle
   }: Props = $props();
+
+  const selectedEvent = $derived(events.find((e) => e.slug === selectedEventSlug) ?? events[0]);
 
   let showEventPicker = $state(false);
 
@@ -41,26 +44,28 @@ On desktop (>= 1024px): renders all events as a plain vertical scrollable list.
     <p class="competition-label">{competitionTitle}</p>
   {/if}
   <div class="desktop-list">
-    {#each events as event}
+    {#each events as event (event.slug)}
       <EventCard
-        eventSlug={event}
-        onclick={() => eventSelectionSetter(event)}
-        isSelected={event === selectedEventSlug}
+        {event}
+        onclick={() => eventSelectionSetter(event.slug)}
+        isSelected={event.slug === selectedEventSlug}
       />
     {/each}
   </div>
 
   <!-- Mobile: single selected card with caret indicator -->
-  <div class="mobile-card">
-    <div class="mobile-card-inner">
-      <EventCard
-        eventSlug={selectedEventSlug ?? '333'}
-        onclick={() => (showEventPicker = true)}
-        isSelected={true}
-      />
-      <span class="mobile-caret" aria-hidden="true"></span>
+  {#if selectedEvent}
+    <div class="mobile-card">
+      <div class="mobile-card-inner">
+        <EventCard
+          event={selectedEvent}
+          onclick={() => (showEventPicker = true)}
+          isSelected={true}
+        />
+        <span class="mobile-caret" aria-hidden="true"></span>
+      </div>
     </div>
-  </div>
+  {/if}
 </div>
 
 <!-- Mobile: full-page event picker overlay -->
@@ -71,11 +76,11 @@ On desktop (>= 1024px): renders all events as a plain vertical scrollable list.
       <button class="picker-close" onclick={() => (showEventPicker = false)}>✕</button>
     </div>
     <div class="picker-list">
-      {#each events as event}
+      {#each events as event (event.slug)}
         <EventCard
-          eventSlug={event}
-          onclick={() => selectEvent(event)}
-          isSelected={event === selectedEventSlug}
+          {event}
+          onclick={() => selectEvent(event.slug)}
+          isSelected={event.slug === selectedEventSlug}
         />
       {/each}
     </div>
@@ -109,15 +114,14 @@ On desktop (>= 1024px): renders all events as a plain vertical scrollable list.
     border-bottom: 1px solid var(--brand);
   }
 
-  /* Disable event switching while the timer is active */
-  :global(body.timer-active) .mobile-card {
-    pointer-events: none;
-    opacity: 0.4;
-    transition: opacity 0.2s ease;
-  }
-
   .mobile-card-inner {
     position: relative;
+  }
+
+  /* The caret overlays the card's right edge, so push the card's results section
+     (rendered inside EventCard, hence :global) clear of it */
+  .mobile-card-inner :global(.event-results) {
+    padding-right: 2.75rem;
   }
 
   .mobile-caret {

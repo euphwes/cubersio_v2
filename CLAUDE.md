@@ -50,3 +50,4 @@ After editing any file, run the appropriate formatter before finishing.
 
 - **Python** (any `.py` file): `cd backend`, then `uv run ruff format <file>`
 - **Svelte** (any `.svelte` file): `cd frontend`, then `npx prettier --write <file>`
+- **TypeScript** (any `.ts` file): `cd frontend`, then `npx prettier --write <file>`

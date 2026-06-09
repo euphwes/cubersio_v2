@@ -8,8 +8,12 @@ TODO: later, profile page, settings, buy me a cup of coffee, etc
 -->
 
 <script lang="ts">
+  import { getContext } from 'svelte';
   import { page } from '$app/state';
   import CubersioIcon from '$lib/CubersioIcon.svelte';
+  import type { NavigationLock } from '$lib/navigationLock.svelte.js';
+
+  const navigationLock = getContext<NavigationLock>('navigationLock');
 
   const menuItemsAndRoutes: [string, string][] = [
     ['Compete', '/compete'],
@@ -24,7 +28,7 @@ TODO: later, profile page, settings, buy me a cup of coffee, etc
   const toggleMobileMenu = () => (isMobileMenuOpen = !isMobileMenuOpen);
 </script>
 
-<nav class="navbar">
+<nav class="navbar" class:locked={!navigationLock.navigationAllowed}>
   <div class="navbar-start">
     <CubersioIcon />
     <span class="site-name">cubers.io</span>
@@ -91,19 +95,11 @@ TODO: later, profile page, settings, buy me a cup of coffee, etc
       0 1px 2px rgba(0, 0, 0, 0.1);
   }
 
-  /* On mobile: visually indicate the nav is locked while the timer is running */
-  :global(body.timer-active) .navbar {
+  /* Visually indicate the nav is locked while a solve is in progress or awaiting submission */
+  .navbar.locked {
     pointer-events: none;
     opacity: 0.4;
     transition: opacity 0.2s ease;
-  }
-
-  /* On desktop the overlay is hidden so the nav should stay fully interactive */
-  @media (min-width: 1024px) {
-    :global(body.timer-active) .navbar {
-      pointer-events: auto;
-      opacity: 1;
-    }
   }
 
   .navbar-start {
