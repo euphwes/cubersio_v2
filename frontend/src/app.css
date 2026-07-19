@@ -31,24 +31,32 @@ a {
 
 /* Default theme */
 :root {
-  --surface: #f0efff;
+  --surface: #e7e7f3;
   --surface-card: #ffffff;
   --surface-card-hover: #eeeef6;
-  --surface-card-selected: #daf1d3;
   --surface-image-bg: #555555;
 
   --text-primary: #1e1b4b;
   --text-secondary: #52525b;
   --text-muted: #424242;
 
-  --brand-tint: #a8a5cc;
+  --brand-tint: #b0aec4;
   --brand: #7872a8;
 
   --secondary-tint: #a8d0bc;
   --secondary: #361e11;
 
-  /* Golden glow marking personal-best solve times */
   --pb-glow: #fbbf24;
+
+  /* Cube sticker colors, plus the "plastic" showing between stickers */
+  --cube-white: #ffffff;
+  --cube-red: #f45e5e;
+  /* TODO apply this blue color to the event icon svgs, we've changed it slightly */
+  --cube-blue: #63a5fc;
+  --cube-green: #54fd64;
+  --cube-yellow: #f0ff70;
+  --cube-orange: #f8b468;
+  --cube-innard: #555555;
 }
 
 html,
@@ -65,8 +73,4 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--surface);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.35'/%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-repeat: repeat;
-  background-size: 300px 300px;
 }

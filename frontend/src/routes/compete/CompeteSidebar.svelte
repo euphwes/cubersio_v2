@@ -74,7 +74,7 @@ The competition title header is hidden on mobile.
 
   @media (min-width: 1024px) {
     .compete-sidebar {
-      border-right: 1px solid var(--brand);
+      border-right: 1px solid var(--brand-tint);
     }
 
     .sidebar-header {

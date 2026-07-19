@@ -186,6 +186,8 @@ On desktop (>= 1024px): renders all events as a plain vertical scrollable list.
     flex: 1;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: gray transparent;
   }
 
   /* --------------------------------------------- */
@@ -198,6 +200,8 @@ On desktop (>= 1024px): renders all events as a plain vertical scrollable list.
       flex: 1;
       overflow-y: auto;
       min-height: 0;
+      scrollbar-width: thin;
+      scrollbar-color: var(--brand-tint) transparent;
     }
 
     .mobile-card {

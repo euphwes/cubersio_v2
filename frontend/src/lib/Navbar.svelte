@@ -89,10 +89,7 @@ TODO: later, profile page, settings, buy me a cup of coffee, etc
     --icon-size: 40px;
     background-color: var(--surface-card);
     color: var(--text-primary);
-    border-bottom: 1px solid var(--brand);
-    box-shadow:
-      0 4px 6px rgba(0, 0, 0, 0.15),
-      0 1px 2px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--brand-tint);
   }
 
   /* Visually indicate the nav is locked while a solve is in progress or awaiting submission */
@@ -145,7 +142,8 @@ TODO: later, profile page, settings, buy me a cup of coffee, etc
   }
 
   .nav-link.selected {
-    font-weight: 600;
+    font-size: 0.925rem;
+    background-color: color-mix(in srgb, var(--brand-tint) 15%, transparent);
     border-radius: 0.375rem 0.375rem 0 0;
     border-bottom: 2px solid var(--brand);
   }

@@ -117,9 +117,6 @@ display replaces the timer.
     {#if !eventIsComplete}
       <div class="scramble-bar">
         <p class="scramble-text">{scramble}</p>
-        <div class="scramble-bar-preview">
-          <EventImage eventSlug={selectedEventSlug} solved={false} />
-        </div>
       </div>
     {/if}
 
@@ -214,8 +211,8 @@ display replaces the timer.
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background: var(--surface-card);
-    border: 1px solid color-mix(in srgb, var(--text-primary) 12%, transparent);
+    /* background: var(--surface-card); */
+    /* border: 1px solid color-mix(in srgb, var(--text-primary) 12%, transparent); */
     border-radius: 0.375rem;
     padding: 0.5rem 0.625rem 0.5rem 0.875rem;
     flex-shrink: 0;
@@ -224,20 +221,17 @@ display replaces the timer.
   .scramble-text {
     flex: 1;
     margin: 0;
-    font-family: monospace;
-    font-size: 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.2rem;
+    /* Visually widens the gap between scramble moves */
+    word-spacing: 0.15ch;
     line-height: 1.5;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     word-break: break-word;
-    text-align: left;
-  }
-
-  /* Shown on mobile alongside the scramble text */
-  .scramble-bar-preview {
-    display: block;
-    width: 48px;
-    height: 48px;
-    flex-shrink: 0;
+    /* When the scramble wraps, balance the lines to roughly equal length rather than
+       filling the first line and leaving a short remainder */
+    text-wrap: balance;
+    text-align: center;
   }
 
   .timer-wrapper {
@@ -340,14 +334,15 @@ display replaces the timer.
       gap: 0.75rem;
     }
 
-    .scramble-text {
-      font-size: 1.5rem;
-      text-align: center;
+    .scramble-bar {
+      width: 90%;
+      margin: 0 auto;
     }
 
-    /* On desktop the scramble preview moves to its own panel in the bottom zone */
-    .scramble-bar-preview {
-      display: none;
+    .scramble-text {
+      font-size: 1.75rem;
+      /* Visually widens the gap between scramble moves */
+      word-spacing: 0.25ch;
     }
 
     .timer-wrapper {

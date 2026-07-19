@@ -1,99 +1,139 @@
 <!--
 @component
-The cubers.io logo: a "C" superimposed on a colorful gradient square,
-with a light grid pattern defining the face of a 3x3 cube.
+The cubers.io logo: a single 3x3 cube face. Original, I know.
+
+Sticker colors are chosen by hashing today's date, so the face is
+static every day but rescrambles daily.
 -->
 
+<script lang="ts">
+  import { hashObject } from '$lib/utils.js';
+
+  // Tile geometry; the face spans 3 tiles + 2 gaps = 204 viewBox units
+  const TILE = 66;
+  const GAP = 4;
+  const STEP = TILE + GAP;
+  const FACE = 3 * TILE + 2 * GAP;
+
+  // Backing square behind the stickers; PAD is how far it extends beyond the
+  // face on each side (8 units is roughly 2px at the default 50px icon size)
+  const PAD = 6;
+  const BG_RADIUS = 10;
+
+  // The old cubers.io scramble renderer drew 30px stickers; radii below are in
+  // that coordinate space and get scaled up to TILE-sized tiles here
+  const SCALE = TILE / 30;
+
+  // Per-corner radii [UL, DL, DR, UR] for each tile, indexed [row][col].
+  type CornerRadii = [number, number, number, number];
+  const RADII: CornerRadii[][] = [
+    [
+      [2, 2, 6, 2],
+      [2, 8, 8, 2],
+      [2, 6, 2, 2]
+    ],
+    [
+      [2, 2, 8, 8],
+      [12, 12, 12, 12],
+      [8, 8, 2, 2]
+    ],
+    [
+      [2, 2, 2, 6],
+      [8, 2, 2, 8],
+      [6, 2, 2, 2]
+    ]
+  ];
+
+  // Sticker color CSS variables, defined globally in app.css
+  const COLORS = [
+    'var(--cube-white)',
+    'var(--cube-red)',
+    'var(--cube-blue)',
+    'var(--cube-green)',
+    'var(--cube-yellow)',
+    'var(--cube-orange)'
+  ];
+
+  // Today's date as yyyy/mm/dd, used as the hash input below so the sticker
+  // colors change on a daily basis.
+  const now = new Date();
+  const dateKey = [
+    now.getFullYear(),
+    String(now.getMonth() + 1).padStart(2, '0'),
+    String(now.getDate()).padStart(2, '0')
+  ].join('/');
+
+  /**
+   * Picks today's sticker colors by shuffling an array holding three copies
+   * of each color, and picking the first 9, so a color can only appear up to
+   * three times, ensuring a little variety each day.
+   */
+  function dailyFills(): string[][] {
+    const deck = [...COLORS, ...COLORS, ...COLORS];
+    for (let i = deck.length - 1; i > 0; i--) {
+      const j = hashObject({ date: dateKey, salt: i }, i);
+      [deck[i], deck[j]] = [deck[j], deck[i]];
+    }
+    return [deck.slice(0, 3), deck.slice(3, 6), deck.slice(6, 9)];
+  }
+
+  // Sticker colors, indexed [row][col]
+  const FILLS: string[][] = dailyFills();
+
+  /**
+   * Builds the path for the tile at grid position (col, row): a square traced
+   * UL -> DL -> DR -> UR with a quadratic curve through each corner, the same
+   * shape the old canvas renderer produced with quadraticCurveTo.
+   */
+  function tilePath(col: number, row: number): string {
+    const [ul, dl, dr, ur] = RADII[row][col].map(
+      (r) => Math.round(r * SCALE * 10) / 10
+    ) as CornerRadii;
+    const x = col * STEP;
+    const y = row * STEP;
+    const s = TILE;
+    return [
+      `M ${x} ${y + ul}`,
+      `L ${x} ${y + s - dl}`,
+      `Q ${x} ${y + s} ${x + dl} ${y + s}`,
+      `L ${x + s - dr} ${y + s}`,
+      `Q ${x + s} ${y + s} ${x + s} ${y + s - dr}`,
+      `L ${x + s} ${y + ur}`,
+      `Q ${x + s} ${y} ${x + s - ur} ${y}`,
+      `L ${x + ul} ${y}`,
+      `Q ${x} ${y} ${x} ${y + ul}`,
+      'Z'
+    ].join(' ');
+  }
+</script>
+
 <div class="icon">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
-    <defs>
-      <!--
-        top row gradient: blue to green
-      -->
-      <linearGradient id="topColors" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#4591f5" />
-        <stop offset="10%" stop-color="#4591f5" />
-        <stop offset="90%" stop-color="#54fd64" />
-        <stop offset="100%" stop-color="#54fd64" />
-      </linearGradient>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="{-PAD} {-PAD} {FACE + 2 * PAD} {FACE + 2 * PAD}"
+    width="100%"
+    height="100%"
+  >
+    <rect
+      x={-PAD}
+      y={-PAD}
+      width={FACE + 2 * PAD}
+      height={FACE + 2 * PAD}
+      rx={BG_RADIUS}
+      fill="var(--cube-innard)"
+    />
 
-      <!--
-        bottom row gradient: red to orange
-      -->
-      <linearGradient id="bottomColors" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#f45e5e" />
-        <stop offset="10%" stop-color="#f45e5e" />
-        <stop offset="90%" stop-color="#f8b468" />
-        <stop offset="100%" stop-color="#f8b468" />
-      </linearGradient>
-
-      <!-- 
-        vertical mask gradient, used to blend top row and bottom row gradients
-      -->
-      <linearGradient id="verticalMask" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#000000" />
-        <stop offset="10%" stop-color="#000000" />
-        <stop offset="90%" stop-color="#FFFFFF" />
-        <stop offset="100%" stop-color="#FFFFFF" />
-      </linearGradient>
-
-      <mask id="blendMask">
-        <rect width="100%" height="100%" fill="url(#verticalMask)" />
-      </mask>
-
-      <!--
-        drop shadow to elevate the "C" off the background
-      -->
-      <filter id="c-shadow" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="0" dy="25" stdDeviation="25" flood-color="#000000" flood-opacity="0.75" />
-      </filter>
-    </defs>
-
-    <!--
-      base layer, filled with the top colors gradient
-    -->
-    <rect width="100%" height="100%" rx="150" fill="url(#topColors)" />
-
-    <!--
-      overlay layer, using the vertical blend mask to show the top colors and the bottom colors
-    -->
-    <rect width="100%" height="100%" rx="150" fill="url(#bottomColors)" mask="url(#blendMask)" />
-
-    <!--
-      3x3 grid lines
-    -->
-    <g stroke="#ffffff" stroke-width="24" stroke-opacity="1">
-      <line x1="0" y1="333" x2="1000" y2="333" />
-      <line x1="0" y1="667" x2="1000" y2="667" />
-      <line x1="333" y1="0" x2="333" y2="1000" />
-      <line x1="667" y1="0" x2="667" y2="1000" />
+    <g stroke="var(--cube-innard)">
+      {#each FILLS as rowFills, row (row)}
+        {#each rowFills as fill, col (col)}
+          <path d={tilePath(col, row)} {fill} />
+        {/each}
+      {/each}
     </g>
-
-    <text
-      x="500"
-      y="500"
-      class="center-text"
-      text-anchor="middle"
-      dominant-baseline="central"
-      stroke="#000000"
-      stroke-width="35"
-      stroke-opacity="0.60"
-      paint-order="stroke fill"
-      filter="url(#c-shadow)">C</text
-    >
   </svg>
 </div>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;display=swap');
-
-  .center-text {
-    font-family: 'Merriweather', serif;
-    font-size: 800px;
-    font-weight: bold;
-    fill: #ffffff;
-  }
-
   .icon {
     width: var(--icon-size, 50px);
     height: var(--icon-size, 50px);

@@ -156,6 +156,8 @@ format, and overall stats, above a table with one row per solve.
     flex: 1;
     overflow-y: auto;
     padding: 0 0.5rem 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: gray transparent;
   }
 
   .solves-table {

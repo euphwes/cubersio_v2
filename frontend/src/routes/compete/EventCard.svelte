@@ -161,6 +161,7 @@ complete, the image switches to its solved variant and the card shows the user's
   .image-scaler {
     width: 100%;
     height: 100%;
+    filter: drop-shadow(0 6px 6px rgb(0 0 0 / 0.55));
   }
 
   /* --------------------------------------------- */
